@@ -1,0 +1,221 @@
+body {
+    font-family: Calibri;
+    font-size: 20px;
+    /*background-image: url(МакетГлавнойСтраницы.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center top;*/
+    margin: 0;
+    padding: 0;
+}
+
+/*стили для шапки сайта*/
+
+.header {
+    font-family: "Century Gothic";
+    font-weight: bold;
+    color: white;
+    padding-left: 150px;
+    padding-right: 150px;
+    display: grid;
+    background-color: #0047a3;
+    grid-template-columns: minmax(130px, 2fr) minmax(1px, 6fr) minmax(260px, 4fr) minmax(260px, 4fr);
+    grid-template-rows: 2fr 3fr 4fr;    
+}
+
+.header div:nth-child(1) {
+    grid-column: 1 / -1;
+}
+
+.phone {
+    font-weight: normal;
+    justify-self: stretch;
+    align-self: center;  
+}
+
+.number {
+    font-size: 18px;
+}
+
+.time {
+    font-size: 9.85px;
+}
+
+.name {
+    font-weight: normal;
+    justify-self: end;
+    align-self: center;
+    padding-right: 3px;
+}
+
+.first {
+    font-size: 20px;
+}
+
+.second {
+    font-size: 17.3px;
+}
+
+.logo {
+    padding: 0;
+    margin: 0;
+    justify-self: center;
+    align-self: center;
+}
+
+.logo img {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.header-item {
+    border: 0px solid rgb(250, 250, 250);
+}
+
+/*стили для меню сайта*/
+
+.menu {
+    font-family: "Century Gothic";
+    font-weight: normal;
+    font-size: 14px;
+    color: #ff7c00;
+    top: -18px;
+    padding: 0;
+    padding-left: 150px;
+    padding-right: 150px;
+    position: relative;
+    display: grid;
+    background-color: #0047a3;
+    grid-template-columns: repeat(8, minmax(130px, 2fr)); 
+}
+
+.menu-item {
+    font-weight: bold;
+    list-style: none;
+    text-align: center;
+    position: relative;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0px solid rgb(250, 250, 250);
+}
+
+.menu-item:hover {
+    background-color: #00a9d2;
+    color: white;
+}
+
+.menu-item:hover ul{
+    display: block;
+}
+
+.submenu {
+    font-family: "Century Gothic";
+    font-size: 14px;
+    background-color: #bfe9f4;
+    color: #ff7c00;
+    display: none;
+    position: absolute;
+    text-align: left;
+    width: 225px;
+    padding: 0;
+    top: 47px;
+    left: 0;      
+}
+
+.submenu-item {
+    border: 0px solid rgb(250, 250, 250);
+    padding-left: 15px;
+    list-style: none;
+    height: 28px;
+    padding-top: 15px;
+    padding-bottom: 5px;   
+}
+
+.submenu-item:hover {
+    background-color: #00a9d2;
+    color: white;
+}
+
+/*медиа-запросы в переломных точках*/
+
+@media (max-width: 1150px) {
+    .header, .menu {
+        padding-left: 13%;
+        padding-right: 13%;
+    }
+}
+
+@media (max-width: 1005px) {
+    .header, .menu {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+
+@media (max-width: 905px) {
+    .header, .menu {
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+}
+
+@media (max-width: 805px) {
+    .header, .menu {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+}
+
+@media (max-width: 795px) {
+    .header, .menu {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+}
+
+@media (max-width: 750px) {
+    .header, .menu {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .header div:nth-child(2) {
+        grid-area: telephone;
+        justify-self: center;
+    }
+    .header div:nth-child(4) {
+        grid-area: fullname;
+        justify-self: center;
+    }
+    .header div:nth-child(5) {
+        grid-area: logotype;
+        justify-self: center;
+    }
+    .logo img {
+        width: 300px;
+    }
+    .header {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+            "fullname"
+            "logotype"
+            "telephone"
+    }
+    .header-item {
+        border: 0px solid rgb(250, 250, 250);
+    }
+    .menu-item {
+        border: 0px solid rgb(250, 250, 250);
+    }
+    .menu {
+        display: grid;
+        background-color: #0047a3;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(5, 1fr); 
+    }
+    .menu-item:hover ul{
+        display: none;
+    }
+}  
