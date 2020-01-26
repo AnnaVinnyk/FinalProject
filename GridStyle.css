@@ -9,17 +9,28 @@ body {
     padding: 0;
 }
 
+body>div {
+    padding-left: 12.5%;
+    padding-right: 12.5%;
+    text-align: justify;    
+}
+
 /*стили для шапки сайта*/
 
 .header {
     font-family: "Century Gothic";
     font-weight: bold;
     color: white;
-    padding-left: 150px;
-    padding-right: 150px;
+    padding-left: 12.5%;
+    padding-right: 12.5%;
+    justify-self: center;
+    align-self: center;
     display: grid;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0;
     background-color: #0047a3;
-    grid-template-columns: minmax(130px, 2fr) minmax(1px, 6fr) minmax(260px, 4fr) minmax(260px, 4fr);
+    grid-template-columns: minmax(160px, 1fr) minmax(260px, 2fr) minmax(230px, 1fr);
     grid-template-rows: 2fr 3fr 4fr;    
 }
 
@@ -34,11 +45,11 @@ body {
 }
 
 .number {
-    font-size: 18px;
+    font-size: 21.1px;
 }
 
 .time {
-    font-size: 9.85px;
+    font-size: 11.5px;
 }
 
 .name {
@@ -57,14 +68,19 @@ body {
 }
 
 .logo {
-    padding: 0;
-    margin: 0;
     justify-self: center;
     align-self: center;
+    padding: 0;
+    margin: 0;
 }
 
 .logo img {
     max-width: 100%;
+    align-self: stretch;
+    margin: 0;
+}
+
+.logo div {
     padding: 0;
     margin: 0;
 }
@@ -77,17 +93,17 @@ body {
 
 .menu {
     font-family: "Century Gothic";
-    font-weight: normal;
     font-size: 14px;
     color: #ff7c00;
-    top: -18px;
+    /*top: -18px;*/
+    margin: 0;
     padding: 0;
-    padding-left: 150px;
-    padding-right: 150px;
-    position: relative;
+    padding-left: 12.5%;
+    padding-right: 12.5%;
+    /*position: relative;*/
     display: grid;
     background-color: #0047a3;
-    grid-template-columns: repeat(8, minmax(130px, 2fr)); 
+    grid-template-columns: repeat(8, minmax(130px, 2fr));
 }
 
 .menu-item {
@@ -100,9 +116,30 @@ body {
     border: 0px solid rgb(250, 250, 250);
 }
 
+/*.service {
+    padding: 0;
+}
+
+button {
+    font-family: "Century Gothic";
+    font-size: 14px;
+    font-weight: bold;
+    color: #ff7c00;
+    background-color: #0047a3;
+    border: transparent;
+    margin: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 100%;
+}*/
+
 .menu-item:hover {
     background-color: #00a9d2;
     color: white;
+}
+
+ul {
+    margin: 0;
 }
 
 .menu-item:hover ul{
@@ -139,55 +176,20 @@ body {
 
 /*медиа-запросы в переломных точках*/
 
-@media (max-width: 1150px) {
-    .header, .menu {
-        padding-left: 13%;
-        padding-right: 13%;
-    }
-}
-
-@media (max-width: 1005px) {
-    .header, .menu {
-        padding-left: 10%;
-        padding-right: 10%;
-    }
-}
-
-@media (max-width: 905px) {
-    .header, .menu {
-        padding-left: 7%;
-        padding-right: 7%;
-    }
-}
-
-@media (max-width: 805px) {
-    .header, .menu {
-        padding-left: 3%;
-        padding-right: 3%;
-    }
-}
-
-@media (max-width: 795px) {
-    .header, .menu {
-        padding-left: 3%;
-        padding-right: 3%;
-    }
-}
-
-@media (max-width: 750px) {
-    .header, .menu {
-        padding-left: 0;
-        padding-right: 0;
+@media (max-width: 870px) {    
+    .header, .menu, body>div {
+        padding-left: 25px;
+        padding-right: 25px;
     }
     .header div:nth-child(2) {
         grid-area: telephone;
         justify-self: center;
     }
-    .header div:nth-child(4) {
+    .header div:nth-child(3) {
         grid-area: fullname;
         justify-self: center;
     }
-    .header div:nth-child(5) {
+    .header div:nth-child(4) {
         grid-area: logotype;
         justify-self: center;
     }
@@ -209,13 +211,58 @@ body {
     .menu-item {
         border: 0px solid rgb(250, 250, 250);
     }
+}  
+
+@media (max-width: 700px) {
     .menu {
-        display: grid;
+        padding-left: 0;
+        padding-right: 0;display: grid;
         background-color: #0047a3;
         grid-template-columns: auto;
-        grid-template-rows: repeat(5, 1fr); 
+        grid-template-rows: repeat(5, auto); 
     }
     .menu-item:hover ul{
         display: none;
+    }  
+    .submenu {
+        width: 100%;
+        text-align: center;
+        top: 15px;
     }
-}  
+    .menu-item .service::before {
+        content: '▶ ';
+        font-size: 80%;
+        color: #ff7c00;
+    }
+    .menu-item.open .service::before {
+        content: '▼ ';
+        color: white;
+    }
+    
+    .menu-item.open ul {
+        display: block;
+    }
+}
+
+@media (min-width: 871px) {
+    .submenu {
+        width: 225px;
+        text-align: left;
+        /*top: 15px;*/
+        position: absolute;
+        display: none;                
+    } 
+    .menu-item:hover ul{
+        display: block;
+    } 
+    .menu-item:hover, button:hover {
+        background-color: #00a9d2;
+        color: white;
+    } 
+}
+
+
+.menu-item {
+    cursor: pointer;
+}
+

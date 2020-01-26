@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
     <link href="GridStyle.css" type="text/css" rel="stylesheet" />
+    <script async src="FinalProject.js"></script>
 </head>
 
 <body>
@@ -18,23 +19,22 @@
             <div class="number">0(800) 50 77 12</div>
             <div class="time">Ежедневно с 7:55 до 20:05</div>
         </div>
-        <div></div>
+        <!--<div></div>-->
         <div class="header-item name">
             <div class="first">Рекрутинговая компания</div>
             <div class="second">по подбору рабочих кадров</div>
         </div>
-        <div id="logotype" class="header-item logo">
-            <div>
-                <img src="WorkerHUNTERS.png" alt="Логотип компании">
-            </div>
+        <div class="header-item logo">
+            <div><img src="WorkerHUNTERS.png" alt="Логотип компании"></div>
         </div>
     </div>
     <!--меню сайта-->
     <ul class="menu">
         <li class="menu-item">Главная</li>
         <li class="menu-item">Рынок труда</li>
-        <li class="menu-item">Наши услуги
-            <ul class="submenu">
+        <li id="OurService" class="menu-item"><div class="service">Наши услуги</div>
+            <!--<button id="OurService">Наши услуги</button>-->
+            <ul id="sub" class="submenu">
                 <li class="submenu-item">Сохранение персонала</li>
                 <li class="submenu-item">Обучение персонала</li>
                 <li class="submenu-item">Привлечение сотрудников</li>
@@ -57,6 +57,17 @@
         neque soluta.
     </div>
     <!--подвал сайта-->
+    <script>
+        /*
+        OurService.onclick = function () {
+            if (sub.style.display === "block") {
+                sub.style.display = "none";
+            }
+            else { sub.style.display = "block"; };
+        }
+        */
+    </script>
+
 </body>
 
 </html>
