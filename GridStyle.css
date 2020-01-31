@@ -133,7 +133,7 @@ button {
     width: 100%;
 }*/
 
-.menu-item:hover {
+.menu-item:hover{
     background-color: #00a9d2;
     color: white;
 }
@@ -142,11 +142,11 @@ ul {
     margin: 0;
 }
 
-.menu-item:hover ul{
+.menu-item:hover ul {
     display: block;
 }
 
-.submenu {
+.submenu, .menu-item ul {
     font-family: "Century Gothic";
     font-size: 14px;
     background-color: #bfe9f4;
@@ -158,6 +158,10 @@ ul {
     padding: 0;
     top: 47px;
     left: 0;      
+}
+
+#sub {
+    position: absolute;
 }
 
 .submenu-item {
@@ -229,38 +233,46 @@ ul {
         text-align: center;
         top: 15px;
     }
+    
     .menu-item .service::before {
         content: '▶ ';
         font-size: 80%;
         color: #ff7c00;
     }
+
+    .menu-item:hover .service::before {
+        content: '▶ ';
+        font-size: 80%;
+        color: white;
+    }
+
     .menu-item.open .service::before {
+        content: '▼ ';
+        color: #ff7c00;
+    }
+
+    .menu-item.open:hover .service::before {
         content: '▼ ';
         color: white;
     }
     
     .menu-item.open ul {
         display: block;
+        text-align: center;
+        width: 100%;
+        padding: 0;
+        top: 17px;
+        left: 0;
+    }
+
+    #sub {
+        position: absolute;
+    }
+
+    #sub.open {
+        position: relative;
     }
 }
-
-@media (min-width: 871px) {
-    .submenu {
-        width: 225px;
-        text-align: left;
-        /*top: 15px;*/
-        position: absolute;
-        display: none;                
-    } 
-    .menu-item:hover ul{
-        display: block;
-    } 
-    .menu-item:hover, button:hover {
-        background-color: #00a9d2;
-        color: white;
-    } 
-}
-
 
 .menu-item {
     cursor: pointer;
