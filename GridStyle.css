@@ -286,6 +286,16 @@ ul {
     text-align: center;
 }
 
+.sub1-blocks-item-temp {
+    border: 0px solid black;
+    font-size: 19px;
+    color: white;
+    background-color: #1ed9a1;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
 .sub2-blocks-item {
     border: 0px solid black;
     font-style: italic;
