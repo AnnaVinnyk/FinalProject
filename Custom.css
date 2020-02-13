@@ -1,0 +1,132 @@
+body {
+    font-family: Calibri;
+    font-size: 20px;
+    display: grid;
+    grid-template-columns: 1fr minmax(200px, 1150px) 1fr;
+    background-color: #f8f4e8;
+    margin: 0;
+    padding: 0;
+}
+
+body > div {
+    padding: 0;
+    margin: 0;
+    /*padding-left: 25px;
+    padding-right: 25px;
+    text-align: justify;*/    
+}
+
+/*цветовая карта*/
+
+.orange-fon {
+    background-color: #ff7c00;
+}
+
+.orange-text {
+    color: #ff7c00;
+}
+
+.orange-line {
+    border-bottom: 4px solid #ff7c00;    
+}
+
+.navy-fon {
+    background-color: #0047a3;
+}
+
+.navy-text {
+    color: #0047a3;
+}
+
+.blue-fon {
+    background-color: #1e95d9;
+}
+
+.blue-text {
+    color: #1e95d9;
+}
+/*он же navy-on-white*/
+.blue-on-white {
+    /*color: #1e95d9;
+    background-color: white;*/
+    color: #0047a3;
+    background-color: white;
+}
+/*он же navy-on-lightblue*/
+.white-on-blue {
+    /*background-color: #1e95d9;
+    color: white;*/
+    color: #0047a3;
+    background-color: #deefff;
+}
+
+.white-on-navy {
+    /*background-color: #0047a3;
+    color: white;*/
+    color: white;
+    background-color: #0086e4;
+}
+
+.white-on-orange {
+    /*background-color: #1e95d9;
+    color: white;*/
+    color: white;
+    background-color: #ff7c00;
+}
+
+.lightblue-fon {
+    background-color: #deefff;
+}
+
+.blue-on-lightblue {
+    color: #0047a3;
+    background-color: #deefff;
+}
+
+.orange-on-navy {
+    background-color: #0047a3;
+    color: #ff7c00;   
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.button {
+    height: 40px;
+    font-size: 17px;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    /*background-color: white;    
+    border: 1px solid #ff7c00;
+    color: white;*/
+    border-radius: 20px;
+    /*background-color: #0086e4;
+    background-color: #0047a3;*/
+    border: 1px solid #0047a3;;
+    background-color: #deefff;
+    color: #0047a3;
+    cursor: pointer;
+}
+
+.button:hover {
+    /*background-color: #0047a3;
+    background-color: #ff7c00;*/
+    border: 1px solid #0086e4;
+    background-color: #0086e4;
+    color: white;
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -o-transition: 0.2s;
+    -ms-transition: 0.2s;
+}
+
+.button:not(:hover) {
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -o-transition: 0.2s;
+    -ms-transition: 0.2s;
+}

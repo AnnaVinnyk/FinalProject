@@ -6,16 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>FinalProject</title>
-    <link href="GridStyle.css" type="text/css" rel="stylesheet" />
+    <link href="Custom.css" type="text/css" rel="stylesheet" />
+    <link href="Header.css" type="text/css" rel="stylesheet" />
+    <link href="Menu.css" type="text/css" rel="stylesheet" />
+    <link href="Content.css" type="text/css" rel="stylesheet" />
+    <link href="Footer.css" type="text/css" rel="stylesheet" />
+    <link href="Media.css" type="text/css" rel="stylesheet" />
+    <!--<link href="GridStyle.css" type="text/css" rel="stylesheet" />-->
     <!--код для меню-->
     <script async src="FinalProject.js"></script>
     <!--код для карточек с отзывами клиентов-->
-    <script async src="async.js"></script>
+    <script async src="reviews.js"></script>
+    <!--код для карусели-->
+    <script async src="slider.js"></script>
+    <!--код для рекомендаций
+    <script async src="recommendations.js"></script>-->
 </head>
 
 <body>
-    <!--шапка сайта-->
-    <div class="header navy-fon fields">
+    <!--ШАПКА САЙТА-->
+    <div class="navy-fon"></div>
+    <div class="header navy-fon">
         <div></div>
         <div class="header-item phone">
             <div class="number">(044) 593 82 39</div>
@@ -27,103 +38,376 @@
             <div class="first">Рекрутинговая компания</div>
             <div class="second">по подбору рабочих кадров</div>
         </div>
-        <div class="header-item logo">
-            <div><img src="WorkerHUNTERS.png" alt="Логотип компании"></div>
+        <div class="header-item logo cursor">
+            <div><a href="index.html"><img src="WorkerHUNTERS.png" alt="Логотип компании" class="first-img"></a>
+                <a href="index.html"><img src="WorkerHUNTERS_reverse.png" alt="Логотип компании" class="second-img"></a>
+            </div>
         </div>
     </div>
-    <!--меню сайта-->
-    <ul class="menu fields menu-font orange-on-navy">
-        <li class="menu-item">Главная</li>
-        <li class="menu-item">Рынок труда</li>
-        <li id="OurService" class="menu-item">
-            <div class="service">Наши услуги</div>
-            <!--<button id="OurService">Наши услуги</button>-->
-            <ul id="sub" class="submenu orange-text">
-                <li class="submenu-item">Сохранение персонала</li>
-                <li class="submenu-item">Обучение персонала</li>
-                <li class="submenu-item">Привлечение сотрудников</li>
-            </ul>
-        </li>
-        <li class="menu-item">Отзывы</li>
-        <li class="menu-item">Контакты</li>
-    </ul>
-    <!--содержимое страницы сайта-->
-    <!--ОТЗЫВЫ КЛИЕНТОВ-->
-    <div class="subject orange-text fields">
-        <div>ОТЗЫВЫ НАШИХ КЛИЕНТОВ</div>
-        <div class="orange-line"></div>
-        <div class="orange-line"></div>
+    <div class="navy-fon"></div>
+    <!--МЕНЮ САЙТА-->
+    <div class="orange-on-navy"></div>
+    <div class="orange-on-navy">
+        <ul class="menu menu-font orange-on-navy">
+            <li class="menu-item cursor">Главная</li>
+            <li class="menu-item cursor">Рынок труда</li>
+            <li id="OurService" class="menu-item cursor">
+                <div class="service">Наши услуги</div>
+                <!--<button id="OurService">Наши услуги</button>-->
+                <ul id="sub" class="submenu orange-text">
+                    <li class="submenu-item cursor">Сохранение персонала</li>
+                    <li class="submenu-item cursor">Обучение персонала</li>
+                    <li class="submenu-item cursor">Привлечение сотрудников</li>
+                </ul>
+            </li>
+            <li class="menu-item cursor">Отзывы</li>
+            <li class="menu-item cursor">Контакты</li>
+        </ul>
     </div>
-    <div id=reviews class="blocks fields content-font grid-for-content-blocks">
-        <!--ВСТАВКА ЭТОЙ ЧАСТИ ПРОИСХОДИТ ЧЕРЕЗ JAVASCRIPT
-        
-        <div class="blocks-item">
-            <div class="sub1-blocks-item">Леонардо Ди Каприо</div>
-            <div class="sub2-blocks-item">
-                <div class="div-clients"><img src="clients/client-002.jpg" alt="Di Caprio" class="clients" /></div>
-                <div class="blue-on-white">
-                    <div class="organization">МЕТІНВЕСТ</div>
-                    <div class="profession">Recruitment/HR Manager</div>
+    <div class="orange-on-navy"></div>
+    <!--СОДЕРЖИМОЕ СТРАНИЦЫ-->
+    <!--пустой блок для полей-->
+    <div></div>
+    <div>
+        <!--команда профессионалов-->
+        <div class="subject orange-text">
+            <div>КОМАНДА ПРОФЕССИОНАЛОВ</div>
+            <div class="orange-line"></div>
+            <div class="orange-line"></div>
+        </div>
+        <!--блоки презентации-->
+        <div class="blocks content-font grid-for-content-blocks presentation">
+            <!--о компании-->
+            <div class="blocks-item company">
+                <div>
+                    <div class="sub1-blocks-item">О компании</div>
+                    <div class="sub3-blocks-item">
+                        <div class="presentation-block">
+                            <div class="presentation-content">
+                                <div><img src="markers/marker-.png" alt="Маркер"></div>
+                                <div>Совре&shy;мен&shy;ная и ин&shy;но&shy;ва&shy;ци&shy;он&shy;ная ком&shy;па&shy;ния
+                                </div>
+                            </div>
+                            <div class="presentation-content">
+                                <div><img src="markers/marker-.png" alt="Маркер"></div>
+                                <div>Инди&shy;ви&shy;ду&shy;аль&shy;ный под&shy;ход к каж&shy;до&shy;му
+                                    кли&shy;ен&shy;ту
+                                </div>
+                            </div>
+                            <div class="presentation-content">
+                                <div><img src="markers/marker-.png" alt="Маркер"></div>
+                                <div>Много&shy;лет&shy;ний опыт успеш&shy;ной ра&shy;бо&shy;ты</div>
+                            </div>
+                            <div class="presentation-content">
+                                <div><img src="markers/marker-.png" alt="Маркер"></div>
+                                <div>Приме&shy;не&shy;ние прин&shy;ци&shy;пов раз&shy;ви&shy;тых стран</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="review">Lorem ipsum dolor sit, amet consectetur adipisicing elit. A, ad veniam
-                    officiisillum nostrum pariatur voluptatibus eveniet corrupti aperiam! Expedita nostrum earum quae
-                    voluptate temporibus distinctio totam unde neque soluta. Lorem ipsum dolor sit, amet consectetur
-                    adipisicing elit. A, ad veniam
-                    officiisillum nostrum pariatur voluptatibus eveniet corrupti aperiam! Expedita nostrum earum quae
-                    voluptate temporibus distinctio totam unde neque soluta.</div>
-                <div class="div-logos"><img src="logos/logo-002.jpg" alt="Metinvest" class="logos" /></div>
             </div>
+            <!--карусель-->
+            <div class="blocks-item slide">
+                <div class="sub4-blocks-item">
+                    <div class="karusel">
+                        <div><img src="images/slide01.jpg" alt="Стратегии развитых стран"
+                                class="mySlides-01 image-01 cursor">
+                            <img src="images/slide02.jpg" alt="Сохранение персонала"
+                                class="mySlides-01 image-00 image-02 cursor">
+                            <img src="images/slide03.jpg" alt="Инновационный метод поиска"
+                                class="mySlides-01 image-00 image-03 cursor">
+                            <img src="images/slide04.jpg" alt="Стратегия привлечения кадров"
+                                class="mySlides-01 image-00 image-04 cursor">
+                            <img src="images/slide05.jpg" alt="Наши клиенты"
+                                class="mySlides-01 image-00 image-05 cursor">
+                        </div>
+                    </div>
+                </div>
+                <div class="navigator">
+                    <div class="karusel-navigator white-on-navy" onclick="changeIndex(1)">1</div>
+                    <div class="karusel-navigator white-on-navy" onclick="changeIndex(2)">2</div>
+                    <div class="karusel-navigator white-on-navy" onclick="changeIndex(3)">3</div>
+                    <div class="karusel-navigator white-on-navy" onclick="changeIndex(4)">4</div>
+                    <div class="karusel-navigator white-on-navy" onclick="changeIndex(5)">5</div>
+                </div>
+            </div>
+            <!--деятельность-->
+            <div class="blocks-item">
+                <div>
+                    <div class="sub1-blocks-item">Деятельность</div>
+                    <div class="sub3-blocks-item">
+                        <div class="presentation-content">
+                            <div><img src="markers/marker-.png" alt="Маркер"></div>
+                            <div>Налаживание взаимосвязи между работником и руководителем предприятия</div>
+                            <div><img src="markers/marker-.png" alt="Маркер"></div>
+                            <div>Разрабатывание и внедрение индивидуальной системы экономических стимулов и социальных
+                                гарантий
+                            </div>
+                            <div><img src="markers/marker-.png" alt="Маркер"></div>
+                            <div>Оформление необходимой докуметации и полное сопровождение процедуры "заём у
+                                работодателя"
+                            </div>
+                            <div><img src="markers/marker-.png" alt="Маркер"></div>
+                            <div>Инновационная методика привлечения новых сотрудников, основанная как на собственном
+                                успешном
+                                опыте работы, так и на опыте европейских стран</div>
+                            <div><img src="markers/marker-.png" alt="Маркер"></div>
+                            <div>Разрабатывание и внедрение эффективной системы управления кадрами, а также при
+                                необходимости
+                                обучение кадрового персонала предприятия</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--нам доверяют-->
+        <div class="subject orange-text">
+            <div>НАМ ДОВЕРЯЮТ</div>
+            <div class="orange-line"></div>
+            <div class="orange-line"></div>
+        </div>
+        <!--блоки-логотипы компаний-->
+        <div class="blocks content-font grid-for-content-blocks trust">
+            <div class="trusty cursor">
+                <div class="pic">
+                    <a href="https://metinvestholding.com" target="_blank">
+                        <img src="trust/Trust-01.jpg" alt="МЕТІНВЕСТ" class="mySlides-02">
+                    </a>
+                </div>
+                <div class="navy-text"><a href="https://metinvestholding.com" target="_blank">МЕТІНВЕСТ</a></div>
+            </div>
+            <div class="trusty cursor">
+                <div class="pic">
+                    <a href="https://dtek.com" target="_blank">
+                        <img src="trust/Trust-02.jpg" alt="ДТЭК" class="mySlides-02">
+                    </a>
+                </div>
+                <div class="navy-text"><a href="https://dtek.com" target="_blank">ДТЭК</a></div>
+            </div>
+            <div class="trusty cursor">
+                <div class="pic">
+                    <a href="https://www.lemtrans.com.ua" target="_blank">
+                        <img src="trust/Trust-03.jpg" alt="Лемтранс" class="mySlides-02">
+                    </a>
+                </div>
+                <div class="navy-text"><a href="https://www.lemtrans.com.ua" target="_blank">Лемтранс</a></div>
+            </div>
+            <div class="trusty cursor">
+                <div class="pic">
+                    <a href="https://www.ferrexpo.ua" target="_blank">
+                        <img src="trust/Trust-04.jpg" alt="FERREXPO" class="mySlides-02">
+                    </a>
+                </div>
+                <div class="navy-text"><a href="https://www.ferrexpo.ua" target="_blank">FERREXPO</a></div>
+            </div>
+            <div class="trusty cursor">
+                <div class="pic">
+                    <a href="http://www.motorsich.com/ukr/" target="_blank">
+                        <img src="trust/Trust-05.jpg" alt='АО "МОТОР СИЧ"' class="mySlides-02">
+                    </a>
+                </div>
+                <div class="navy-text"><a href="http://www.motorsich.com/ukr/" target="_blank">АО "МОТОР СИЧ"</a></div>
+            </div>
+            <div class="trusty cursor">
+                <div class="pic">
+                    <a href="http://donetsksteel.com.ua" target="_blank">
+                        <img src="trust/Trust-06.jpg" alt='ПРАО "Донецксталь"' class="mySlides-02">
+                    </a>
+                </div>
+                <div class="navy-text"><a href="http://donetsksteel.com.ua" target="_blank">ПРАО "Донецксталь"</a></div>
+            </div>
+            <div class="trusty cursor">
+                <div class="pic">
+                    <a href="http://ztr.com.ua" target="_blank">
+                        <img src="trust/Trust-07.jpg" alt='ЧАО "Запорожтрансформатор"' class="mySlides-02">
+                    </a>
+                </div>
+                <div class="navy-text"><a href="http://ztr.com.ua" target="_blank">ЧАО "Запорожтрансформатор"</a></div>
+            </div>
+            <div class=" trusty cursor">
+                <div class="pic">
+                    <a href="http://www.ugok.info" target="_blank">
+                        <img src="trust/Trust-08.jpg" alt="ЮГОК" class="mySlides-02">
+                    </a>
+                </div>
+                <div class="navy-text"><a href="http://www.ugok.info" target="_blank">ЮГОК</a></div>
+            </div>
+        </div>
+        <!--отзывы клиентов-->
+        <div class="subject orange-text">
+            <div>ОТЗЫВЫ НАШИХ КЛИЕНТОВ</div>
+            <div class="orange-line"></div>
+            <div class="orange-line"></div>
+        </div>
+        <!--блоки с отзывами клиентов-->
+        <div id=reviews class="blocks content-font grid-for-content-blocks">
+            <!--ВСТАВКА ЭТОЙ ЧАСТИ ПРОИСХОДИТ ЧЕРЕЗ JAVASCRIPT
+        <div class="blocks-item">
+            <div>
+                <div class="sub1-blocks-item">Леонардо Ди Каприо</div>
+                <div class="sub2-blocks-item">
+                    <div class="div-clients"><img src="clients/client-002.jpg" alt="Di Caprio" class="clients" /></div>
+                    <div class="blue-on-white">
+                        <div class="organization">МЕТІНВЕСТ</div>
+                        <div class="profession">Recruitment/HR Manager</div>
+                    </div>
+                    <div class="review">Lorem ipsum dolor sit, amet consectetur adipisicing elit. A, ad veniam
+                        officiisillum nostrum pariatur voluptatibus eveniet corrupti aperiam! Expedita nostrum earum
+                        quae
+                        voluptate temporibus distinctio totam unde neque soluta. Lorem ipsum dolor sit, amet consectetur
+                        adipisicing elit. A, ad veniam
+                        officiisillum nostrum pariatur voluptatibus eveniet corrupti aperiam! Expedita nostrum earum
+                        quae
+                        voluptate temporibus distinctio totam unde neque soluta.</div>
+                </div>
+            </div>
+            <div class="div-logos"><img src="logos/logo-002.jpg" alt="Metinvest" class="logos" /></div>
         </div>-->
+        </div>
+        <!--кнопка-->
+        <div class="blocks but content-font grid-for-content-blocks">
+            <div class="button reviews">Больше отзывов</div>
+        </div>
+        <!--рекомендуем к просмотру-->
+        <div class="subject orange-text">
+            <div>РЕКОМЕНДУЕМ К ПРОСМОТРУ</div>
+            <div class="orange-line"></div>
+            <div class="orange-line"></div>
+        </div>
+        <!--блоки с рекомендациями-->
+        <div id=recommendations class="blocks content-font grid-for-content-blocks">
+            <!--ВСТАВКА ЭТОЙ ЧАСТИ ПРОИСХОДИТ ЧЕРЕЗ JAVASCRIPT-->
+            <div class="blocks-item">
+                <div>
+                    <div class="sub1-blocks-item">Рынок труда</div>
+                    <div class="sub5-blocks-item">
+                        <div class="div-clients"><img src="images/reccom01.jpg" alt="Реккомендации" class="reccom" />
+                        </div>
+                        <!--<div class="blue-on-white">
+                            <div class="organization">МЕТІНВЕСТ</div>
+                            <div class="profession">Recruitment/HR Manager</div>
+                        </div>-->
+                        <div class="review">Lorem ipsum dolor sit, amet consectetur adipisicing elit. A, ad veniam
+                            officiisillum nostrum pariatur voluptatibus eveniet corrupti aperiam! Expedita nostrum earum
+                            quae
+                            voluptate temporibus distinctio totam unde neque soluta. Lorem ipsum dolor sit, amet
+                            consectetur
+                            adipisicing elit. A, ad veniam
+                            officiisillum nostrum pariatur voluptatibus eveniet corrupti aperiam! Expedita nostrum earum
+                            quae
+                            voluptate temporibus distinctio totam unde neque soluta.</div>
+                    </div>
+                </div>
+                <div class="button reccom">Подробнее</div>
+            </div>
+            <div class="blocks-item">
+                <div>
+                    <div class="sub1-blocks-item">Сохранение персонала</div>
+                    <div class="sub5-blocks-item">
+                        <div class="div-clients"><img src="images/reccom02.jpg" alt="Реккомендации" class="reccom" />
+                        </div>
+                        <!--<div class="blue-on-white">
+                            <div class="organization">МЕТІНВЕСТ</div>
+                            <div class="profession">Recruitment/HR Manager</div>
+                        </div>-->
+                        <div class="review">Lorem ipsum dolor sit, amet consectetur adipisicing elit. A, ad veniam
+                            officiisillum nostrum pariatur voluptatibus eveniet corrupti aperiam! Expedita nostrum earum
+                            quae
+                            voluptate temporibus distinctio totam unde neque soluta.</div>
+                    </div>
+                </div>
+                <div class="button reccom">Подробнее</div>
+            </div>
+            <div class="blocks-item">
+                <div>
+                    <div class="sub1-blocks-item">Обучение персонала</div>
+                    <div class="sub5-blocks-item">
+                        <div class="div-clients"><img src="images/reccom03.jpg" alt="Реккомендации" class="reccom" />
+                        </div>
+                        <!--<div class="blue-on-white">
+                            <div class="organization">МЕТІНВЕСТ</div>
+                            <div class="profession">Recruitment/HR Manager</div>
+                        </div>-->
+                        <div class="review">Lorem ipsum dolor sit, amet consectetur adipisicing elit. A, ad veniam
+                            officiisillum nostrum pariatur voluptatibus eveniet corrupti aperiam! Expedita nostrum earum
+                            quae
+                            voluptate temporibus distinctio totam unde neque soluta. Lorem ipsum dolor sit, amet
+                            consectetur
+                            adipisicing elit. A, ad veniam
+                            officiisillum nostrum pariatur voluptatibus eveniet corrupti aperiam! Expedita nostrum earum
+                            quae
+                            voluptate temporibus distinctio totam unde neque soluta.</div>
+                    </div>
+                </div>
+                <div class="button reccom">Подробнее</div>
+            </div>
+            <div class="blocks-item">
+                <div>
+                    <div class="sub1-blocks-item">Привлечение сотрудников</div>
+                    <div class="sub5-blocks-item">
+                        <div class="div-clients"><img src="images/reccom04.jpg" alt="Реккомендации" class="reccom" />
+                        </div>
+                        <!--<div class="blue-on-white">
+                            <div class="organization">МЕТІНВЕСТ</div>
+                            <div class="profession">Recruitment/HR Manager</div>
+                        </div>-->
+                        <div class="review">Lorem ipsum dolor sit, amet consectetur adipisicing elit. A, ad veniam
+                            officiisillum nostrum pariatur voluptatibus eveniet corrupti aperiam! Expedita nostrum earum
+                            quae
+                            voluptate temporibus distinctio totam unde neque soluta.</div>
+                    </div>
+                </div>
+                <div class="button reccom">Подробнее</div>
+            </div>
+        </div>
     </div>
-    <!--БЛОКИ-ПРЕЗЕНТАЦИИ-->
-    <div class="subject orange-text fields">
-        <div>КОМАНДА ПРОФЕССИОНАЛОВ</div>
-        <div class="orange-line"></div>
-        <div class="orange-line"></div>
-    </div>
-    <div class="presentation fields content-font grid-for-content-blocks">
-        <div class="blocks-item">
-            <div class="sub1-blocks-item">О компании</div>
-            <div class="sub3-blocks-item">Lorem ipsum dolor sit, amet consectetur adipisicing elit. A, ad veniam
-                officiisillum nostrum pariatur voluptatibus eveniet corrupti aperiam! Expedita nostrum earum quae
-                voluptate temporibus distinctio totam unde neque soluta.
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. A, ad veniam
-                officiisillum nostrum pariatur voluptatibus eveniet corrupti aperiam! Expedita nostrum earum quae
-                voluptate temporibus distinctio totam unde neque soluta.
+    <!--пустой блок для полей-->
+    <div></div>
+    <!--ПОДВАЛ САЙТА-->
+    <div class="footer navy-fon"></div>
+    <div class="footer navy-fon">
+        <div class="footer-menu">
+            <div>
+                <div class="orange-text headline">КОНТАКТЫ</div>
+                <li class="footer-menu-item">
+                    <div>ул. Богдана Хмельницкого, 32,</div>
+                    <div>г. Киев, 01030, Украина</div>
+                </li>
+                <li class="footer-menu-item">(044) 593 82 39, 0 (800) 50 77 12</li>
+                <li class="footer-menu-item">office2@workerhunters.ua</li>
+            </div>
+            <div>
+                <div class="orange-text headline">НАВИГАЦИЯ ПО САЙТУ</div>
+                <li class="footer-menu-item cursor">Главная</li>
+                <li class="footer-menu-item cursor">Рынок труда</li>
+                <li class="footer-menu-item cursor">Наши услуги</li>
+                <li class="footer-menu-item cursor">Отзывы</li>
+            </div>
+            <div>
+                <div class="orange-text headline">НАШИ УСЛУГИ</div>
+                <li class="footer-menu-item cursor">
+                    <div>Мотивация и сохранение</div>
+                    <div>персонала</div>
+                </li>
+                <li class="footer-menu-item cursor">
+                    <div>Обучение кадрового</div>
+                    <div>персонала</div>
+                </li>
+                <li class="footer-menu-item cursor">Привлечение кадров</li>
+            </div>
+            <div>
+                <div class="orange-text headline">МЫ В СОЦСЕТЯХ</div>
+                <li class="footer-menu-item cursor">YouTube</li>
+                <li class="footer-menu-item cursor">Facebook</li>
+                <li class="footer-menu-item cursor">Instagram</li>
             </div>
         </div>
-        <div class="blocks-item">
-            <div class="sub1-blocks-item">Наши преимущества</div>
-            <div class="sub3-blocks-item">Lorem ipsum dolor sit, amet consectetur adipisicing elit. A, ad veniam
-                officiisillum nostrum pariatur voluptatibus eveniet corrupti aperiam! Expedita nostrum earum quae
-                voluptate temporibus distinctio totam unde neque soluta.
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. A, ad veniam
-                officiisillum nostrum pariatur voluptatibus eveniet corrupti aperiam! Expedita nostrum earum quae
-                voluptate temporibus distinctio totam unde neque soluta.
-            </div>
-        </div>
-        <div class="blocks-item">
-            <div class="sub1-blocks-item">Деятельность</div>
-            <div class="sub3-blocks-item">Lorem ipsum dolor sit, amet consectetur adipisicing elit. A, ad veniam
-                officiisillum nostrum pariatur voluptatibus eveniet corrupti aperiam! Expedita nostrum earum quae
-                voluptate temporibus distinctio totam unde neque soluta.
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. A, ad veniam
-                officiisillum nostrum pariatur voluptatibus eveniet corrupti aperiam! Expedita nostrum earum quae
-                voluptate temporibus distinctio totam unde neque soluta.
-            </div>
-        </div>
-        <div class="blocks-item">
-            <div class="sub1-blocks-item">Нам доверяют</div>
-            <div class="sub3-blocks-item">Lorem ipsum dolor sit, amet consectetur adipisicing elit. A, ad veniam
-                officiisillum nostrum pariatur voluptatibus eveniet corrupti aperiam! Expedita nostrum earum quae
-                voluptate temporibus distinctio totam unde neque soluta.
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. A, ad veniam
-                officiisillum nostrum pariatur voluptatibus eveniet corrupti aperiam! Expedita nostrum earum quae
-                voluptate temporibus distinctio totam unde neque soluta.
-            </div>
+        <div class="orange-text headline">ЛЮБОЕ СОВПАДЕНИЕ С РЕАЛЬНОСТЬЮ СЛУЧАЙНО!</div>
+        <div>© WorkerHunters, 2000-2020</div>
+        <div>За использование материалов без согласия WorkerHunters уголовная ответственность не предусмотрена.
         </div>
     </div>
-    <!--подвал сайта-->
+    <div class="footer navy-fon"></div>
     <script>
 
     </script>

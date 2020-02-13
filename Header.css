@@ -1,0 +1,121 @@
+/*стили для шапки сайта*/
+
+.header {
+    font-family: "Century Gothic";
+    font-weight: bold;
+    color: white;
+    justify-self: center;
+    align-self: center;
+    display: grid;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0;
+    grid-template-columns: minmax(160px, 1fr) minmax(260px, 2fr) minmax(230px, 1fr);
+    -webkit-grid-template-columns: minmax(160px, 1fr) minmax(260px, 2fr) minmax(230px, 1fr);
+    -moz-grid-template-columns: minmax(160px, 1fr) minmax(260px, 2fr) minmax(230px, 1fr);
+    -o-grid-template-columns: minmax(160px, 1fr) minmax(260px, 2fr) minmax(230px, 1fr);
+    -ms-grid-template-columns: minmax(160px, 1fr) minmax(260px, 2fr) minmax(230px, 1fr); 
+    grid-template-rows: 2fr 3fr 4fr;
+    -webkit-grid-template-rows: 2fr 3fr 4fr;
+    -moz-grid-template-rows: 2fr 3fr 4fr;
+    -o-grid-template-rows: 2fr 3fr 4fr;
+    -ms-grid-template-rows: 2fr 3fr 4fr;     
+}
+
+.header > div:nth-child(1) {
+    grid-column: 1 / -1;
+    -webkit-grid-column: 1 / -1;
+    -moz-grid-column: 1 / -1;
+    -o-grid-column: 1 / -1;
+    -ms-grid-column: 1 / -1; 
+}
+
+.phone {
+    font-weight: normal;
+    justify-self: stretch;
+    align-self: center;  
+}
+
+.number {
+    font-size: 21.1px;
+}
+
+.time {
+    font-size: 11.5px;
+}
+
+.name {
+    font-weight: normal;
+    justify-self: end;
+    align-self: center;
+    padding-right: 3px;
+}
+
+.first {
+    font-size: 20px;
+}
+
+.second {
+    font-size: 17.3px;
+}
+
+.logo {    
+    padding: 0;
+    margin: 0;
+}
+
+.logo img {
+    max-width: 100%;
+    align-self: stretch;
+    display: block;
+}
+
+.logo > div {
+    padding: 0;
+    margin: 0;
+    justify-self: center;
+    align-self: center;
+    position: relative;
+}
+
+.first-img {
+    opacity: 1;
+    position: absolute;
+    z-index: 100;
+    /*transition-duration: 3.3s;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    -ms-transition-duration: 0.3s;*/
+}
+
+.second-img {
+    position: relative;
+    /*transition-duration: 3.3s;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    -ms-transition-duration: 0.3s;*/
+}
+
+.first-img:hover {
+    opacity: 0.00;
+    transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -ms-transition-duration: 0.5s;
+}
+
+.first-img:not(:hover) {
+    opacity: 1;
+    transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -ms-transition-duration: 0.5s;
+}
+
+.header-item {
+    border: 0px solid white;
+}

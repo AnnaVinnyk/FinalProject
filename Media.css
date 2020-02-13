@@ -1,0 +1,273 @@
+/*медиа-запросы для header и menu в переломных точках*/
+@media (max-width: 1200px) {    
+    /*body > div:nth-child(2){grid-area: mainhead;}
+    body > div:nth-child(5){grid-area: mainmenu;}   
+    body > div:nth-child(8){grid-area: maincontent;}
+    body > div:nth-child(11){grid-area: mainfooter;}*/
+    body {
+        grid-template-columns: 25px minmax(200px, 1fr) 25px;
+        /*grid-template-areas:
+            "mainhead"
+            "mainmenu"
+            "maincontent"
+            "mainfooter"*/
+    }
+}
+@media (max-width: 1050px) {    
+    .footer-menu > div:nth-child(1) {
+        grid-area: contacts;
+    }
+    .footer-menu > div:nth-child(2) {
+        grid-area: navigation;
+    }
+    .footer-menu > div:nth-child(3) {
+        grid-area: services;
+    }
+    .footer-menu > div:nth-child(4) {
+        grid-area: social;
+    }
+    .footer-menu {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "contacts social"
+            "navigation services"  
+    }
+}    
+@media (max-width: 750px) {    
+    .grid-for-content-blocks {
+        margin-left: 0;
+        margin-right: 0;   
+    }
+    .logo img, .first-img {
+        width: 300px;
+    }
+    .header > div:nth-child(2) {
+        grid-area: telephone;
+        justify-self: center;
+    }
+    .header > div:nth-child(3) {
+        grid-area: fullname;
+        justify-self: center;
+    }
+    .header > div:nth-child(4) {
+        grid-area: logotype;
+        justify-self: center;
+    }
+    .header {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        align-self: stretch;
+        justify-self: stretch;
+        grid-template-areas:
+            "fullname"
+            "logotype"
+            "telephone"
+    }
+    .header-item {
+        border: 0px solid white;
+    }
+    .menu-item {
+        border: 0px solid white;
+    } 
+}  
+
+@media (max-width: 700px) {
+    body > div:nth-child(5) {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    body > div:nth-child(4) {
+        display: none;
+    }
+    body > div:nth-child(6) {
+        display: none;
+    }
+    .menu {
+        padding-left: 0;
+        padding-right: 0;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(5, auto); 
+    }
+    .menu-item:hover ul{
+        display: none;
+    }
+    .submenu, .menu-item ul {
+       box-shadow: none;
+    }
+    .submenu {
+        width: 100%;
+        text-align: center;
+        top: 15px;
+    }
+    .menu-item .service::before {
+        content: '▶ ';
+        font-size: 80%;
+        /*border: none;*/
+        color: #ff7c00;
+    }
+    .menu-item:hover .service::before {
+        content: '▶ ';
+        font-size: 80%;
+        border: none;
+        color: white;
+        background-color: #0086e4;
+        transition-duration: 0.3s; 
+        -webkit-transition-duration: 0.3s;
+        -moz-transition-duration: 0.3s;
+        -o-transition-duration: 0.3s;
+        -ms-transition-duration: 0.3s; 
+    }
+    .menu-item:not(:hover) .service::before {
+        content: '▶ ';
+        font-size: 80%;
+        border: none;
+        color: #ff7c00;
+        background-color: #0047a3;
+        transition-duration: 0.3s; 
+        -webkit-transition-duration: 0.3s;
+        -moz-transition-duration: 0.3s;
+        -o-transition-duration: 0.3s;
+        -ms-transition-duration: 0.3s; 
+    }
+    .menu-item.open .service::before {
+        content: '▼ ';
+        font-size: 80%;
+    }
+    .menu-item.open ul {
+        display: block;
+        text-align: center;
+        width: 100%;
+        padding: 0;
+        top: 17px;
+        left: 0;
+    }
+    #sub {
+        position: absolute;
+    }
+    #sub.open {
+        position: relative;
+    }
+}
+
+@media (max-width: 520px) {
+    .footer-menu {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "contacts"
+            "social"
+            "navigation"
+            "services"        
+    }
+}
+
+@media (max-width: 320px) {
+    .first {
+        font-size: 16px;
+    }
+    .second {
+        font-size: 13.8px;
+    }
+    .number {
+        font-size: 18px;
+    }
+    .time {
+        font-size: 9.9px;
+    }
+}
+
+/*медиа-запросы для content в переломных точках*/
+
+@media (max-width: 1350px) {    
+    
+    .blocks {
+        grid-template-columns: repeat(3, minmax(200px, 1fr));
+    }
+    .presentation {
+        grid-template-areas:
+            "advantage advantage advantage"
+            "about activity activity"
+    }
+    .blocks.but > div:nth-child(1) {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+}
+
+@media (max-width: 900px) {    
+    .blocks {
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+    }
+    .presentation {
+        grid-template-areas:
+            "advantage advantage"
+            "about about"
+            "activity activity"
+    }
+    .blocks.but > div:nth-child(1) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+}
+
+@media (max-width: 550px) {    
+    .subject {
+        font-size: 22px;
+    }
+    .orange-line {
+        border-bottom: 3.5px solid #ff7c00;    
+    }
+    .sub2-blocks-item > div {
+        border: 0px black solid;
+    }
+    .sub2-blocks-item > div:nth-child(1) {
+        grid-area: photo;
+        align-self: flex-start;
+    }
+    .sub2-blocks-item > div:nth-child(2) {
+        grid-area: status;
+        align-self: flex-start;
+    }
+    .sub2-blocks-item > div:nth-child(3) {
+        grid-area: monologue;
+        text-align: justify;
+    }
+    .sub2-blocks-item > div:nth-child(4) {
+        grid-area: logo-type;
+        padding-top: 10px;
+    }
+    .sub2-blocks-item {
+        grid-template-columns: 2fr 3fr;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas:
+            "photo monologue"
+            "status monologue"
+            "logo-type logo-type"        
+    }
+    .blocks {
+        grid-template-columns: 1fr;
+    }
+    .presentation {
+        grid-template-areas:
+            "advantage"
+            "about"
+            "activity"
+    }
+    .blocks.but > div:nth-child(1) {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .grid-for-content-blocks.trust {
+        grid-row-gap: 0;
+    }
+    .trusty > .navy-text {
+        padding-top: 15px;
+        padding-bottom: 35px;
+        font-size: 15px;
+        width: 235px;
+        height: 17px;
+    }
+}

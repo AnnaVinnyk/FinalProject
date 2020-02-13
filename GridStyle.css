@@ -81,11 +81,23 @@ body > div {
     padding-bottom: 0;
     margin: 0;
     grid-template-columns: minmax(160px, 1fr) minmax(260px, 2fr) minmax(230px, 1fr);
-    grid-template-rows: 2fr 3fr 4fr;    
+    -webkit-grid-template-columns: minmax(160px, 1fr) minmax(260px, 2fr) minmax(230px, 1fr);
+    -moz-grid-template-columns: minmax(160px, 1fr) minmax(260px, 2fr) minmax(230px, 1fr);
+    -o-grid-template-columns: minmax(160px, 1fr) minmax(260px, 2fr) minmax(230px, 1fr);
+    -ms-grid-template-columns: minmax(160px, 1fr) minmax(260px, 2fr) minmax(230px, 1fr); 
+    grid-template-rows: 2fr 3fr 4fr;
+    -webkit-grid-template-rows: 2fr 3fr 4fr;
+    -moz-grid-template-rows: 2fr 3fr 4fr;
+    -o-grid-template-rows: 2fr 3fr 4fr;
+    -ms-grid-template-rows: 2fr 3fr 4fr;     
 }
 
 .header > div:nth-child(1) {
     grid-column: 1 / -1;
+    -webkit-grid-column: 1 / -1;
+    -moz-grid-column: 1 / -1;
+    -o-grid-column: 1 / -1;
+    -ms-grid-column: 1 / -1; 
 }
 
 .phone {
@@ -124,15 +136,35 @@ body > div {
     margin: 0;
 }
 
+.image.first {
+    opacity: 1px;
+    position: absolute;
+    z-index: 100;
+    max-width: 290px;
+    margin: 0;
+    margin-left: 5px;
+    transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    -ms-transition-duration: 0.3s;
+}
+
+.image.first:hover {
+    opacity: 0.00;
+}
+
 .logo img {
-    max-width: 100%;
+    max-width: 290px;
     align-self: stretch;
     margin: 0;
+    margin-left: 5px;
 }
 
 .logo div {
     padding: 0;
     margin: 0;
+    display:inline-block;
 }
 
 .header-item {
@@ -149,6 +181,10 @@ body > div {
 .menu {
     display: grid;
     grid-template-columns: repeat(8, minmax(130px, 2fr));
+    -webkit-grid-template-columns: repeat(8, minmax(130px, 2fr));
+    -moz-grid-template-columns: repeat(8, minmax(130px, 2fr));
+    -o-grid-template-columns: repeat(8, minmax(130px, 2fr));
+    -ms-grid-template-columns: repeat(8, minmax(130px, 2fr)); 
 }
 
 .menu-item {
@@ -163,25 +199,41 @@ body > div {
 .menu-item:hover{
     background-color: #00a9d2;
     color: white;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    -ms-transition: 0.3s; 
 }
 
 ul {
     margin: 0;
 }
 
-.menu-item:hover ul {
-    display: block;
-}
-
 .submenu, .menu-item ul {
-    background-color: #bfe9f4;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    /*box-shadow: inset, 10px, 10px, rgba(200, 200, 200, .2);
+    background-color: #f7f7f7;
+    background-color: #e7e7e7;
+    background-color: #dfdfdf;*/
+    background-color: #daf7fe;
+    /*background-color: #bfe9f4;*/
     display: none;
     position: absolute;
     text-align: left;
     width: 240px;
     padding: 0;
-    top: 47px;
-    left: 0;      
+    top: 48px;
+    left: 0;     
+}
+
+.menu-item:hover ul {
+    display: inline-block;
+    transition: all 0.3s; 
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    -ms-transition: 0.3s; 
 }
 
 #sub {
@@ -194,12 +246,17 @@ ul {
     list-style: none;
     height: 28px;
     padding-top: 15px;
-    padding-bottom: 5px;   
+    padding-bottom: 5px; 
 }
 
 .submenu-item:hover {
     background-color: #00a9d2;
     color: white;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    -ms-transition: 0.3s; 
 }
 
 .menu-item {
@@ -216,8 +273,20 @@ ul {
     padding-top: 25px;
     padding-bottom: 25px;
     grid-column-gap: 20px;
+    -webkit-grid-column-gap: 20px;
+    -moz-grid-column-gap: 20px;
+    -o-grid-column-gap: 20px;
+    -ms-grid-column-gap: 20px;
     grid-template-columns: 1fr auto 1fr;
-    grid-template-rows: 1fr 1fr;     
+    -webkit-grid-template-columns: 1fr auto 1fr;
+    -moz-grid-template-columns: 1fr auto 1fr;
+    -o-grid-template-columns: 1fr auto 1fr;
+    -ms-grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: 1fr 1fr;
+    -webkit-grid-template-rows: 1fr 1fr;
+    -moz-grid-template-rows: 1fr 1fr;
+    -o-grid-template-rows: 1fr 1fr;
+    -ms-grid-template-rows: 1fr 1fr; 
 }
 
 .subject > div:nth-child(1) {
