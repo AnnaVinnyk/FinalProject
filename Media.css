@@ -264,3 +264,30 @@
         height: 17px;
     }
 }
+
+@media (max-width: 390px) {    
+    .sub2-blocks-item > div:nth-child(1) {
+        grid-area: photo;
+        align-self: flex-start;
+    }
+    .sub2-blocks-item > div:nth-child(2) {
+        grid-area: status;
+        align-self: flex-start;
+    }
+    .sub2-blocks-item > div:nth-child(3) {
+        grid-area: monologue;
+        text-align: justify;
+    }
+    .sub2-blocks-item > div:nth-child(4) {
+        grid-area: logo-type;
+        padding-top: 10px;
+    }
+    .sub2-blocks-item {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "photo"
+            "status"
+            "monologue"
+            "logo-type"        
+    }
+}
