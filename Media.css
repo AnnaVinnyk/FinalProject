@@ -174,7 +174,7 @@
 
 /*медиа-запросы для content в переломных точках*/
 
-@media (max-width: 1350px) {    
+@media (max-width: 1100px) {    
     
     .blocks {
         grid-template-columns: repeat(3, minmax(200px, 1fr));
