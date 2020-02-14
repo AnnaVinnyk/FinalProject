@@ -233,7 +233,7 @@
         padding-top: 10px;
     }
     .sub2-blocks-item {
-        grid-template-columns: 2fr 3fr;
+        grid-template-columns: 1fr 2fr;
         grid-template-rows: auto 1fr auto;
         grid-template-areas:
             "photo monologue"
@@ -265,7 +265,7 @@
     }
 }
 
-@media (max-width: 390px) {    
+@media (max-width: 350px) {    
     .sub2-blocks-item > div:nth-child(1) {
         grid-area: photo;
         align-self: flex-start;
