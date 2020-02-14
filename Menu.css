@@ -7,11 +7,12 @@
 }
 .menu {
     display: grid;
-    grid-template-columns: repeat(8, minmax(130px, 2fr));
-    -webkit-grid-template-columns: repeat(8, minmax(130px, 2fr));
-    -moz-grid-template-columns: repeat(8, minmax(130px, 2fr));
-    -o-grid-template-columns: repeat(8, minmax(130px, 2fr));
-    -ms-grid-template-columns: repeat(8, minmax(130px, 2fr)); 
+    grid-template-columns: repeat(5, minmax(125px, 145px));
+    -webkit-grid-template-columns: repeat(5, minmax(125px, 145px));
+    -moz-grid-template-columns: repeat(5, minmax(125px, 145px));
+    -o-grid-template-columns: repeat(5, minmax(125px, 145px));
+    -ms-grid-template-columns: repeat(5, minmax(125px, 145px)); 
+    align-items: flex-start;
 }
 
 .menu-item {

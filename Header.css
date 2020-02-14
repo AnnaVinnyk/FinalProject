@@ -7,27 +7,14 @@
     justify-self: center;
     align-self: center;
     display: grid;
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-top: 45px;
+    padding-bottom: 85px;
     margin: 0;
     grid-template-columns: minmax(160px, 1fr) minmax(260px, 2fr) minmax(230px, 1fr);
     -webkit-grid-template-columns: minmax(160px, 1fr) minmax(260px, 2fr) minmax(230px, 1fr);
     -moz-grid-template-columns: minmax(160px, 1fr) minmax(260px, 2fr) minmax(230px, 1fr);
     -o-grid-template-columns: minmax(160px, 1fr) minmax(260px, 2fr) minmax(230px, 1fr);
-    -ms-grid-template-columns: minmax(160px, 1fr) minmax(260px, 2fr) minmax(230px, 1fr); 
-    grid-template-rows: 2fr 3fr 4fr;
-    -webkit-grid-template-rows: 2fr 3fr 4fr;
-    -moz-grid-template-rows: 2fr 3fr 4fr;
-    -o-grid-template-rows: 2fr 3fr 4fr;
-    -ms-grid-template-rows: 2fr 3fr 4fr;     
-}
-
-.header > div:nth-child(1) {
-    grid-column: 1 / -1;
-    -webkit-grid-column: 1 / -1;
-    -moz-grid-column: 1 / -1;
-    -o-grid-column: 1 / -1;
-    -ms-grid-column: 1 / -1; 
+    -ms-grid-template-columns: minmax(160px, 1fr) minmax(260px, 2fr) minmax(230px, 1fr);    
 }
 
 .phone {
@@ -48,7 +35,7 @@
     font-weight: normal;
     justify-self: end;
     align-self: center;
-    padding-right: 3px;
+    padding-right: 10px;
 }
 
 .first {
@@ -59,7 +46,9 @@
     font-size: 17.3px;
 }
 
-.logo {    
+.logo { 
+    display: grid;
+    justify-items: center;   
     padding: 0;
     margin: 0;
 }

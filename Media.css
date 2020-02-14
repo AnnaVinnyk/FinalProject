@@ -1,16 +1,7 @@
 /*медиа-запросы для header и menu в переломных точках*/
 @media (max-width: 1200px) {    
-    /*body > div:nth-child(2){grid-area: mainhead;}
-    body > div:nth-child(5){grid-area: mainmenu;}   
-    body > div:nth-child(8){grid-area: maincontent;}
-    body > div:nth-child(11){grid-area: mainfooter;}*/
     body {
         grid-template-columns: 25px minmax(200px, 1fr) 25px;
-        /*grid-template-areas:
-            "mainhead"
-            "mainmenu"
-            "maincontent"
-            "mainfooter"*/
     }
 }
 @media (max-width: 1050px) {    
@@ -41,19 +32,21 @@
     .logo img, .first-img {
         width: 300px;
     }
-    .header > div:nth-child(2) {
+    .header > div:nth-child(1) {
         grid-area: telephone;
         justify-self: center;
     }
-    .header > div:nth-child(3) {
+    .header > div:nth-child(2) {
         grid-area: fullname;
         justify-self: center;
     }
-    .header > div:nth-child(4) {
+    .header > div:nth-child(3) {
         grid-area: logotype;
         justify-self: center;
     }
     .header {
+        padding-top: 10px;
+        padding-bottom: 10px;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr;

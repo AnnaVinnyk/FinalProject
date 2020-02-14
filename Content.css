@@ -60,7 +60,7 @@
     margin-right: 40px;
     /*padding-bottom: 25px;*/
     display: grid;
-    grid-gap: 20px;   
+    grid-gap: 30px;   
 }
 
 .presentation > div:nth-child(1) {grid-area: about;}
@@ -206,7 +206,7 @@
     padding-top: 5px;
 }
 
-.presentation-content div{text-align: justify;}
+.presentation-content div{text-align: left;}
 
 .karusel {
     /*display: grid;
@@ -321,7 +321,7 @@
 
 .trusty > .navy-text {
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 10px;
     font-size: 15px;
     width: 235px;
     height: 17px;
@@ -370,7 +370,7 @@
 
 .button.reviews {
     width: 200px;
-    margin-top: 20px;
+    margin-top: 30px;
     justify-self: center;
 }
 

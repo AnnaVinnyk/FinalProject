@@ -26,14 +26,12 @@
 <body>
     <!--ШАПКА САЙТА-->
     <div class="navy-fon"></div>
-    <div class="header navy-fon">
-        <div></div>
+    <header class="header navy-fon">
         <div class="header-item phone">
             <div class="number">(044) 593 82 39</div>
             <div class="number">0(800) 50 77 12</div>
             <div class="time">Ежедневно с 7:55 до 20:05</div>
         </div>
-        <!--<div></div>-->
         <div class="header-item name">
             <div class="first">Рекрутинговая компания</div>
             <div class="second">по подбору рабочих кадров</div>
@@ -43,26 +41,28 @@
                 <a href="index.html"><img src="WorkerHUNTERS_reverse.png" alt="Логотип компании" class="second-img"></a>
             </div>
         </div>
-    </div>
+    </header>
     <div class="navy-fon"></div>
     <!--МЕНЮ САЙТА-->
     <div class="orange-on-navy"></div>
     <div class="orange-on-navy">
-        <ul class="menu menu-font orange-on-navy">
-            <li class="menu-item cursor">Главная</li>
-            <li class="menu-item cursor">Рынок труда</li>
-            <li id="OurService" class="menu-item cursor">
-                <div class="service">Наши услуги</div>
-                <!--<button id="OurService">Наши услуги</button>-->
-                <ul id="sub" class="submenu orange-text">
-                    <li class="submenu-item cursor">Сохранение персонала</li>
-                    <li class="submenu-item cursor">Обучение персонала</li>
-                    <li class="submenu-item cursor">Привлечение сотрудников</li>
-                </ul>
-            </li>
-            <li class="menu-item cursor">Отзывы</li>
-            <li class="menu-item cursor">Контакты</li>
-        </ul>
+        <nav>
+            <ul class="menu menu-font orange-on-navy">
+                <li class="menu-item cursor">Главная</li>
+                <li class="menu-item cursor">Рынок труда</li>
+                <li id="OurService" class="menu-item cursor">
+                    <div class="service">Наши услуги</div>
+                    <!--<button id="OurService">Наши услуги</button>-->
+                    <ul id="sub" class="submenu orange-text">
+                        <li class="submenu-item cursor">Сохранение персонала</li>
+                        <li class="submenu-item cursor">Обучение персонала</li>
+                        <li class="submenu-item cursor">Привлечение сотрудников</li>
+                    </ul>
+                </li>
+                <li class="menu-item cursor">Отзывы</li>
+                <li class="menu-item cursor">Контакты</li>
+            </ul>
+        </nav>
     </div>
     <div class="orange-on-navy"></div>
     <!--СОДЕРЖИМОЕ СТРАНИЦЫ-->
@@ -85,22 +85,23 @@
                         <div class="presentation-block">
                             <div class="presentation-content">
                                 <div><img src="markers/marker-.png" alt="Маркер"></div>
-                                <div>Совре&shy;мен&shy;ная и ин&shy;но&shy;ва&shy;ци&shy;он&shy;ная ком&shy;па&shy;ния
+                                <!--&shy;-->
+                                <div>Современная и инновационная компания
                                 </div>
                             </div>
                             <div class="presentation-content">
                                 <div><img src="markers/marker-.png" alt="Маркер"></div>
-                                <div>Инди&shy;ви&shy;ду&shy;аль&shy;ный под&shy;ход к каж&shy;до&shy;му
-                                    кли&shy;ен&shy;ту
+                                <div>Индивидуальный подход к каждому
+                                    клиенту
                                 </div>
                             </div>
                             <div class="presentation-content">
                                 <div><img src="markers/marker-.png" alt="Маркер"></div>
-                                <div>Много&shy;лет&shy;ний опыт успеш&shy;ной ра&shy;бо&shy;ты</div>
+                                <div>Многолетний опыт успешной работы</div>
                             </div>
                             <div class="presentation-content">
                                 <div><img src="markers/marker-.png" alt="Маркер"></div>
-                                <div>Приме&shy;не&shy;ние прин&shy;ци&shy;пов раз&shy;ви&shy;тых стран</div>
+                                <div>Применение принципов развитых стран</div>
                             </div>
                         </div>
                     </div>
@@ -266,7 +267,7 @@
         </div>
         <!--кнопка-->
         <div class="blocks but content-font grid-for-content-blocks">
-            <div class="button reviews">Больше отзывов</div>
+            <div class="button reviews" onclick="ClientsSay()">Больше отзывов</div>
         </div>
         <!--рекомендуем к просмотру-->
         <div class="subject orange-text">
@@ -365,7 +366,7 @@
     <div></div>
     <!--ПОДВАЛ САЙТА-->
     <div class="footer navy-fon"></div>
-    <div class="footer navy-fon">
+    <footer class="footer navy-fon">
         <div class="footer-menu">
             <div>
                 <div class="orange-text headline">КОНТАКТЫ</div>
@@ -406,7 +407,7 @@
         <div>© WorkerHunters, 2000-2020</div>
         <div>За использование материалов без согласия WorkerHunters уголовная ответственность не предусмотрена.
         </div>
-    </div>
+    </footer>
     <div class="footer navy-fon"></div>
     <script>
 
