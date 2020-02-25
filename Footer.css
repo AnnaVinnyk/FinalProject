@@ -44,16 +44,17 @@
     border: 0px solid white;
 }
 
-.footer-menu-item.cursor:hover {
+.footer-menu-item.cursor:hover, .footer a:hover {
     margin-left: 10px;
     color: #ff7c00;
     transition-duration: 0.8s;
 }
 
-.footer-menu-item.cursor:not(:hover) {
+.footer-menu-item.cursor:not(:hover), .footer a:not(:hover) {
     transition-duration: 0.8s;
 }
 
-.conclusion {
-
+.footer a {
+    text-decoration: none;
+    color: white;
 }

@@ -138,6 +138,10 @@
     align-items: stretch;  
 }
 
+.sub5-blocks-item {
+    font-style: normal;
+}
+
 .sub3-blocks-item {
     border: 0px solid black;
     font-style: italic;
