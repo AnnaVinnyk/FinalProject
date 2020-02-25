@@ -17,34 +17,18 @@ body > div {
 }
 
 /*цветовая карта*/
-
-.orange-fon {
-    background-color: #ff7c00;
-}
-
-.orange-text {
-    color: #ff7c00;
-}
-
-.orange-line {
-    border-bottom: 4px solid #ff7c00;    
-}
-
-.navy-fon {
-    background-color: #0047a3;
-}
-
-.navy-text {
-    color: #0047a3;
-}
-
-.blue-fon {
-    background-color: #1e95d9;
-}
-
-.blue-text {
-    color: #1e95d9;
-}
+.orange-fon {background-color: #ff7c00;}
+.orange-text {color: #ff7c00;}
+.orange-line {border-bottom: 4px solid #ff7c00;}
+.navy-fon {background-color: #0047a3;}
+.navy-text {color: #0047a3;}
+.blue-fon {background-color: #1e95d9;}
+.blue-text {color: #1e95d9;}
+.navy-on-aqua {color: #0047a3;background-color: #86e7ff;}
+.blue-on-aqua {color: #006fff;background-color: #86e7ff;}
+/*.blue-on-aqua {color: #1e95d9;background-color: #86e7ff;}*/
+.white-on-aqua {color: white;background-color: #86e7ff;}
+.aqua {color: #86e7ff;}
 /*он же navy-on-white*/
 .blue-on-white {
     /*color: #1e95d9;
@@ -59,38 +43,22 @@ body > div {
     color: #0047a3;
     background-color: #deefff;
 }
-
 .white-on-navy {
     /*background-color: #0047a3;
     color: white;*/
     color: white;
     background-color: #0086e4;
 }
-
 .white-on-orange {
     /*background-color: #1e95d9;
     color: white;*/
     color: white;
     background-color: #ff7c00;
 }
-
-.lightblue-fon {
-    background-color: #deefff;
-}
-
-.blue-on-lightblue {
-    color: #0047a3;
-    background-color: #deefff;
-}
-
-.orange-on-navy {
-    background-color: #0047a3;
-    color: #ff7c00;   
-}
-
-.cursor {
-    cursor: pointer;
-}
+.lightblue-fon {background-color: #deefff;}
+.blue-on-lightblue {color: #0047a3;background-color: #deefff;}
+.orange-on-navy {background-color: #0047a3;color: #ff7c00;}
+.cursor {cursor: pointer;}
 
 .button {
     height: 40px;

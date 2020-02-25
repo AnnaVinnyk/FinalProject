@@ -7,11 +7,11 @@
 }
 .menu {
     display: grid;
-    grid-template-columns: repeat(5, minmax(125px, 145px));
-    -webkit-grid-template-columns: repeat(5, minmax(125px, 145px));
-    -moz-grid-template-columns: repeat(5, minmax(125px, 145px));
-    -o-grid-template-columns: repeat(5, minmax(125px, 145px));
-    -ms-grid-template-columns: repeat(5, minmax(125px, 145px)); 
+    grid-template-columns: repeat(5, minmax(125px, 230px));
+    -webkit-grid-template-columns: repeat(5, minmax(125px, 230px));
+    -moz-grid-template-columns: repeat(5, minmax(125px, 230px));
+    -o-grid-template-columns: repeat(5, minmax(125px, 230px));
+    -ms-grid-template-columns: repeat(5, minmax(125px, 230px)); 
     align-items: flex-start;
 }
 
@@ -19,15 +19,15 @@
     list-style: none;
     text-align: center;
     position: relative;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 16px;
+    padding-bottom: 12px;
     border: 0px solid white;
 }
 
 .menu-item:hover{
     /*background-color: #00a9d2;*/
-    background-color: #0086e4;
-    color: white;
+    background-color: #86e7ff;
+    color: #0066e9;
     transition: 0.4s;
     -webkit-transition: 0.4s;
     -moz-transition: 0.4s;
@@ -51,14 +51,16 @@ ul {
 
 .menu-item ul {
     box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
-    /*background-color: #daf7fe;*/
-    background-color: #deefff;
+    font-size: 12px;
+    /*background-color: #daf7fe;
+    background-color: #deefff;*/
+    background-color: #daf7fe;
     display: none;
     position: absolute;
-    text-align: left;
-    width: 240px;
+    text-align: center;
+    width: 230px;
     padding: 0;
-    top: 48px;
+    top: 46.5px;
     left: 0;     
 }
 
@@ -87,17 +89,16 @@ ul {
 
 .submenu-item {
     border: 0px solid rgb(250, 250, 250);
-    padding-left: 15px;
     list-style: none;
-    height: 28px;
-    padding-top: 15px;
-    padding-bottom: 5px; 
+    /*height: 28px;*/
+    padding-top: 14px;
+    padding-bottom: 14px; 
 }
 
 .submenu-item:hover {
     /*background-color: #00a9d2;*/
-    background-color: #0086e4;
-    color: white;
+    background-color: #86e7ff;
+    color: #0066e9;
     transition: 0.3s;
     -webkit-transition: 0.3s;
     -moz-transition: 0.3s;
