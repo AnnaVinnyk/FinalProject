@@ -49,6 +49,7 @@
     .header > div:nth-child(4) {
         grid-area: callback;
         justify-self: center;
+        padding-left: 30px;
         /*grid-column-start: 1;
         grid-column-end: 2;
         grid-row-start: 1;
@@ -56,7 +57,7 @@
     }
     .header {
         padding-top: 10px;
-        padding-bottom: 30px;
+        padding-bottom: 50px;
         display: grid;
         grid-gap: 20px;
         grid-template-columns: 1fr;
@@ -72,17 +73,6 @@
         display:grid;
         justify-items: center;
     }
-    /*.name > span:nth-child(1) {font-size: 21.5px;}
-    .name > span:nth-child(2) {font-size: 18.5px;}
-    .header {
-        display: grid;
-        grid-template-columns: 300px 3fr 1fr;
-    }*/
-    /*.number {font-size: 10px;}
-    .time {font-size: 10.3px;}
-    .callback {font-size: 13px;}
-    .telephone {left: 5px;}
-    .orange-telephone {width: 100px;}*/
 }  
 
 @media (max-width: 750px) {    
@@ -192,6 +182,11 @@
 }
 
 @media (max-width: 520px) {
+    .number {
+        display: grid;
+        justify-items: center;
+    }
+    .number > span:nth-child(1) {font-size: 14px;} 
     .footer-menu {
         grid-template-columns: 1fr;
         grid-template-areas:
@@ -201,19 +196,17 @@
             "services"        
     }
 }
-
+@media (max-width: 450px) {
+    .name > span:nth-child(1) {font-size: 16.75px;}
+    .name > span:nth-child(2) {font-size: 14.5px;}
+    .logo img {max-width: 100%;}
+}
 @media (max-width: 320px) {
     .first {
         font-size: 16px;
     }
     .second {
         font-size: 13.8px;
-    }
-    .number {
-        font-size: 18px;
-    }
-    .time {
-        font-size: 9.9px;
     }
 }
 
