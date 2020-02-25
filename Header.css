@@ -6,21 +6,30 @@
     font-size: 16px;
     color: white;
     display: grid;
-    padding-top: 25px;
+    grid-row-gap: 10px;
+    padding-top: 10px;
     padding-bottom: 85px;
     margin: 0;
-    grid-template-columns: minmax(160px, 1fr) 380px minmax(160px, 1fr);
+    grid-template-columns: 380px 2fr 1fr;
     /*-webkit-grid-template-columns: minmax(160px, 1fr) minmax(260px, 2fr) minmax(230px, 1fr);
     -moz-grid-template-columns: minmax(160px, 1fr) minmax(260px, 2fr) minmax(230px, 1fr);
     -o-grid-template-columns: minmax(160px, 1fr) minmax(260px, 2fr) minmax(230px, 1fr);
     -ms-grid-template-columns: minmax(160px, 1fr) minmax(260px, 2fr) minmax(230px, 1fr);  */  
 }
 
-.back {
-    position: relative;
+.header >div:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.header >div:nth-child(4) {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
 }
 
 .back > div {
+    position: relative;
     display: grid;
     justify-items: end;
 }
@@ -35,15 +44,9 @@
     transition-duration: 0.8s;
 }
 
-.telephone {
-    z-index: 100;
-}
-
-.orange-telephone {
-    width: 120px;
-    position: absolute;
-    right: 5px;
-}
+.telephone {width: 130px; position: absolute;}
+.orange-tel {}
+.aqua-tel{z-index: 100;}
 
 .callback {
     display: grid;
@@ -55,6 +58,7 @@
 
 .name {
     display:grid;
+    align-items: center;
     justify-items: center;
 }
 .name > span:nth-child(1) {font-size: 27px;}
@@ -66,15 +70,15 @@ h1 {
     display: grid;
     justify-items: center;
     margin: 0;
-    padding-bottom: 5px;
+    padding: 0;
 }
 
 .number {
-    font-size: 21.5px;
+    font-size: 12.75px;
     padding-bottom: 2px;
 }
 
-.time {font-size: 11px;}
+.time {font-size: 13px;}
 
 .first {font-size: 20px;}
 
@@ -83,22 +87,20 @@ h1 {
 .logo { 
     display: grid;
     grid-gap: 10px;
-    justify-items: center;   
     padding: 0;
     margin: 0;
 }
 
 .logo img {
-    max-width: 100%;
-    align-self: stretch;
+    max-width: 380px;
     display: block;
 }
 
 .logo > div {
     padding: 0;
     margin: 0;
-    justify-self: center;
-    align-self: center;
+    /*justify-self: center;
+    align-self: center;*/
     position: relative;
 }
 
@@ -140,7 +142,7 @@ h1 {
     -ms-transition-duration: 0.5s;
 }
 
-.telephone:hover {
+.aqua-tel:hover {
     opacity: 0.00;
     transition-duration: 0.8s;
     -webkit-transition-duration: 0.8s;
@@ -148,8 +150,7 @@ h1 {
     -o-transition-duration: 0.8s;
     -ms-transition-duration: 0.8s;
 }
-
-.telephone:not(:hover) {
+.aqua-tel:not(:hover) {
     opacity: 1;
     transition-duration: 0.8s;
     -webkit-transition-duration: 0.8s;

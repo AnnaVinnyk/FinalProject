@@ -23,25 +23,66 @@
             "contacts social"
             "navigation services"  
     }
-}
-@media (max-width: 900px) {    
-    .logo img, .first-img {
-        width: 300px;
-    }
     .name {
         display:grid;
         justify-items: center;
     }
     .name > span:nth-child(1) {font-size: 21.5px;}
     .name > span:nth-child(2) {font-size: 18.5px;}
+}  
+@media (max-width: 900px) {    
+    /*.logo img, .first-img {
+        width: 300px;
+    }*/
+    .header > div:nth-child(1) {
+        grid-area: telephone;
+        justify-self: center;
+    }
+    .header > div:nth-child(2) {
+        grid-area: logotype;
+        justify-self: center;
+    }
+    .header > div:nth-child(3) {
+        grid-area: name;
+        justify-self: center;
+    }
+    .header > div:nth-child(4) {
+        grid-area: callback;
+        justify-self: center;
+        /*grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;*/
+    }
+    .header {
+        padding-top: 10px;
+        padding-bottom: 30px;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: 1fr;
+        grid-column-gap: 50px;
+        align-self: center;
+        grid-template-areas:
+            "callback"
+            "telephone"
+            "logotype"
+            "name"
+    }
+    .name {
+        display:grid;
+        justify-items: center;
+    }
+    /*.name > span:nth-child(1) {font-size: 21.5px;}
+    .name > span:nth-child(2) {font-size: 18.5px;}
     .header {
         display: grid;
-        grid-template-columns: minmax(160px, 1fr) 300px minmax(160px, 1fr);
-    }
-    .number {font-size: 20px;}
+        grid-template-columns: 300px 3fr 1fr;
+    }*/
+    /*.number {font-size: 10px;}
     .time {font-size: 10.3px;}
     .callback {font-size: 13px;}
-    .orange-telephone {width: 100px;right: 5px;}
+    .telephone {left: 5px;}
+    .orange-telephone {width: 100px;}*/
 }  
 
 @media (max-width: 750px) {    
@@ -54,35 +95,7 @@
     } 
 }  
 @media (max-width: 700px) {    
-    .header > div:nth-child(1) {
-        grid-area: telephone;
-        justify-self: center;
-    }
-    .header > div:nth-child(2) {
-        grid-area: logoname;
-        justify-self: center;
-    }
-    .header > div:nth-child(3) {
-        grid-area: callback;
-        justify-self: end;
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 1;
-        grid-row-end: 2;
-    }
-    .header {
-        padding-top: 10px;
-        padding-bottom: 30px;
-        display: grid;
-        grid-gap: 20px;
-        grid-template-columns: 1fr;
-        grid-column-gap: 50px;
-        align-self: stretch;
-        justify-self: stretch;
-        grid-template-areas:
-            "telephone"
-            "logoname"
-    }
+    
     .header-item {
         border: 0px solid white;
     }
