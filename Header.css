@@ -2,30 +2,30 @@
 
 .header {
     font-family: "Century Gothic";
-    font-weight: bold;
+    font-weight: normal;
     font-size: 16px;
     color: white;
     display: grid;
+    grid-column-gap: 15px;
     grid-row-gap: 10px;
     padding-top: 10px;
-    padding-bottom: 85px;
+    padding-bottom: 50px;
     margin: 0;
-    grid-template-columns: 380px 2fr 1fr;
+    grid-template-columns: 230px 230px auto;
+    align-items: center;
     /*-webkit-grid-template-columns: minmax(160px, 1fr) minmax(260px, 2fr) minmax(230px, 1fr);
     -moz-grid-template-columns: minmax(160px, 1fr) minmax(260px, 2fr) minmax(230px, 1fr);
     -o-grid-template-columns: minmax(160px, 1fr) minmax(260px, 2fr) minmax(230px, 1fr);
     -ms-grid-template-columns: minmax(160px, 1fr) minmax(260px, 2fr) minmax(230px, 1fr);  */  
 }
 
-.header >div:nth-child(1) {
-    grid-column-start: 1;
-    grid-column-end: 3;
+.header > div:nth-child(1) {
+    display: grid;
+    align-self: flex-end;
 }
-.header >div:nth-child(4) {
-    grid-column-start: 3;
+.header > div:nth-child(2) {
+    grid-column-start: 2;
     grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 3;
 }
 
 .back > div {
@@ -34,22 +34,25 @@
     justify-items: end;
 }
 
-.back > div:hover {
+.back > div:nth-child(1):hover {
     color: #ff7c00;
     transition-duration: 0.8s;
 }
 
-.back > div:not(:hover) {
-    color: #86e7ff;
+.back > div:nth-child(1):not(:hover) {
+    color: #4cb5ff;;
     transition-duration: 0.8s;
 }
 
-.telephone {width: 130px; position: absolute;}
+.telephone {width: 170px; position: absolute; right: 0px;}
 .orange-tel {}
 .aqua-tel{z-index: 100;}
 
 .callback {
+    font-size: 14.5px;
+    font-weight: bold;
     display: grid;
+    grid-gap: 20px;
     padding-bottom: 5px;
     margin: 0;
     align-content: flex-start;
@@ -57,24 +60,39 @@
 }
 
 .name {
+    padding: 0;
+    font-weight: bold;
     display:grid;
+    justify-items: start;
     align-items: center;
-    justify-items: center;
 }
-.name > span:nth-child(1) {font-size: 27px;}
-.name > span:nth-child(2) {font-size: 23.3px;}
+.name > span:nth-child(1) {font-size: 16.2px;}
+.name > span:nth-child(2) {font-size: 14px;}
     
 
 h1 {
+    font-weight: normal;
     font-size: 16px;
     display: grid;
     justify-items: center;
     margin: 0;
     padding: 0;
 }
+.quote span:nth-child(1) {font-size: 39px;}
+.quote span:nth-child(2) {font-size: 14px; font-weight: bold;}
 
 .number {
-    font-size: 12.75px;
+    color: white;
+    font-size: 20px;
+    font-weight: normal;
+    padding-bottom: 2px;
+    display: grid;
+    align-items: flex-end;
+    justify-items: end;
+}
+
+.number > span:nth-child(3){
+    font-size: 10.5px;
     padding-bottom: 2px;
 }
 
@@ -92,7 +110,7 @@ h1 {
 }
 
 .logo img {
-    max-width: 380px;
+    max-width: 100%;
     display: block;
 }
 

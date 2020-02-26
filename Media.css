@@ -23,45 +23,38 @@
             "contacts social"
             "navigation services"  
     }
-    .name {
-        display:grid;
-        justify-items: center;
-    }
-    .name > span:nth-child(1) {font-size: 21.5px;}
-    .name > span:nth-child(2) {font-size: 18.5px;}
 }  
-@media (max-width: 900px) {    
-    /*.logo img, .first-img {
-        width: 300px;
-    }*/
-    .header > div:nth-child(1) {
-        grid-area: telephone;
-        justify-self: center;
+@media (max-width: 700px) {    
+    .logo img, .first-img {
+        width: 230px;
     }
     .header > div:nth-child(2) {
-        grid-area: logotype;
+        grid-area: callback;
         justify-self: center;
     }
     .header > div:nth-child(3) {
-        grid-area: name;
+        grid-area: logotype;
         justify-self: center;
     }
     .header > div:nth-child(4) {
-        grid-area: callback;
+        grid-area: name;
         justify-self: center;
-        padding-left: 30px;
-        /*grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 1;
-        grid-row-end: 2;*/
+    }
+    .header > div:nth-child(1) {
+        grid-area: quote;
+        justify-self: center;
+        display: none;
+    }
+    .header > div:nth-child(5) {
+        grid-area: telephone;
+        justify-self: center;
     }
     .header {
         padding-top: 10px;
-        padding-bottom: 50px;
+        padding-bottom: 10px;
         display: grid;
-        grid-gap: 20px;
-        grid-template-columns: 1fr;
-        grid-column-gap: 50px;
+        grid-gap: 10px;
+        grid-template-columns: auto;
         align-self: center;
         grid-template-areas:
             "callback"
@@ -141,8 +134,8 @@
         content: '▶ ';
         font-size: 80%;
         border: none;
-        color: #0066e9;
-        background-color: #86e7ff;
+        color: white;
+        background-color: #4cb5ff;;
         transition-duration: 0.3s; 
         -webkit-transition-duration: 0.3s;
         -moz-transition-duration: 0.3s;
@@ -186,7 +179,6 @@
         display: grid;
         justify-items: center;
     }
-    .number > span:nth-child(1) {font-size: 14px;} 
     .footer-menu {
         grid-template-columns: 1fr;
         grid-template-areas:

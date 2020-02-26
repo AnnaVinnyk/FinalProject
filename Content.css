@@ -3,7 +3,7 @@
 .subject {
     font-family: Calibri;
     font-size: 26px;
-    font-weight: bold;
+    font-weight: normal;
     display: grid;
     padding-top: 25px;
     padding-bottom: 25px;
@@ -106,12 +106,12 @@
 .sub1-blocks-item {
     border: 0px solid black;
     font-size: 19px;
-    color: #0047a3;
-    background-color: #deefff;
+    color: white;
+    background-color: #4cb5ff;/*#4cd3ff;#deefff;*/
     padding-top: 10px;
     padding-bottom: 10px;
     text-align: center;
-    border-bottom: 1px solid #0047a3;
+    border-bottom: 0px solid #0047a3;
     /*border-top: 1px solid #0047a3;*/
 }
 
@@ -256,23 +256,23 @@
 .navigator {
     position: relative;
     height: 0;
-    top: -33px;
+    top: -40px;
     z-index: 101;
     display: grid; 
-    grid-template-columns: 17px 17px 17px 17px 17px;
-    grid-gap: 17px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 15px;
 }
 
 .karusel-navigator {
     font-family: "Century Gothic";
     font-weight: bold;
-    height: 20px;
-    width: 20px;
-    font-size: 12px;
+    height: 30px;
+    width: 30px;
+    font-size: 14px;
     display: grid;
     align-content: center;
     justify-content: center;
-    border-radius: 20px;
+    border-radius: 30px;
     cursor: pointer;
 }
 
@@ -323,23 +323,23 @@
     -ms-transition: 0.3s;
 }
 
-.trusty > .navy-text {
+.trusty > .blue-text {
     padding-top: 30px;
     padding-bottom: 10px;
-    font-size: 15px;
-    width: 235px;
+    font-size: 17px;
+    width: 255px;
     height: 17px;
 }
 
-.navy-text > a {
+.blue-text > a {
     text-decoration: none;
-    color: #0047a3;
+    color: #0086e4;
 }
 
 
-.navy-text > a:hover {
+.blue-text > a:hover {
     color: #ff7c00;
-    font-size: 17px;
+    font-size: 19px;
     transition: 0.2s;
     -webkit-transition: 0.2s;
     -moz-transition: 0.2s;
@@ -347,7 +347,7 @@
     -ms-transition: 0.2s; 
 }
 
-.navy-text > a:not(:hover) {
+.blue-text > a:not(:hover) {
     transition: 0.2s;
     -webkit-transition: 0.2s;
     -moz-transition: 0.2s;
@@ -398,3 +398,4 @@
     margin-left: 0;
     width: 100%;
   }
+}
