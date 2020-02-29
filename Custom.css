@@ -7,95 +7,121 @@ body {
     margin: 0;
     padding: 0;
 }
-
 body > div {
     padding: 0;
-    margin: 0;
-    /*padding-left: 25px;
-    padding-right: 25px;
-    text-align: justify;*/    
+    margin: 0; 
 }
+a {text-decoration: none;}
+.cursor {cursor: pointer;}
+
 
 /*цветовая карта*/
+.bcolor-none {background-color: none;}
 .orange-fon {background-color: #ff7c00;}
 .orange-text {color: #ff7c00;}
-.orange-line {border-bottom: 2px solid #ff7c00;}
+.orange-line {border-bottom: 3px solid #ff7c00;}
 .navy-fon {background-color: #0047a3;}
 .navy-text {color: #0047a3;}
 .blue-fon {background-color: #4cb5ff;}
 .blue-text {color: #0086e4;}
 .navy-on-aqua {color: #0047a3;background-color: #86e7ff;}
 .blue-on-aqua {color: #006fff;background-color: #86e7ff;}
-/*.blue-on-aqua {color: #1e95d9;background-color: #86e7ff;}*/
 .white-on-aqua {color: white;background-color: #86e7ff;}
+.white-on-orange {color: white;background-color: #ff7c00;}
+.orange-on-navy {color: #ff7c00;background-color: #0047a3;}
+.orange-on-white {color: #ff7c00;background-color: white;}
 .aqua {color: #86e7ff;}
-/*он же navy-on-white*/
-.blue-on-white {
-    /*color: #1e95d9;
-    background-color: white;*/
-    color: #0086e4;
-    background-color: white;
-}
-/*он же navy-on-lightblue*/
-.white-on-blue {
-    /*background-color: #1e95d9;
-    color: white;*/
-    color: #0047a3;
-    background-color: #deefff;
-}
-.white-on-navy {
-    /*background-color: #0047a3;
-    color: white;*/
-    color: white;
-    background-color: #4cb5ff;
-    /*background-color: #0086e4;*/
-}
-.white-on-orange {
-    /*background-color: #1e95d9;
-    color: white;*/
-    color: white;
-    background-color: #ff7c00;
-}
+.blue-on-white {color: #0086e4;background-color: white;}
+.white-on-blue {color:  white;background-color: #4cb5ff;}
+.white-on-navy {color: white;background-color: #4cb5ff;}
+.white-on-orange {color: white;background-color: #ff7c00;}
 .lightblue-fon {background-color: #deefff;}
 .blue-on-lightblue {color: #0047a3;background-color: #deefff;}
 .orange-on-navy {background-color: #0047a3;color: #ff7c00;}
-.cursor {cursor: pointer;}
 
-.button {
-    height: 40px;
-    font-size: 17px;
+
+/*стили для кнопок сервиса "sticky"*/
+.on-top {
+    background-color: #86e7ff;
+    border: 1.75px solid white;
+    border-radius: 100%;
+    width: 55px;
+    height: 55px;
+    text-align: center;  
+    opacity: 0.75;  
+}
+.on-top img {
+    z-index: 103;
+    max-width: 100%;
+}
+.on-top:hover {
+    background-color: #00acd6;
+    transform: scale(1.2);/**/
+    opacity: 1;
+    transition: 0.4s;
+}
+.on-top:not(:hover) {
+    transition: 0.4s;
+}
+
+
+/*стили для остальных кнопок*/
+.animate
+{
+	transition: all 0.1s;
+	-webkit-transition: all 0.1s;
+}
+.action-button
+{
+	position: absolute;
+	height: 40px;
     display: grid;
     align-content: center;
     justify-content: center;
-    /*background-color: white;    
-    border: 1px solid #ff7c00;
-    color: white;*/
     border-radius: 20px;
-    /*background-color: #0086e4;
-    background-color: #0047a3;*/
-    border: 1px solid #0047a3;;
-    background-color: #deefff;
-    color: #0047a3;
-    cursor: pointer;
+	background-color: #b8f1ff;
+    border: 1px solid  #5fcbe5;
+    border-bottom: 5px solid  #5fcbe5;
+    color: #00acd6;
+    text-shadow: 0px -2px #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+	cursor: pointer;	
 }
-
+.action-button:hover {background-color: #daf7fe;}
+.action-button:active
+{
+	transform: translate(0px,5px);
+    -webkit-transform: translate(0px,5px);
+	border-bottom: 1px solid;
+}
+.button {
+    height: 40px;
+    font-size: 15px;
+    font-weight: bold;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    border-radius: 20px;
+}
 .button:hover {
-    /*background-color: #0047a3;
-    background-color: #ff7c00;*/
-    border: 1px solid #0086e4;
-    background-color: #0086e4;
-    color: white;
+    background-color: #00acd6;
+    border: 1px solid #00acd6; 
+    color: #ffffff;
     transition: 0.2s;
     -webkit-transition: 0.2s;
     -moz-transition: 0.2s;
     -o-transition: 0.2s;
     -ms-transition: 0.2s;
 }
-
 .button:not(:hover) {
     transition: 0.2s;
     -webkit-transition: 0.2s;
     -moz-transition: 0.2s;
     -o-transition: 0.2s;
     -ms-transition: 0.2s;
+}
+.unvisible {
+    margin: 0;
+    display: none;
 }

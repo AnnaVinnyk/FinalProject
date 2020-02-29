@@ -7,39 +7,52 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>FinalProject</title>
     <link href="Custom.css" type="text/css" rel="stylesheet" />
+    <!--стили для "HEADER"-->
     <link href="Header.css" type="text/css" rel="stylesheet" />
+    <!--стили для МЕНЮ сайта-->
     <link href="Menu.css" type="text/css" rel="stylesheet" />
+    <!--ОБЩИЕ СТИЛИ для контента-->
     <link href="Content.css" type="text/css" rel="stylesheet" />
+    <!--стили для КАРУСЕЛИ-->
+    <link href="Carousel.css" type="text/css" rel="stylesheet" />
+    <!--стили для раздела "НАША ДЕЯТЕЛЬНОСТЬ"-->
+    <link href="Activity.css" type="text/css" rel="stylesheet" />
+    <!--стили для раздела "НАМ ДОВЕРЯЮТ"-->
+    <link href="Trust.css" type="text/css" rel="stylesheet" />
+    <!--стили для раздела "ОТЗЫВЫ НАШИХ КЛИЕНТОВ"-->
+    <link href="Reviews.css" type="text/css" rel="stylesheet" />
+    <!--стили для раздела "РЕКОМЕНДУЕМ К ПРОСМОТРУ"-->
+    <link href="Recommendations.css" type="text/css" rel="stylesheet" />
+    <!--стили для "FOOTER"-->
     <link href="Footer.css" type="text/css" rel="stylesheet" />
+    <!--МЕДИА-ЗАПРОСЫ-->
     <link href="Media.css" type="text/css" rel="stylesheet" />
-    <!--<link href="GridStyle.css" type="text/css" rel="stylesheet" />-->
-    <!--код для меню-->
+    <!--код для МЕНЮ-->
     <script async src="FinalProject.js"></script>
-    <!--код для карточек с отзывами клиентов-->
-    <script async src="reviews.js"></script>
-    <!--код для карусели-->
-    <script async src="slider.js"></script>
-    <!--код для рекомендаций
-    <script async src="recommendations.js"></script>-->
+    <!--код для раздела "ОТЗЫВЫ НАШИХ КЛИЕНТОВ"-->
+    <script async src="Data.js"></script>
+    <script async src="Reviews.js"></script>
+    <!--код для КАРУСЕЛИ-->
+    <script async src="Slider.js"></script>
 </head>
 
 <body>
     <!--ШАПКА САЙТА-->
     <div class="navy-fon"></div>
-    <header class="header navy-fon">
+    <header id="header" class="header navy-fon">
         <div class="header-item quote orange-text">
             <!--<div><span>МЫ</span><span class="quote2"> - ВАШ ЛУЧШИЙ ВЫБОР</span></div>-->
         </div>
         <div class="header-item back callback">
             <div class="blue-text">
                 <div>ОБРАТНЫЙ ЗВОНОК</div>
-                <img src="telephone.png" class="telephone aqua-tel cursor">
-                <img src="orange-telephone.png" class="telephone orange-tel cursor">
+                <img src="images/telephone.png" class="telephone aqua-tel cursor">
+                <img src="images/orange-telephone.png" class="telephone orange-tel cursor">
             </div>
         </div>
         <div class="header-item logo">
-            <div><a href="index.html"><img src="WorkerHUNTERS.png" alt="Логотип компании" class="first-img cursor"></a>
-                <a href="index.html"><img src="WorkerHUNTERS_reverse.png" alt="Логотип компании"
+            <div><a href="index.html"><img src="images/WorkerHUNTERS.png" alt="Логотип компании" class="first-img cursor"></a>
+                <a href="index.html"><img src="images/WorkerHUNTERS_reverse.png" alt="Логотип компании"
                         class="second-img cursor"></a>
             </div>
         </div>
@@ -58,8 +71,8 @@
     </header>
     <div class="navy-fon"></div>
     <!--МЕНЮ САЙТА-->
-    <div class="orange-on-navy"></div>
-    <div class="orange-on-navy">
+    <div class="orange-on-navy stick"></div>
+    <div class="orange-on-navy stick">
         <nav>
             <ul class="menu menu-font orange-on-navy">
                 <li class="menu-item cursor">ГЛАВНАЯ</li>
@@ -78,7 +91,7 @@
             </ul>
         </nav>
     </div>
-    <div class="orange-on-navy"></div>
+    <div class="orange-on-navy stick"></div>
     <!--СОДЕРЖИМОЕ СТРАНИЦЫ-->
     <!--пустой блок для полей-->
     <div></div>
@@ -88,40 +101,25 @@
             <div>КОМАНДА ПРОФЕССИОНАЛОВ</div>
             <div class="orange-line"></div>
             <div class="orange-line"></div>
-        </div>
-        <!--блоки презентации-->
-        <div class="blocks content-font grid-for-content-blocks presentation">
-            <!--о компании-->
-            <div class="blocks-item company">
+            <div>
                 <div>
-                    <div class="sub1-blocks-item">О компании</div>
-                    <div class="sub3-blocks-item">
-                        <div class="presentation-block">
-                            <div class="presentation-content">
-                                <div><img src="markers/marker-.png" alt="Маркер"></div>
-                                <!--&shy;-->
-                                <div>Современная и инновационная компания
-                                </div>
-                            </div>
-                            <div class="presentation-content">
-                                <div><img src="markers/marker-.png" alt="Маркер"></div>
-                                <div>Индивидуальный подход к каждому
-                                    клиенту
-                                </div>
-                            </div>
-                            <div class="presentation-content">
-                                <div><img src="markers/marker-.png" alt="Маркер"></div>
-                                <div>Многолетний опыт успешной работы</div>
-                            </div>
-                            <div class="presentation-content">
-                                <div><img src="markers/marker-.png" alt="Маркер"></div>
-                                <div>Применение принципов развитых стран</div>
-                            </div>
-                        </div>
-                    </div>
+                    <a href="#" title="Обратный звонок">
+                        <div class="on-top"><img src="icon/icon/callback01.png" alt="Обратный звонок"></div>
+                    </a>
+                    <a href="#" title="Написать письмо">
+                        <div class="on-top"><img src="icon/icon/callback02.png" alt="Написать письмо"></div>
+                    </a>
+                    <a href="#header" title="Онлайн консультация">
+                        <div class="on-top"><img src="icon/icon/callback03.png" alt="Онлайн консультация"></div>
+                    </a>
+                    <a href="#header" title="Наверх">
+                        <div class="on-top"><img src="icon/icon/callback04.png" alt="Наверх"></div>
+                    </a>
                 </div>
             </div>
-            <!--карусель-->
+        </div>
+        <!--карусель-->
+        <div class="blocks presentation content-font grid-for-content-blocks">
             <div class="blocks-item slide">
                 <div class="sub4-blocks-item">
                     <div class="karusel">
@@ -146,32 +144,68 @@
                     <div class="karusel-navigator white-on-navy" onclick="changeIndex(5)">5</div>
                 </div>
             </div>
-            <!--деятельность-->
-            <div class="blocks-item">
-                <div>
-                    <div class="sub1-blocks-item">Деятельность</div>
-                    <div class="sub3-blocks-item">
-                        <div class="presentation-content">
-                            <div><img src="markers/marker-.png" alt="Маркер"></div>
-                            <div>Налаживание взаимосвязи между работником и руководителем предприятия</div>
-                            <div><img src="markers/marker-.png" alt="Маркер"></div>
-                            <div>Разрабатывание и внедрение индивидуальной системы экономических стимулов и социальных
-                                гарантий
-                            </div>
-                            <div><img src="markers/marker-.png" alt="Маркер"></div>
-                            <div>Оформление необходимой докуметации и полное сопровождение процедуры "заём у
-                                работодателя"
-                            </div>
-                            <div><img src="markers/marker-.png" alt="Маркер"></div>
-                            <div>Инновационная методика привлечения новых сотрудников, основанная как на собственном
-                                успешном
-                                опыте работы, так и на опыте европейских стран</div>
-                            <div><img src="markers/marker-.png" alt="Маркер"></div>
-                            <div>Разрабатывание и внедрение эффективной системы управления кадрами, а также при
-                                необходимости
-                                обучение кадрового персонала предприятия</div>
-                        </div>
-                    </div>
+        </div>
+        <!--наша деятельность-->
+        <div class="subject orange-text">
+            <div>НАША ДЕЯТЕЛЬНОСТЬ</div>
+            <div class="orange-line"></div>
+            <div class="orange-line"></div>
+        </div>
+        <div class="blocks activity content-font grid-for-content-blocks">
+            <div class="blocks-item activity">
+                <div class="sub6-blocks-item">
+                    <!--div class="white-on-blue">1</div-->
+                    <div><img src="icon/01.png" alt="" class="reccom" /></div>
+                    <div>ПРОВЕДЕНИЕ СОЦИАЛЬНЫХ ОПРОСОВ</div>
+                </div>
+            </div>
+            <div class="blocks-item activity">
+                <div class="sub6-blocks-item">
+                    <!--div>2</div-->
+                    <div><img src="icon/02.png" alt="" class="reccom" /></div>
+                    <div>НАЛАЖИВАНИЕ ВЗАИМОСВЯЗИ «РАБОТНИК - РУКОВОДИТЕЛЬ»</div>
+                </div>
+            </div>
+            <div class="blocks-item activity">
+                <div class="sub6-blocks-item">
+                    <!--div>3</div-->
+                    <div><img src="icon/03.png" alt="" class="reccom" /></div>
+                    <div>КУРСЫ ПОВЫШЕНИЯ КВАЛИФИКАЦИИ РАБОТНИКОВ</div>
+                </div>
+            </div>
+            <div class="blocks-item activity">
+                <div class="sub6-blocks-item">
+                    <!--div>4</div-->
+                    <div><img src="icon/04.png" alt="" class="reccom" /></div>
+                    <div>РАЗРАБОТКА И ВНЕДРЕНИЕ СИСТЕМЫ ЭКОНОМИЧЕСКИХ СТИМУЛОВ И СОЦИАЛЬНЫХ ГАРАНТИЙ</div>
+                </div>
+            </div>
+            <div class="blocks-item activity">
+                <div class="sub6-blocks-item">
+                    <!--div>5</div-->
+                    <div><img src="icon/05.png" alt="" class="reccom" /></div>
+                    <div>ОФОРМЛЕНИЕ И СОПРОВОЖДЕНИЕ ПРОЦЕДУРЫ «ЗАЁМ У РАБОТОДАТЕЛЯ»</div>
+                </div>
+            </div>
+            <div class="blocks-item activity">
+                <div class="sub6-blocks-item">
+                    <!--div>6</div-->
+                    <div><img src="icon/06.png" alt="" class="reccom" /></div>
+                    <div>ПОИСК И ПРИВЛЕЧЕНИЕ НОВЫХ СОТРУДНИКОВ</div>
+                </div>
+            </div>
+            <div class="blocks-item activity">
+                <div class="sub6-blocks-item">
+                    <!--div>7</div-->
+                    <div><img src="icon/07.png" alt="" class="reccom" /></div>
+                    <div>ВНЕДРЕНИЕ СИСТЕМЫ УПРАВЛЕНИЯ КАДРАМИ ПО ПРИНЦИПУ РАЗВИТЫХ СТРАН</div>
+                </div>
+            </div>
+            <div class="blocks-item activity">
+                <div class="sub6-blocks-item">
+                    <!--div>8</div-->
+                    <div><img src="icon/08.png" alt="" class="reccom" /></div>
+                    <div>ОБУЧЕНИЕ КАДРОВОГО ПЕРСОНАЛА</div>
                 </div>
             </div>
         </div>
@@ -202,10 +236,10 @@
             <div class="trusty cursor">
                 <div class="pic">
                     <a href="https://www.lemtrans.com.ua" target="_blank">
-                        <img src="trust/Trust-03.jpg" alt="Лемтранс" class="mySlides-02">
+                        <img src="trust/Trust-03.jpg" alt="ЛЕМТРАНС" class="mySlides-02">
                     </a>
                 </div>
-                <div class="blue-text"><a href="https://www.lemtrans.com.ua" target="_blank">Лемтранс</a></div>
+                <div class="blue-text"><a href="https://www.lemtrans.com.ua" target="_blank">ЛЕМТРАНС</a></div>
             </div>
             <div class="trusty cursor">
                 <div class="pic">
@@ -221,23 +255,23 @@
                         <img src="trust/Trust-05.jpg" alt='АО "МОТОР СИЧ"' class="mySlides-02">
                     </a>
                 </div>
-                <div class="blue-text"><a href="http://www.motorsich.com/ukr/" target="_blank">АО "МОТОР СИЧ"</a></div>
+                <div class="blue-text"><a href="http://www.motorsich.com/ukr/" target="_blank">МОТОР СИЧ</a></div>
             </div>
             <div class="trusty cursor">
                 <div class="pic">
                     <a href="http://donetsksteel.com.ua" target="_blank">
-                        <img src="trust/Trust-06.jpg" alt='ПРАО "Донецксталь"' class="mySlides-02">
+                        <img src="trust/Trust-06.jpg" alt='ПРАО "ДОНЕЦКСТАЛЬ"' class="mySlides-02">
                     </a>
                 </div>
-                <div class="blue-text"><a href="http://donetsksteel.com.ua" target="_blank">ПРАО "Донецксталь"</a></div>
+                <div class="blue-text"><a href="http://donetsksteel.com.ua" target="_blank">ДОНЕЦКСТАЛЬ</a></div>
             </div>
             <div class="trusty cursor">
                 <div class="pic">
                     <a href="http://ztr.com.ua" target="_blank">
-                        <img src="trust/Trust-07.jpg" alt='ЧАО "Запорожтрансформатор"' class="mySlides-02">
+                        <img src="trust/Trust-07.jpg" alt='ЧАО "ЗАПОРОЖТРАНСФОРМАТОР"' class="mySlides-02">
                     </a>
                 </div>
-                <div class="blue-text"><a href="http://ztr.com.ua" target="_blank">ЧАО "Запорожтрансформатор"</a></div>
+                <div class="blue-text"><a href="http://ztr.com.ua" target="_blank">ЗАПОРОЖТРАНСФОРМАТОР</a></div>
             </div>
             <div class=" trusty cursor">
                 <div class="pic">
@@ -257,31 +291,33 @@
         <!--блоки с отзывами клиентов-->
         <div id=reviews class="blocks content-font grid-for-content-blocks">
             <!--ВСТАВКА ЭТОЙ ЧАСТИ ПРОИСХОДИТ ЧЕРЕЗ JAVASCRIPT
-        <div class="blocks-item">
-            <div>
-                <div class="sub1-blocks-item">Леонардо Ди Каприо</div>
-                <div class="sub2-blocks-item">
-                    <div class="div-clients"><img src="clients/client-002.jpg" alt="Di Caprio" class="clients" /></div>
-                    <div class="blue-on-white">
-                        <div class="organization">МЕТІНВЕСТ</div>
-                        <div class="profession">Recruitment/HR Manager</div>
+            <div class="blocks-item">
+                <div>
+                    <div class="sub1-blocks-item">Леонардо Ди Каприо</div>
+                    <div class="sub2-blocks-item">
+                        <div class="div-clients"><img src="clients/client-002.jpg" alt="Di Caprio" class="clients" /></div>
+                        <div class="blue-on-white">
+                            <div class="organization">МЕТІНВЕСТ</div>
+                            <div class="profession">Recruitment/HR Manager</div>
+                        </div>
+                        <div class="review">Lorem ipsum dolor sit, amet consectetur adipisicing elit. A, ad veniam
+                            officiisillum nostrum pariatur voluptatibus eveniet corrupti aperiam! Expedita nostrum earum
+                            quae
+                            voluptate temporibus distinctio totam unde neque soluta. Lorem ipsum dolor sit, amet consectetur
+                            adipisicing elit. A, ad veniam
+                            officiisillum nostrum pariatur voluptatibus eveniet corrupti aperiam! Expedita nostrum earum
+                            quae
+                            voluptate temporibus distinctio totam unde neque soluta.</div>
                     </div>
-                    <div class="review">Lorem ipsum dolor sit, amet consectetur adipisicing elit. A, ad veniam
-                        officiisillum nostrum pariatur voluptatibus eveniet corrupti aperiam! Expedita nostrum earum
-                        quae
-                        voluptate temporibus distinctio totam unde neque soluta. Lorem ipsum dolor sit, amet consectetur
-                        adipisicing elit. A, ad veniam
-                        officiisillum nostrum pariatur voluptatibus eveniet corrupti aperiam! Expedita nostrum earum
-                        quae
-                        voluptate temporibus distinctio totam unde neque soluta.</div>
                 </div>
-            </div>
-            <div class="div-logos"><img src="logos/logo-002.jpg" alt="Metinvest" class="logos" /></div>
-        </div>-->
+                <div class="div-logos"><img src="logos/logo-002.jpg" alt="Metinvest" class="logos" /></div>
+            </div>-->
         </div>
         <!--кнопка-->
         <div class="blocks but content-font grid-for-content-blocks">
-            <div class="button reviews" onclick="ClientsSay()">Больше отзывов</div>
+            <div id="say">
+                <div class="action-button animate" onclick="ClientsSay(4,8,1)">БОЛЬШЕ ОТЗЫВОВ</div>
+            </div>
         </div>
         <!--рекомендуем к просмотру-->
         <div class="subject orange-text">
@@ -290,92 +326,52 @@
             <div class="orange-line"></div>
         </div>
         <!--блоки с рекомендациями-->
-        <div id=recommendations class="blocks content-font grid-for-content-blocks">
-            <!--ВСТАВКА ЭТОЙ ЧАСТИ ПРОИСХОДИТ ЧЕРЕЗ JAVASCRIPT-->
-            <div class="blocks-item">
-                <div>
-                    <div class="sub1-blocks-item">Рынок труда</div>
-                    <div class="sub5-blocks-item">
-                        <div class="div-clients"><img src="images/reccom01.jpg" alt="Реккомендации" class="reccom" />
-                        </div>
-                        <!--<div class="blue-on-white">
-                            <div class="organization">МЕТІНВЕСТ</div>
-                            <div class="profession">Recruitment/HR Manager</div>
-                        </div>-->
-                        <div class="review">Lorem ipsum dolor sit, amet consectetur adipisicing elit. A, ad veniam
-                            officiisillum nostrum pariatur voluptatibus eveniet corrupti aperiam! Expedita nostrum earum
-                            quae
-                            voluptate temporibus distinctio totam unde neque soluta. Lorem ipsum dolor sit, amet
-                            consectetur
-                            adipisicing elit. A, ad veniam
-                            officiisillum nostrum pariatur voluptatibus eveniet corrupti aperiam! Expedita nostrum earum
-                            quae
-                            voluptate temporibus distinctio totam unde neque soluta.</div>
+        <div id=recommendations class="blocks reccom content-font grid-for-content-blocks">
+            <!--ВСТАВКА ЭТОЙ ЧАСТИ ДОЛЖНА ПРОИСХОДИТЬ ЧЕРЕЗ JAVASCRIPT???-->
+            <a href="index.html">
+                <div class="blocks-item reccom cursor">
+                    <div><img src="images/reccom01.jpg" alt="Реккомендации" class="reccom" /></div>
+                    <div>
+                        <div>РЫНОК ТРУДА</div>
+                        <div>Основные проблемы, существующие на украинском рынке труда, и причины их возникновения</div>
                     </div>
                 </div>
-                <div class="button reccom">Подробнее</div>
-            </div>
-            <div class="blocks-item">
-                <div>
-                    <div class="sub1-blocks-item">Сохранение персонала</div>
-                    <div class="sub5-blocks-item">
-                        <div class="div-clients"><img src="images/reccom02.jpg" alt="Реккомендации" class="reccom" />
-                        </div>
-                        <!--<div class="blue-on-white">
-                            <div class="organization">МЕТІНВЕСТ</div>
-                            <div class="profession">Recruitment/HR Manager</div>
-                        </div>-->
-                        <div class="review">Lorem ipsum dolor sit, amet consectetur adipisicing elit. A, ad veniam
-                            officiisillum nostrum pariatur voluptatibus eveniet corrupti aperiam! Expedita nostrum earum
-                            quae
-                            voluptate temporibus distinctio totam unde neque soluta.</div>
+            </a>
+            <a href="index.html">
+                <div class="blocks-item reccom cursor">
+                    <div><img src="images/reccom02.jpg" alt="Реккомендации" class="reccom" /></div>
+                    <div>
+                        <div>СОХРАНЕНИЕ ПЕРСОНАЛА</div>
+                        <div>Проблема сохранения персонала: актуальность вопроса и методы его решения</div>
+
                     </div>
                 </div>
-                <div class="button reccom">Подробнее</div>
-            </div>
-            <div class="blocks-item">
-                <div>
-                    <div class="sub1-blocks-item">Обучение персонала</div>
-                    <div class="sub5-blocks-item">
-                        <div class="div-clients"><img src="images/reccom03.jpg" alt="Реккомендации" class="reccom" />
-                        </div>
-                        <!--<div class="blue-on-white">
-                            <div class="organization">МЕТІНВЕСТ</div>
-                            <div class="profession">Recruitment/HR Manager</div>
-                        </div>-->
-                        <div class="review">Lorem ipsum dolor sit, amet consectetur adipisicing elit. A, ad veniam
-                            officiisillum nostrum pariatur voluptatibus eveniet corrupti aperiam! Expedita nostrum earum
-                            quae
-                            voluptate temporibus distinctio totam unde neque soluta. Lorem ipsum dolor sit, amet
-                            consectetur
-                            adipisicing elit. A, ad veniam
-                            officiisillum nostrum pariatur voluptatibus eveniet corrupti aperiam! Expedita nostrum earum
-                            quae
-                            voluptate temporibus distinctio totam unde neque soluta.</div>
+            </a>
+            <a href="index.html">
+                <div class="blocks-item reccom cursor">
+                    <div><img src="images/reccom03.jpg" alt="Реккомендации" class="reccom" /></div>
+                    <div>
+                        <div>ОБУЧЕНИЕ ПЕРСОНАЛА</div>
+                        <div>Обучение персонала как самый лучший повод для мотивации сотрудников</div>
+
                     </div>
                 </div>
-                <div class="button reccom">Подробнее</div>
-            </div>
-            <div class="blocks-item">
-                <div>
-                    <div class="sub1-blocks-item">Привлечение сотрудников</div>
-                    <div class="sub5-blocks-item">
-                        <div class="div-clients"><img src="images/reccom04.jpg" alt="Реккомендации" class="reccom" />
-                        </div>
-                        <!--<div class="blue-on-white">
-                            <div class="organization">МЕТІНВЕСТ</div>
-                            <div class="profession">Recruitment/HR Manager</div>
-                        </div>-->
-                        <div class="review">Lorem ipsum dolor sit, amet consectetur adipisicing elit. A, ad veniam
-                            officiisillum nostrum pariatur voluptatibus eveniet corrupti aperiam! Expedita nostrum earum
-                            quae
-                            voluptate temporibus distinctio totam unde neque soluta.</div>
+            </a>
+            <a href="index.html">
+                <div class="blocks-item reccom cursor">
+                    <div><img src="images/reccom04.jpg" alt="Реккомендации" class="reccom" /></div>
+                    <div>
+                        <div>ПРИВЛЕЧЕНИЕ СОТРУДНИКОВ</div>
+                        <div>Поиск источников и способы привлечения новых сотрудников</div>
+
                     </div>
                 </div>
-                <div class="button reccom">Подробнее</div>
-            </div>
+            </a>
         </div>
+
     </div>
+    <!--/div>
+    </div-->
     <!--пустой блок для полей-->
     <div></div>
     <!--ПОДВАЛ САЙТА-->
@@ -412,8 +408,10 @@
             </div>
             <div>
                 <div class="orange-text headline">МЫ В СОЦСЕТЯХ</div>
-                <li class="footer-menu-item cursor"><a href="https://www.youtube.com" target="_blank">YouTube</a></li>
-                <li class="footer-menu-item cursor"><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+                <li class="footer-menu-item cursor"><a href="https://www.youtube.com" target="_blank">YouTube</a>
+                </li>
+                <li class="footer-menu-item cursor"><a href="https://www.facebook.com" target="_blank">Facebook</a>
+                </li>
                 <li class="footer-menu-item cursor"><a href="https://www.instagram.com" target="_blank">Instagram</a>
                 </li>
             </div>

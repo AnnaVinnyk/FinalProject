@@ -1,22 +1,16 @@
 /*медиа-запросы для header и menu в переломных точках*/
-@media (max-width: 1200px) {    
-    body {
-        grid-template-columns: 25px minmax(200px, 1fr) 25px;
+@media (max-width: 1210px) {    
+    body {grid-template-columns: 25px minmax(200px, 1fr) 25px;}
+    .grid-for-content-blocks {
+        margin-left: 0;
+        margin-right: 0;  
     }
 }
 @media (max-width: 1050px) {    
-    .footer-menu > div:nth-child(1) {
-        grid-area: contacts;
-    }
-    .footer-menu > div:nth-child(2) {
-        grid-area: navigation;
-    }
-    .footer-menu > div:nth-child(3) {
-        grid-area: services;
-    }
-    .footer-menu > div:nth-child(4) {
-        grid-area: social;
-    }
+    .footer-menu > div:nth-child(1) {grid-area: contacts;}
+    .footer-menu > div:nth-child(2) {grid-area: navigation;}
+    .footer-menu > div:nth-child(3) {grid-area: services;}
+    .footer-menu > div:nth-child(4) {grid-area: social;}
     .footer-menu {
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
@@ -25,9 +19,7 @@
     }
 }  
 @media (max-width: 700px) {    
-    .logo img, .first-img {
-        width: 230px;
-    }
+    .logo img, .first-img {width: 230px;}
     .header > div:nth-child(2) {
         grid-area: callback;
         justify-self: center;
@@ -67,45 +59,25 @@
         justify-items: center;
     }
 }  
-
-@media (max-width: 750px) {    
-    .grid-for-content-blocks {
-        margin-left: 0;
-        margin-right: 0;   
-    }
-    .menu-item {
-        border: 0px solid white;
-    } 
+/*@media (max-width: 750px) {    
+    .menu-item {border: 0px solid white;} 
 }  
-@media (max-width: 700px) {    
-    
-    .header-item {
-        border: 0px solid white;
-    }
-}  
-
-@media (max-width: 750px) {    
-    .grid-for-content-blocks {
-        margin-left: 0;
-        margin-right: 0;   
-    }
-    .menu-item {
-        border: 0px solid white;
-    } 
-}
 @media (max-width: 700px) {
+    .header-item {border: 0px solid white;}
+}  
+@media (max-width: 750px) {    
+    .menu-item {border: 0px solid white;} 
+}*/
+@media (max-width: 700px) {
+    body {grid-template-columns: 15px minmax(200px, 1fr) 15px;}
     body > div:nth-child(5) {
         grid-column-start: 1;
         grid-column-end: 4;
         grid-row-start: 2;
         grid-row-end: 3;
     }
-    body > div:nth-child(4) {
-        display: none;
-    }
-    body > div:nth-child(6) {
-        display: none;
-    }
+    body > div:nth-child(4) {display: none;}
+    body > div:nth-child(6) {display: none;}
     .menu {
         padding-left: 0;
         padding-right: 0;
@@ -113,12 +85,8 @@
         grid-template-columns: auto;
         grid-template-rows: repeat(5, auto); 
     }
-    .menu-item:hover ul{
-        display: none;
-    }
-    .submenu, .menu-item ul {
-       box-shadow: none;
-    }
+    .menu-item:hover ul{display: none;}
+    .submenu, .menu-item ul {box-shadow: none;}
     .submenu {
         width: 100%;
         text-align: center;
@@ -127,7 +95,6 @@
     .menu-item .service::before {
         content: '▶ ';
         font-size: 80%;
-        /*border: none;*/
         color: #ff7c00;
     }
     .menu-item:hover .service::before {
@@ -166,12 +133,8 @@
         top: 17px;
         left: 0;
     }
-    #sub {
-        position: absolute;
-    }
-    #sub.open {
-        position: relative;
-    }
+    #sub {position: absolute;}
+    #sub.open {position: relative;}
 }
 
 @media (max-width: 520px) {
@@ -194,58 +157,73 @@
     .logo img {max-width: 100%;}
 }
 @media (max-width: 320px) {
-    .first {
-        font-size: 16px;
-    }
-    .second {
-        font-size: 13.8px;
-    }
+    .first {font-size: 16px;}
+    .second {font-size: 13.8px;}
 }
 
 /*медиа-запросы для content в переломных точках*/
-
 @media (max-width: 1100px) {    
-    
-    .blocks {
-        grid-template-columns: repeat(3, minmax(200px, 1fr));
-    }
-    .presentation {
-        grid-template-areas:
-            "advantage advantage advantage"
-            "about activity activity"
-    }
+    .blocks {grid-template-columns: repeat(3, minmax(200px, 1fr));}
     .blocks.but > div:nth-child(1) {
         grid-column-start: 2;
         grid-column-end: 3;
     }
 }
 
+@media (max-width: 1000px) {    
+    .blocks.reccom {
+        grid-template-columns: minmax(450px, 650px);
+        justify-content: center;
+        grid-gap: 30px;
+    }
+}
+
+@media (max-width: 500px) {    
+    .blocks.reccom {
+        grid-template-columns: minmax(250px, 350px);
+        justify-content: center;
+        grid-gap: 30px;
+    }
+    .blocks-item.reccom {
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
+    .blocks-item.reccom > div:nth-child(2) {grid-gap: 10px;}
+}
+
 @media (max-width: 900px) {    
-    .blocks {
-        grid-template-columns: repeat(2, minmax(200px, 1fr));
-    }
-    .presentation {
-        grid-template-areas:
-            "advantage advantage"
-            "about about"
-            "activity activity"
-    }
+    .blocks {grid-template-columns: repeat(2, minmax(200px, 1fr));}
+    .blocks.activity {grid-template-columns: repeat(2, 1fr);}
     .blocks.but > div:nth-child(1) {
         grid-column-start: 1;
         grid-column-end: 3;
     }
 }
 
-@media (max-width: 550px) {    
+@media (max-width: 750px) {    
+    .blocks.activity {
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-items: center;
+    }
+    .sub6-blocks-item {
+        display: grid;
+        grid-template-columns: minmax(50px, 100px) minmax(100px, 300px);
+        grid-gap: 20px;
+        align-self: center;
+        justify-self: center;
+    }
+}
+
+@media (max-width: 560px) {    
     .subject {
+        padding-top: 20px;
+        padding-bottom: 20px;
         font-size: 22px;
     }
-    .orange-line {
-        border-bottom: 3.5px solid #ff7c00;    
-    }
-    .sub2-blocks-item > div {
-        border: 0px black solid;
-    }
+    .orange-line {border-bottom: 2px solid #ff7c00;}
+    .blocks{grid-template-columns: 1fr;}
+    .sub2-blocks-item > div {border: 0px black solid;}
     .sub2-blocks-item > div:nth-child(1) {
         grid-area: photo;
         align-self: flex-start;
@@ -256,7 +234,7 @@
     }
     .sub2-blocks-item > div:nth-child(3) {
         grid-area: monologue;
-        text-align: justify;
+        text-align: left;
     }
     .sub2-blocks-item > div:nth-child(4) {
         grid-area: logo-type;
@@ -270,22 +248,11 @@
             "status monologue"
             "logo-type logo-type"        
     }
-    .blocks {
-        grid-template-columns: 1fr;
-    }
-    .presentation {
-        grid-template-areas:
-            "advantage"
-            "about"
-            "activity"
-    }
     .blocks.but > div:nth-child(1) {
         grid-column-start: 1;
         grid-column-end: 2;
     }
-    .grid-for-content-blocks.trust {
-        grid-row-gap: 0;
-    }
+    .grid-for-content-blocks.trust {grid-row-gap: 30px;}
     .trusty > .navy-text {
         padding-top: 15px;
         padding-bottom: 35px;
@@ -293,9 +260,10 @@
         width: 235px;
         height: 17px;
     }
+    .grid-for-content-blocks {grid-gap: 30px;}
 }
 
-@media (max-width: 350px) {    
+@media (max-width: 390px) {    
     .sub2-blocks-item > div:nth-child(1) {
         grid-area: photo;
         align-self: flex-start;
@@ -306,7 +274,7 @@
     }
     .sub2-blocks-item > div:nth-child(3) {
         grid-area: monologue;
-        text-align: justify;
+        text-align: center;
     }
     .sub2-blocks-item > div:nth-child(4) {
         grid-area: logo-type;
@@ -321,3 +289,12 @@
             "logo-type"        
     }
 }
+
+@media (max-width: 315px) {
+    .subject > div:nth-child(4) {padding-right: 261px;}
+    .subject > div:nth-child(4) > div {grid-template-columns: repeat(4, 54px);}
+    .on-top {
+        max-width: 54px;
+        max-height: 54px;
+    }
+} 

@@ -1,0 +1,53 @@
+/*стили для "КАРУСЕЛИ"*/
+.blocks.presentation {grid-template-columns: 1fr;}
+.blocks-item.slide { background-color: #f8f4e8;}
+.sub4-blocks-item {
+    border: 0px solid black;
+    font-style: normal;
+    padding: 0;   
+}
+.karusel > div {position: relative;}
+.mySlides-01 {
+    max-width: 100%;
+    display: block;
+}
+.image-00 {
+    border: 0px solid black;
+    position: absolute;
+    top: 0;
+    display: grid;
+    align-items: center;
+    justify-content: center;  
+}
+.image-01 {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 100;
+}
+.image-02 {z-index: 99;}
+.image-03 {z-index: 98;}
+.image-04 {z-index: 97;}
+.image-05 {z-index: 96;}
+.navigator {
+    position: relative;
+    height: 0;
+    top: -40px;
+    z-index: 101;
+    display: grid; 
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 15px;
+}
+.karusel-navigator {
+    font-family: "Century Gothic";
+    font-weight: bold;
+    height: 30px;
+    width: 30px;
+    font-size: 14px;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    border-radius: 30px;
+    cursor: pointer;
+}
