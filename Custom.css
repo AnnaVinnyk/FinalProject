@@ -2,10 +2,20 @@ body {
     font-family: Calibri;
     font-size: 20px;
     display: grid;
-    grid-template-columns: 1fr minmax(200px, 1150px) 1fr;
+    grid-template-rows: auto;
     background-color: #f8f4e8;
     margin: 0;
     padding: 0;
+}
+.custom-grid {
+    display: grid;
+    grid-template-columns: 1fr minmax(200px, 1150px) 1fr;
+}
+.custom-grid > div:nth-child(1) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
 }
 body > div {
     padding: 0;
@@ -18,10 +28,12 @@ a {text-decoration: none;}
 /*цветовая карта*/
 .bcolor-none {background-color: none;}
 .orange-fon {background-color: #ff7c00;}
+.white-fon {background-color: white;}
 .orange-text {color: #ff7c00;}
 .orange-line {border-bottom: 3px solid #ff7c00;}
 .navy-fon {background-color: #0047a3;}
 .navy-text {color: #0047a3;}
+.nearly-navy-text {color: #0153bc;}
 .blue-fon {background-color: #4cb5ff;}
 .blue-text {color: #0086e4;}
 .navy-on-aqua {color: #0047a3;background-color: #86e7ff;}
@@ -48,7 +60,8 @@ a {text-decoration: none;}
     width: 55px;
     height: 55px;
     text-align: center;  
-    opacity: 0.75;  
+    opacity: 0.8;  
+    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.367);*/
 }
 .on-top img {
     z-index: 103;
@@ -56,7 +69,8 @@ a {text-decoration: none;}
 }
 .on-top:hover {
     background-color: #00acd6;
-    transform: scale(1.2);/**/
+    transform: scale(1.2);
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.275);/**/
     opacity: 1;
     transition: 0.4s;
 }
@@ -82,8 +96,10 @@ a {text-decoration: none;}
 	background-color: #b8f1ff;
     border: 1px solid  #5fcbe5;
     border-bottom: 5px solid  #5fcbe5;
-    color: #00acd6;
+    /*color: #00acd6;
     text-shadow: 0px -2px #ffffff;
+    text-shadow: 1px 1.5px #00acd6;*/
+    color: #009cc4;
     font-size: 15px;
     font-weight: bold;
 	cursor: pointer;	

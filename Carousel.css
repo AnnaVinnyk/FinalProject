@@ -4,9 +4,45 @@
 .sub4-blocks-item {
     border: 0px solid black;
     font-style: normal;
-    padding: 0;   
+    padding: 0;     
 }
-.karusel > div {position: relative;}
+.karusel {
+    position: relative;
+    display: grid;  
+    grid-template-columns: auto 1fr auto;
+    justify-items: stretch;
+    align-items: stretch;
+}
+.karusel > div:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    padding: 0px 5px;
+    max-height: 100%;
+}
+.karusel > div:nth-child(2) {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.karusel > div:nth-child(3) {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    padding: 0px 5px;
+}
+.karusel > div:nth-child(1), .karusel > div:nth-child(3) {
+    /*background-color: rgba(0, 0, 0, .2);*/
+    z-index: 101;
+    display: grid;
+    align-items: center;
+}
+.karusel > div:nth-child(1) > img, .karusel > div:nth-child(3) > img {
+    max-width: 15px;
+}
 .mySlides-01 {
     max-width: 100%;
     display: block;
@@ -36,8 +72,9 @@
     top: -40px;
     z-index: 101;
     display: grid; 
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(5, auto);
     grid-gap: 15px;
+    justify-content: center;
 }
 .karusel-navigator {
     font-family: "Century Gothic";

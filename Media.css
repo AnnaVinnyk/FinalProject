@@ -1,11 +1,20 @@
-/*медиа-запросы для header и menu в переломных точках*/
+/*общая сетка сайта с полями*/
 @media (max-width: 1210px) {    
-    body {grid-template-columns: 25px minmax(200px, 1fr) 25px;}
+    .custom-grid {grid-template-columns: 25px minmax(200px, 1fr) 25px;}
     .grid-for-content-blocks {
         margin-left: 0;
         margin-right: 0;  
     }
 }
+/*общая сетка, кнопка "БОЛЬШЕ ОТЗЫВОВ"*/
+@media (max-width: 1100px) {    
+    .blocks {grid-template-columns: repeat(3, minmax(200px, 1fr));}
+    .blocks.but > div:nth-child(1) {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+}
+/*"FOOTER"*/
 @media (max-width: 1050px) {    
     .footer-menu > div:nth-child(1) {grid-area: contacts;}
     .footer-menu > div:nth-child(2) {grid-area: navigation;}
@@ -18,6 +27,87 @@
             "navigation services"  
     }
 }  
+/*"РЕКОМЕНДУЕМ К ПРОСМОТРУ"*/
+@media (max-width: 1000px) {    
+    .blocks.reccom {
+        grid-template-columns: minmax(450px, 650px);
+        justify-content: center;
+        grid-gap: 30px;
+    }
+}
+/*общая сетка, "НАША ДЕЯТЕЛЬНОСТЬ", кнопка "БОЛЬШЕ ОТЗЫВОВ"*/
+@media (max-width: 900px) {    
+    .blocks {grid-template-columns: repeat(2, minmax(200px, 1fr));}
+    .blocks.activity {grid-template-columns: repeat(2, 1fr);}
+    .blocks.but > div:nth-child(1) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+}
+/*"НАША ДЕЯТЕЛЬНОСТЬ"*/
+@media (max-width: 750px) {    
+    .blocks.activity {
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-items: center;
+    }
+    .sub6-blocks-item {
+        display: grid;
+        grid-template-columns: minmax(50px, 100px) minmax(100px, 300px);
+        grid-gap: 20px;
+        align-self: center;
+        justify-self: center;
+    }
+}
+/*разделы со статьями*/
+@media (max-width: 750px) {    
+    .article-item {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 20px;
+        padding-bottom: 0;
+    }
+    .article-item.body {
+        align-items: center;
+    }    
+    .article-item.body > div:nth-child(1){
+        max-width: 350px;
+    }   
+    .article-item.title > div:nth-child(1) {
+        padding: 0;
+        padding-top: 10px;
+        border: none;
+        border-top: 1.5px solid #4cb5ff;
+        text-align: left;
+    }
+    .article-item.title > div:nth-child(2) {
+        padding: 0;
+        padding-bottom: 10px;
+        border: none;
+        border-bottom: 1.5px solid #4cb5ff;
+        text-align: left;
+    }
+    .article-item.title.training > div:nth-child(1) {
+        padding: 0;
+        padding-bottom: 15px;
+        border: none;
+        text-align: left;
+    }
+    .article-item.title.training > div:nth-child(2) {
+        padding-bottom: 20px;
+    }
+    .article-item.method {
+        grid-template-columns: 1fr;
+    }
+    .method-item {
+        padding-bottom: 20px;
+        border-bottom: 1.5px solid #4cb5ff;
+    } 
+    .article-item.method > div:last-child {
+        border-bottom: none;
+    }
+}
+/*"HEADER"*/
 @media (max-width: 700px) {    
     .logo img, .first-img {width: 230px;}
     .header > div:nth-child(2) {
@@ -59,25 +149,13 @@
         justify-items: center;
     }
 }  
-/*@media (max-width: 750px) {    
-    .menu-item {border: 0px solid white;} 
-}  
+/*"MENU" на раскрытие, общая сетка сайта*/
 @media (max-width: 700px) {
-    .header-item {border: 0px solid white;}
-}  
-@media (max-width: 750px) {    
-    .menu-item {border: 0px solid white;} 
-}*/
-@media (max-width: 700px) {
-    body {grid-template-columns: 15px minmax(200px, 1fr) 15px;}
-    body > div:nth-child(5) {
+    .custom-grid {grid-template-columns: 15px minmax(200px, 1fr) 15px;}
+    .custom-grid.open-menu > div:nth-child(1) {
         grid-column-start: 1;
         grid-column-end: 4;
-        grid-row-start: 2;
-        grid-row-end: 3;
     }
-    body > div:nth-child(4) {display: none;}
-    body > div:nth-child(6) {display: none;}
     .menu {
         padding-left: 0;
         padding-right: 0;
@@ -92,6 +170,7 @@
         text-align: center;
         top: 15px;
     }
+
     .menu-item .service::before {
         content: '▶ ';
         font-size: 80%;
@@ -121,6 +200,18 @@
         -o-transition-duration: 0.3s;
         -ms-transition-duration: 0.3s; 
     }
+    .menu-item.active-item .service::before {
+        content: '▶ ';
+        font-size: 80%;
+        color: white;
+        background-color: #4cb5ff;
+    }
+    .menu-item.open.active-item .service::before {
+        content: '▼ ';
+        font-size: 80%;
+        color: white;
+        background-color: #4cb5ff;
+    }
     .menu-item.open .service::before {
         content: '▼ ';
         font-size: 80%;
@@ -135,86 +226,15 @@
     }
     #sub {position: absolute;}
     #sub.open {position: relative;}
-}
-
-@media (max-width: 520px) {
-    .number {
-        display: grid;
-        justify-items: center;
+    .karusel > div:nth-child(1), .karusel > div:nth-child(3) {
+        padding: 0px 0px;
+     
     }
-    .footer-menu {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "contacts"
-            "social"
-            "navigation"
-            "services"        
+    .navigator {
+        top: -30px;
     }
 }
-@media (max-width: 450px) {
-    .name > span:nth-child(1) {font-size: 16.75px;}
-    .name > span:nth-child(2) {font-size: 14.5px;}
-    .logo img {max-width: 100%;}
-}
-@media (max-width: 320px) {
-    .first {font-size: 16px;}
-    .second {font-size: 13.8px;}
-}
-
-/*медиа-запросы для content в переломных точках*/
-@media (max-width: 1100px) {    
-    .blocks {grid-template-columns: repeat(3, minmax(200px, 1fr));}
-    .blocks.but > div:nth-child(1) {
-        grid-column-start: 2;
-        grid-column-end: 3;
-    }
-}
-
-@media (max-width: 1000px) {    
-    .blocks.reccom {
-        grid-template-columns: minmax(450px, 650px);
-        justify-content: center;
-        grid-gap: 30px;
-    }
-}
-
-@media (max-width: 500px) {    
-    .blocks.reccom {
-        grid-template-columns: minmax(250px, 350px);
-        justify-content: center;
-        grid-gap: 30px;
-    }
-    .blocks-item.reccom {
-        grid-template-columns: 1fr;
-        grid-gap: 10px;
-    }
-    .blocks-item.reccom > div:nth-child(2) {grid-gap: 10px;}
-}
-
-@media (max-width: 900px) {    
-    .blocks {grid-template-columns: repeat(2, minmax(200px, 1fr));}
-    .blocks.activity {grid-template-columns: repeat(2, 1fr);}
-    .blocks.but > div:nth-child(1) {
-        grid-column-start: 1;
-        grid-column-end: 3;
-    }
-}
-
-@media (max-width: 750px) {    
-    .blocks.activity {
-        grid-template-columns: 1fr;
-        align-items: center;
-        justify-items: center;
-    }
-    .sub6-blocks-item {
-        display: grid;
-        grid-template-columns: minmax(50px, 100px) minmax(100px, 300px);
-        grid-gap: 20px;
-        align-self: center;
-        justify-self: center;
-    }
-}
-
+/*разделители разделов, "ОТЗЫВЫ КЛИЕНТОВ", кнопка "БОЛЬШЕ ОТЗЫВОВ", "НАМ ДОВЕРЯЮТ"*/
 @media (max-width: 560px) {    
     .subject {
         padding-top: 20px;
@@ -262,8 +282,65 @@
     }
     .grid-for-content-blocks {grid-gap: 30px;}
 }
-
-@media (max-width: 390px) {    
+/*разделы со статьями*/
+@media (max-width: 560px) {    
+    .article-item.name {
+        font-size: 20px;
+    }
+    .article-item.title {
+        font-size: 19px;
+    }
+}/*"HEADER", "FOOTER"*/
+@media (max-width: 520px) {
+    .number {
+        display: grid;
+        justify-items: center;
+    }
+    .footer-menu {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "contacts"
+            "social"
+            "navigation"
+            "services"        
+    }
+}
+/*"РЕКОМЕНДУЕМ К ПРОСМОТРУ"*/
+@media (max-width: 500px) {    
+    .blocks.reccom {
+        grid-template-columns: minmax(250px, 350px);
+        justify-content: center;
+        grid-gap: 30px;
+    }
+    .blocks-item.reccom {
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
+    .blocks-item.reccom > div:nth-child(2) {grid-gap: 10px;}
+}
+/*"HEADER"*/
+@media (max-width: 450px) {
+    .name > span:nth-child(1) {font-size: 16.75px;}
+    .name > span:nth-child(2) {font-size: 14.5px;}
+    .logo img {max-width: 100%;}
+}
+/*разделы со статьями*/
+@media (max-width: 420px) {    
+    .article-item.body {
+        text-align: left;
+    }
+    .article-item.method {
+        grid-gap: 10px;
+        padding-top: 10px;
+    }
+    .method-item {
+        grid-template-columns: 70px 1fr;
+        grid-gap: 10px;
+        padding-bottom: 10px;
+    }  
+}
+/*"ОТЗЫВЫ КЛИЕНТОВ"*/
+@media (max-width: 400px) {
     .sub2-blocks-item > div:nth-child(1) {
         grid-area: photo;
         align-self: flex-start;
@@ -289,7 +366,22 @@
             "logo-type"        
     }
 }
-
+/*всплывающие окна*/
+@media (max-width: 345px) {
+    .popuptext {
+        bottom: 75px;
+        right: -8px;  
+    }
+    #MP-Call.popuptext::after {margin-left: -108px;}
+    #MP-Letter.popuptext::after {margin-left: -38px;}
+    #MP-Online.popuptext::after {margin-left: 32px;}
+} 
+/*не известно что:)*/
+@media (max-width: 320px) {
+    .first {font-size: 16px;}
+    .second {font-size: 13.8px;}
+}
+/*фиксированные кнопки сервиса*/
 @media (max-width: 315px) {
     .subject > div:nth-child(4) {padding-right: 261px;}
     .subject > div:nth-child(4) > div {grid-template-columns: repeat(4, 54px);}

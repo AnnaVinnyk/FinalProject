@@ -3,6 +3,7 @@
     display: grid;
     grid-template-columns: repeat(2, minmax(450px, 1fr));
     grid-gap: 40px;
+    padding-bottom: 40px;
 }
 .blocks-item.reccom {
     color: black;

@@ -1,0 +1,42 @@
+/*стили для всплывающих окон*/
+.popup {cursor: pointer;}
+.popuptext {
+    visibility: hidden;
+    background-color: white;
+    color: red;
+    border: 1.5px solid red;
+    box-shadow: 0 0 18px rgba(0, 0, 0, .275);
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    width: 280px;
+    height: 40px;
+    bottom: 75px;
+    right: 0;
+    font-size: 16px;    
+}
+.popuptext::after {
+    content: '▼ ';
+    font-size: 75%;
+    position: absolute;
+    margin-top: 8px;
+}
+#MP-Call.popuptext::after {margin-left: -100px;}
+#MP-Letter.popuptext::after {margin-left: -30px;}
+#MP-Online.popuptext::after {margin-left: 40px;}
+.popuptext.show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+

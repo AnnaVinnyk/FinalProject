@@ -22,6 +22,10 @@
     padding-bottom: 10px;
     border: 0px solid white;
 }
+.active-item {
+    background-color: #4cb5ff;;
+    color: white;
+}
 .menu-item:hover{
     background-color: #4cb5ff;;
     color: white;

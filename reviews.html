@@ -36,6 +36,7 @@
     <!--код для раздела "ОТЗЫВЫ НАШИХ КЛИЕНТОВ"-->
     <script async src="Data.js"></script>
     <script async src="Reviews.js"></script>
+    <script async src="AllReviews.js"></script>
     <!--код для КАРУСЕЛИ-->
     <script async src="Carousel.js"></script>
 </head>
@@ -82,7 +83,7 @@
             <nav>
                 <ul class="menu menu-font orange-on-navy">
                     <a href="index.html" class="orange-on-navy">
-                        <li class="menu-item cursor active-item">ГЛАВНАЯ</li>
+                        <li class="menu-item cursor">ГЛАВНАЯ</li>
                     </a>
                     <a href="laborMarket.html" class="orange-on-navy">
                         <li class="menu-item cursor">РЫНОК ТРУДА</li>
@@ -102,7 +103,7 @@
                         </ul>
                     </li>
                     <a href="reviews.html" class="orange-on-navy">
-                        <li class="menu-item cursor">ОТЗЫВЫ</li>
+                        <li class="menu-item cursor active-item">ОТЗЫВЫ</li>
                     </a>
                     <a href="index.html" class="orange-on-navy">
                         <li class="menu-item cursor">КОНТАКТЫ</li>
@@ -114,9 +115,9 @@
     <!--СОДЕРЖИМОЕ СТРАНИЦЫ-->
     <div class="custom-grid">
         <div>
-            <!--РАЗДЕЛ "КОМАНДА ПРОФЕССИОНАЛОВ"-->
+            <!--РАЗДЕЛ "ОТЗЫВЫ КЛИЕНТОВ"-->
             <div class="subject orange-text">
-                <div>КОМАНДА ПРОФЕССИОНАЛОВ</div>
+                <div>ОТЗЫВЫ НАШИХ КЛИЕНТОВ</div>
                 <div class="orange-line"></div>
                 <div class="orange-line"></div>
                 <!--иконки для всплывающих окон-->
@@ -137,14 +138,11 @@
                         </div>
                         <!--НАПИСАТЬ ПИСЬМО-->
                         <div>
-                            <div id="myModal" class="modal">
-                                <div id="myModal" class="modal-content popuptext" id="MP-Letter">
-                                    <div>Простите за временные неудобства -</div>
-                                    <div>данный сервис на стадии разработки!</div>
-                                    <div class="close">×</div>
-                                </div>
+                            <div class="popuptext" id="MP-Letter">
+                                <div>Простите за временные неудобства -</div>
+                                <div>данный сервис на стадии разработки!</div>
                             </div>
-                            <div id="myBtn" class="popup" onclick="myFunction('MP-Letter')">
+                            <div class="popup" onclick="myFunction('MP-Letter')">
                                 <div class="on-top cursor"><img src="icon/icon/callback02.png" alt="Написать письмо">
                                 </div>
                             </div>
@@ -169,192 +167,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <!--КАРУСЕЛЬ-->
-            <div class="blocks presentation content-font grid-for-content-blocks">
-                <div class="blocks-item slide">
-                    <div class="sub4-blocks-item">
-                        <div class="karusel">
-                            <div class="cursor" onclick="Previous()">
-                                <img src="icon/icon/left01.png" alt="Назад">
-                            </div>
-                            <div><img src="images/slide01.jpg" alt="Стратегии развитых стран"
-                                    class="mySlides-01 image-01 cursor">
-                                <img src="images/slide02.jpg" alt="Сохранение персонала"
-                                    class="mySlides-01 image-00 image-02 cursor">
-                                <img src="images/slide03.jpg" alt="Инновационный метод поиска"
-                                    class="mySlides-01 image-00 image-03 cursor">
-                                <img src="images/slide04.jpg" alt="Стратегия привлечения кадров"
-                                    class="mySlides-01 image-00 image-04 cursor">
-                                <img src="images/slide05.jpg" alt="Наши клиенты"
-                                    class="mySlides-01 image-00 image-05 cursor">
-                            </div>
-                            <div class="cursor" onclick="Next()">
-                                <img src="icon/icon/right01.png" alt="Вперёд">
-                            </div>
-                        </div>
-                        <div class="navigator">
-                            <div class="karusel-navigator white-on-navy" onclick="changeIndex(1)">
-                                <!--1-->
-                            </div>
-                            <div class="karusel-navigator white-on-navy" onclick="changeIndex(2)">
-                                <!--2-->
-                            </div>
-                            <div class="karusel-navigator white-on-navy" onclick="changeIndex(3)">
-                                <!--3-->
-                            </div>
-                            <div class="karusel-navigator white-on-navy" onclick="changeIndex(4)">
-                                <!--4-->
-                            </div>
-                            <div class="karusel-navigator white-on-navy" onclick="changeIndex(5)">
-                                <!--5-->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--РАЗДЕЛ "НАША ДЕЯТЕЛЬНОСТЬ"-->
-            <div class="subject orange-text">
-                <div>НАША ДЕЯТЕЛЬНОСТЬ</div>
-                <div class="orange-line"></div>
-                <div class="orange-line"></div>
-            </div>
-            <div class="blocks activity content-font grid-for-content-blocks">
-                <div class="blocks-item activity">
-                    <div class="sub6-blocks-item">
-                        <div><img src="icon/01.png" alt="" class="reccom"></div>
-                        <div>ПРОВЕДЕНИЕ СОЦИАЛЬНЫХ ОПРОСОВ</div>
-                    </div>
-                </div>
-                <div class="blocks-item activity">
-                    <div class="sub6-blocks-item">
-                        <div><img src="icon/02.png" alt="" class="reccom"></div>
-                        <div>НАЛАЖИВАНИЕ ВЗАИМОСВЯЗИ «РАБОТНИК - РУКОВОДИТЕЛЬ»</div>
-                    </div>
-                </div>
-                <div class="blocks-item activity">
-                    <div class="sub6-blocks-item">
-                        <div><img src="icon/03.png" alt="" class="reccom"></div>
-                        <div>КУРСЫ ПОВЫШЕНИЯ КВАЛИФИКАЦИИ РАБОТНИКОВ</div>
-                    </div>
-                </div>
-                <div class="blocks-item activity">
-                    <div class="sub6-blocks-item">
-                        <div><img src="icon/04.png" alt="" class="reccom"></div>
-                        <div>РАЗРАБОТКА И ВНЕДРЕНИЕ СИСТЕМЫ ЭКОНОМИЧЕСКИХ СТИМУЛОВ И СОЦИАЛЬНЫХ ГАРАНТИЙ
-                        </div>
-                    </div>
-                </div>
-                <div class="blocks-item activity">
-                    <div class="sub6-blocks-item">
-                        <div><img src="icon/05.png" alt="" class="reccom"></div>
-                        <div>ОФОРМЛЕНИЕ И СОПРОВОЖДЕНИЕ ПРОЦЕДУРЫ «ЗАЁМ У РАБОТОДАТЕЛЯ»</div>
-                    </div>
-                </div>
-                <div class="blocks-item activity">
-                    <div class="sub6-blocks-item">
-                        <div><img src="icon/06.png" alt="" class="reccom"></div>
-                        <div>ПОИСК И ПРИВЛЕЧЕНИЕ НОВЫХ СОТРУДНИКОВ</div>
-                    </div>
-                </div>
-                <div class="blocks-item activity">
-                    <div class="sub6-blocks-item">
-                        <div><img src="icon/07.png" alt="" class="reccom"></div>
-                        <div>ВНЕДРЕНИЕ СИСТЕМЫ УПРАВЛЕНИЯ КАДРАМИ ПО ПРИНЦИПУ РАЗВИТЫХ СТРАН</div>
-                    </div>
-                </div>
-                <div class="blocks-item activity">
-                    <div class="sub6-blocks-item">
-                        <div><img src="icon/08.png" alt="" class="reccom"></div>
-                        <div>ОБУЧЕНИЕ КАДРОВОГО ПЕРСОНАЛА</div>
-                    </div>
-                </div>
-            </div>
-            <!--РАЗДЕЛ "НАМ ДОВЕРЯЮТ"-->
-            <div class="subject orange-text">
-                <div>НАМ ДОВЕРЯЮТ</div>
-                <div class="orange-line"></div>
-                <div class="orange-line"></div>
-            </div>
-            <!--логотипы компаний-->
-            <div class="blocks content-font grid-for-content-blocks trust">
-                <div class="trusty cursor">
-                    <div class="pic">
-                        <a href="https://metinvestholding.com" target="_blank">
-                            <img src="trust/Trust-01.jpg" alt="МЕТІНВЕСТ" class="mySlides-02">
-                        </a>
-                    </div>
-                    <div class="blue-text"><a href="https://metinvestholding.com" target="_blank"
-                            class="to-big">МЕТІНВЕСТ</a></div>
-                </div>
-                <div class="trusty cursor">
-                    <div class="pic">
-                        <a href="https://dtek.com" target="_blank">
-                            <img src="trust/Trust-02.jpg" alt="ДТЭК" class="mySlides-02">
-                        </a>
-                    </div>
-                    <div class="blue-text"><a href="https://dtek.com" target="_blank" class="to-big">ДТЭК</a></div>
-                </div>
-                <div class="trusty cursor">
-                    <div class="pic">
-                        <a href="https://www.lemtrans.com.ua" target="_blank">
-                            <img src="trust/Trust-03.jpg" alt="ЛЕМТРАНС" class="mySlides-02">
-                        </a>
-                    </div>
-                    <div class="blue-text"><a href="https://www.lemtrans.com.ua" target="_blank"
-                            class="to-big">ЛЕМТРАНС</a>
-                    </div>
-                </div>
-                <div class="trusty cursor">
-                    <div class="pic">
-                        <a href="https://www.ferrexpo.ua" target="_blank">
-                            <img src="trust/Trust-04.jpg" alt="FERREXPO" class="mySlides-02">
-                        </a>
-                    </div>
-                    <div class="blue-text"><a href="https://www.ferrexpo.ua" target="_blank" class="to-big">FERREXPO</a>
-                    </div>
-                </div>
-                <div class="trusty cursor">
-                    <div class="pic">
-                        <a href="http://www.motorsich.com/ukr/" target="_blank">
-                            <img src="trust/Trust-05.jpg" alt='АО "МОТОР СИЧ"' class="mySlides-02">
-                        </a>
-                    </div>
-                    <div class="blue-text"><a href="http://www.motorsich.com/ukr/" target="_blank" class="to-big">МОТОР
-                            СИЧ</a></div>
-                </div>
-                <div class="trusty cursor">
-                    <div class="pic">
-                        <a href="http://donetsksteel.com.ua" target="_blank">
-                            <img src="trust/Trust-06.jpg" alt='ПРАО "ДОНЕЦКСТАЛЬ"' class="mySlides-02">
-                        </a>
-                    </div>
-                    <div class="blue-text"><a href="http://donetsksteel.com.ua" target="_blank"
-                            class="to-big">ДОНЕЦКСТАЛЬ</a></div>
-                </div>
-                <div class="trusty cursor">
-                    <div class="pic">
-                        <a href="http://ztr.com.ua" target="_blank">
-                            <img src="trust/Trust-07.jpg" alt='ЧАО "ЗАПОРОЖТРАНСФОРМАТОР"' class="mySlides-02">
-                        </a>
-                    </div>
-                    <div class="blue-text"><a href="http://ztr.com.ua" target="_blank"
-                            class="to-big">ЗАПОРОЖТРАНСФОРМАТОР</a></div>
-                </div>
-                <div class=" trusty cursor">
-                    <div class="pic">
-                        <a href="http://www.ugok.info" target="_blank">
-                            <img src="trust/Trust-08.jpg" alt="ЮГОК" class="mySlides-02">
-                        </a>
-                    </div>
-                    <div class="blue-text"><a href="http://www.ugok.info" target="_blank" class="to-big">ЮГОК</a></div>
-                </div>
-            </div>
-            <!--РАЗДЕЛ "ОТЗЫВЫ КЛИЕНТОВ"-->
-            <div class="subject orange-text">
-                <div>ОТЗЫВЫ НАШИХ КЛИЕНТОВ</div>
-                <div class="orange-line"></div>
-                <div class="orange-line"></div>
             </div>
             <!--блоки с отзывами клиентов-->
             <div id=reviews class="blocks content-font grid-for-content-blocks">
@@ -502,31 +314,6 @@
         </div>
     </div>
     <script>
-        // Get the modal
-        var modal = document.getElementById('myModal');
-
-        // Get the button that opens the modal
-        var btn = document.getElementById("myBtn");
-
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-
-        // When the user clicks the button, open the modal 
-        btn.onclick = function () {
-            modal.style.display = "block";
-        }
-
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function () {
-            modal.style.display = "none";
-        }
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
     </script>
 
 </body>

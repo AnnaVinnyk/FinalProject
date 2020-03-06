@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>FinalProject</title>
+    <link href="Custom.css" type="text/css" rel="stylesheet" />
+    <!--стили для "HEADER"-->
+    <link href="Header.css" type="text/css" rel="stylesheet" />
+    <!--стили для МЕНЮ сайта-->
+    <link href="Menu.css" type="text/css" rel="stylesheet" />
+    <!--ОБЩИЕ СТИЛИ для контента-->
+    <link href="Content.css" type="text/css" rel="stylesheet" />
+    <!--стили для кнопок сервиса-->
+    <link href="Popup.css" type="text/css" rel="stylesheet" />
+    <!--стили для КАРУСЕЛИ-->
+    <link href="Carousel.css" type="text/css" rel="stylesheet" />
+    <!--стили для раздела "НАША ДЕЯТЕЛЬНОСТЬ"-->
+    <link href="Activity.css" type="text/css" rel="stylesheet" />
+    <!--стили для раздела "НАМ ДОВЕРЯЮТ"-->
+    <link href="Trust.css" type="text/css" rel="stylesheet" />
+    <!--стили для раздела "ОТЗЫВЫ НАШИХ КЛИЕНТОВ"-->
+    <link href="Reviews.css" type="text/css" rel="stylesheet" />
+    <!--стили для раздела "РЕКОМЕНДУЕМ К ПРОСМОТРУ"-->
+    <link href="Recommendations.css" type="text/css" rel="stylesheet" />
+    <!--стили для "FOOTER"-->
+    <link href="Footer.css" type="text/css" rel="stylesheet" />
+    <!--стили для "ARTICLE"-->
+    <link href="Article.css" type="text/css" rel="stylesheet" />
+    <!--МЕДИА-ЗАПРОСЫ-->
+    <link href="Media.css" type="text/css" rel="stylesheet" />
+    <!--код для МЕНЮ-->
+    <script async src="FinalProject.js"></script>
+    <!--код для раздела "ОТЗЫВЫ НАШИХ КЛИЕНТОВ"-->
+    <script async src="Data.js"></script>
+    <script async src="Reviews.js"></script>
+    <!--код для КАРУСЕЛИ-->
+    <script async src="Carousel.js"></script>
+</head>
+
+<body>
+    <!--ШАПКА САЙТА-->
+    <div class="custom-grid navy-fon">
+        <div>
+            <header id="header" class="header navy-fon">
+                <div class="header-item quote orange-text">
+                    <!--<div><span>МЫ</span><span class="quote2"> - ВАШ ЛУЧШИЙ ВЫБОР</span></div>-->
+                </div>
+                <div class="header-item back callback">
+                    <div class="blue-text">
+                        <div>ОБРАТНЫЙ ЗВОНОК</div>
+                        <img src="images/telephone.png" class="telephone aqua-tel cursor">
+                        <img src="images/orange-telephone.png" class="telephone orange-tel cursor">
+                    </div>
+                </div>
+                <div class="header-item logo">
+                    <div><a href="index.html"><img src="images/WorkerHUNTERS.png" alt="Логотип компании"
+                                class="first-img cursor"></a>
+                        <a href="index.html"><img src="images/WorkerHUNTERS_reverse.png" alt="Логотип компании"
+                                class="second-img cursor"></a>
+                    </div>
+                </div>
+                <div class="header-item">
+                    <div></div>
+                    <h1 class="name">
+                        <span>РЕКРУТИНГОВАЯ КОМПАНИЯ </span><span>ПО ПОДБОРУ РАБОЧИХ КАДРОВ</span>
+                    </h1>
+                </div>
+                <div class="header-item number">
+                    <span>(044) 593 82 39</span>
+                    <span>0(800) 50 77 12</span>
+                    <span>ЕЖЕДНЕВНО с 7:55 до 20:05</span>
+                </div>
+            </header>
+        </div>
+    </div>
+    <!--МЕНЮ САЙТА-->
+    <div class="custom-grid open-menu navy-fon">
+        <div class="orange-on-navy">
+            <nav>
+                <ul class="menu menu-font orange-on-navy">
+                    <a href="index.html" class="orange-on-navy">
+                        <li class="menu-item cursor">ГЛАВНАЯ</li>
+                    </a>
+                    <a href="laborMarket.html" class="orange-on-navy">
+                        <li class="menu-item cursor">РЫНОК ТРУДА</li>
+                    </a>
+                    <li id="OurService" class="menu-item cursor active-item">
+                        <div class="service">НАШИ УСЛУГИ</div>
+                        <ul id="sub" class="submenu blue-text">
+                            <a href="savePersonal.html" class="blue-text">
+                                <li class="submenu-item cursor">СОХРАНЕНИЕ ПЕРСОНАЛА</li>
+                            </a>
+                            <a href="training.html" class="blue-text">
+                                <li class="submenu-item cursor active-item">ОБУЧЕНИЕ ПЕРСОНАЛА</li>
+                            </a>
+                            <a href="recruitingPersonal.html" class="blue-text">
+                                <li class="submenu-item cursor">ПРИВЛЕЧЕНИЕ СОТРУДНИКОВ</li>
+                            </a>
+                        </ul>
+                    </li>
+                    <a href="reviews.html" class="orange-on-navy">
+                        <li class="menu-item cursor">ОТЗЫВЫ</li>
+                    </a>
+                    <a href="index.html" class="orange-on-navy">
+                        <li class="menu-item cursor">КОНТАКТЫ</li>
+                    </a>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!--СОДЕРЖИМОЕ СТРАНИЦЫ-->
+    <div class="custom-grid">
+        <div>
+            <!--РАЗДЕЛ "НАШИ УСЛУГИ"-->
+            <div class="subject orange-text">
+                <div>НАШИ УСЛУГИ</div>
+                <div class="orange-line"></div>
+                <div class="orange-line"></div>
+                <!--иконки для всплывающих окон-->
+                <div>
+                    <!--занимает место с 1 по 4 колонку включительно-->
+                    <div>
+                        <!--определяет 4 колонки-->
+                        <!--ОБРАТНЫЙ ЗВОНОК-->
+                        <div>
+                            <div class="popuptext" id="MP-Call">
+                                <div>Простите за временные неудобства -</div>
+                                <div>данный сервис на стадии разработки!</div>
+                            </div>
+                            <div class="popup" onclick="myFunction('MP-Call')">
+                                <div class="on-top cursor"><img src="icon/icon/callback01.png" alt="Обратный звонок">
+                                </div>
+                            </div>
+                        </div>
+                        <!--НАПИСАТЬ ПИСЬМО-->
+                        <div>
+                            <div class="popuptext" id="MP-Letter">
+                                <div>Простите за временные неудобства -</div>
+                                <div>данный сервис на стадии разработки!</div>
+                            </div>
+                            <div class="popup" onclick="myFunction('MP-Letter')">
+                                <div class="on-top cursor"><img src="icon/icon/callback02.png" alt="Написать письмо">
+                                </div>
+                            </div>
+                        </div>
+                        <!--ОНЛАЙН КОНСУЛЬТАЦИЯ-->
+                        <div>
+                            <div class="popuptext" id="MP-Online">
+                                <div>Простите за временные неудобства -</div>
+                                <div>данный сервис на стадии разработки!</div>
+                            </div>
+                            <div class="popup" onclick="myFunction('MP-Online')">
+                                <div class="on-top cursor"><img src="icon/icon/callback03.png"
+                                        alt="Онлайн консультация">
+                                </div>
+                            </div>
+                        </div>
+                        <!--ОБРАТНЫЙ ЗВОНОК-->
+                        <div>
+                            <a href="#" title="Наверх">
+                                <div class="on-top cursor"><img src="icon/icon/callback04.png" alt="Наверх"></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--СТАТЬЯ "ОБУЧЕНИЕ ПЕРСОНАЛА"-->
+            <article>
+                <div class="article-item name white-on-blue">
+                    <div>ОБУЧЕНИЕ ПЕРСОНАЛА</div>
+                </div>
+                <div class="article-item body">
+                    <div><img src="images/article-03-01.jpg" alt="Обучение персонала" /></div>
+                    <div>Самый лучший повод для мотивации сотрудников – <span class="idea">перспектива 
+                        карьерного роста</span>, которая включает в себя и повышение зарплаты, и более 
+                        интересную и ответственную работу, и прочие бонусы. Но карьерный рост невозможен 
+                        без постоянного внутреннего обучения и развития сотрудников предприятия до уровня 
+                        квалификации, необходимого предприятию в настоящий момент времени и в перспективе.
+                    </div>
+                </div>
+                <div class="article-item title blue-text">
+                    <div></div>
+                    <div class="bold">ЧТО ДАЁТ ОБУЧЕНИЕ СОТРУДНИКОВ?</div>
+                </div>
+                <div class="article-item title training blue-text">
+                    <div>УМЕНИЕ РАБОТАТЬ КОМАНДНО</div>
+                    <div>Все сотрудники работают на общий результат, поэтому процесс обучения
+                        помогает им сплотиться и немного лучше узнать друг друга в неформальной обстановке,
+                        научиться доверять в рамках профессиональной необходимости, чувствовать «локоть».
+                    </div>
+                </div>
+                <div class="article-item title training blue-text">
+                    <div>ВЛОЖЕНИЕ СРЕДСТВ В ОБУЧЕНИЕ ОКУПАЕТСЯ ПОВЫШЕННОЙ ПРОИЗВОДИТЕЛЬНОСТЬЮ
+                        ТРУДА</div>
+                    <div>Обучение сотрудников компании, как правило, окупается многократно за счет повышения 
+                        производительности труда.
+                    </div>
+                </div>
+                <div class="article-item title training blue-text">
+                    <div>ПОВЫШЕНИЕ КВАЛИФИКАЦИИ СОТРУДНИКОВ</div>
+                    <div>Это один из самых важных аспектов обучения сотрудников компании. Работники
+                        приобретают новые профессиональные знания и впоследствии используют их на
+                        практике во благо компании.
+                    </div>
+                </div>
+                <div class="article-item title training blue-text">
+                    <div>ОБУЧЕНИЕ НА РАБОЧЕМ МЕСТЕ СПЕЦИФИКЕ КОНКРЕТНОЙ РАБОТЫ</div>
+                    <div>Каждое предприятие и организация, даже если они работают в одной сфере, имеет
+                        свои отличия и «изюминки». Поэтому даже квалифицированный работник с большим 
+                        опытом не всегда сразу может полностью включиться в производственный процесс. 
+                        Для этого компания проводит обучение сотрудников. Также это актуально для
+                        молодых специалистов, вчерашних выпускников учебных заведений.
+                    </div>
+                </div>
+                <div class="article-item title training blue-text">
+                    <div>ПРАКТИКА</div>
+                    <div>В процессе обучения сотрудников компании, как правило, «проигрываются» в теории
+                        все возможные ошибки. Впоследствии эти недоработки либо не повторяются на
+                        практике совсем, либо обученные сотрудники оперативно и грамотно их устраняют.
+                    </div>
+                </div>
+                <div class="article-item title training blue-text">
+                    <div>ПОВЫШЕНИЕ МОТИВАЦИИ СОТРУДНИКОВ</div>
+                    <div>Сотрудники компании, которые прошли обучение, чувствуют, что компания заботится
+                        о них, ценит их как профессионалов. Как правило, чисто человеческая благодарность
+                        побуждает их работать лучше.
+                    </div>
+                </div>
+            </article>
+            <!--РАЗДЕЛ "РЕКОМЕНДУЕМ К ПРОСМОТРУ"-->
+            <div class="subject orange-text">
+                <div>РЕКОМЕНДУЕМ К ПРОСМОТРУ</div>
+                <div class="orange-line"></div>
+                <div class="orange-line"></div>
+            </div>
+            <!--блоки с рекомендациями-->
+            <div id=recommendations class="blocks reccom content-font grid-for-content-blocks">
+                <!--ВСТАВКА ЭТОЙ ЧАСТИ ДОЛЖНА ПРОИСХОДИТЬ ЧЕРЕЗ JAVASCRIPT???-->
+                <a href="laborMarket.html">
+                    <div class="blocks-item reccom cursor">
+                        <div><img src="images/reccom01.jpg" alt="Реккомендации" class="reccom" /></div>
+                        <div>
+                            <div>РЫНОК ТРУДА</div>
+                            <div>Основные проблемы, существующие на украинском рынке труда, и причины их
+                                возникновения</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="savePersonal.html">
+                    <div class="blocks-item reccom cursor">
+                        <div><img src="images/reccom02.jpg" alt="Реккомендации" class="reccom" /></div>
+                        <div>
+                            <div>СОХРАНЕНИЕ ПЕРСОНАЛА</div>
+                            <div>Проблема сохранения персонала: актуальность вопроса и методы его
+                                решения</div>
+
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="recruitingPersonal.html">
+                    <div class="blocks-item reccom cursor">
+                        <div><img src="images/reccom04.jpg" alt="Реккомендации" class="reccom" /></div>
+                        <div>
+                            <div>ПРИВЛЕЧЕНИЕ СОТРУДНИКОВ</div>
+                            <div>Поиск источников и способы привлечения новых сотрудников</div>
+
+                        </div>
+                    </div>
+                </a>
+                <a href="reviews.html">
+                    <div class="blocks-item reccom cursor">
+                        <div><img src="images/reccom05.jpg" alt="Реккомендации" class="reccom" /></div>
+                        <div>
+                            <div>ОТЗЫВЫ КЛИЕНТОВ</div>
+                            <div>Наши клиенты - это самое ценное, что у нас есть!</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--ПОДВАЛ САЙТА-->
+    <div class="custom-grid navy-fon">
+        <div>
+            <footer class="footer navy-fon">
+                <div class="footer-menu">
+                    <div>
+                        <div class="orange-text headline">КОНТАКТЫ</div>
+                        <li class="footer-menu-item">
+                            <div>ул. Богдана Хмельницкого, 32,</div>
+                            <div>г. Киев, 01030, Украина</div>
+                        </li>
+                        <li class="footer-menu-item">(044) 593 82 39, 0 (800) 50 77 12</li>
+                        <li class="footer-menu-item">office2@workerhunters.ua</li>
+                    </div>
+                    <div>
+                        <div class="orange-text headline">НАВИГАЦИЯ ПО САЙТУ</div>
+                        <li class="footer-menu-item cursor"><a href="index.html">Главная</a></li>
+                        <li class="footer-menu-item cursor"><a href="laborMarket.html">Рынок труда</a></li>
+                        <li class="footer-menu-item cursor"><a href="savePersonal.html">Наши услуги</a></li>
+                        <li class="footer-menu-item cursor"><a href="reviews.html">Отзывы</a></li>
+                    </div>
+                    <div>
+                        <div class="orange-text headline">НАШИ УСЛУГИ</div>
+                        <li class="footer-menu-item cursor">
+                            <a href="savePersonal.html">
+                                <div>Мотивация и сохранение</div>
+                                <div>персонала</div>
+                            </a>
+                        </li>
+                        <li class="footer-menu-item cursor">
+                            <a href="training.html">
+                                <div>Обучение кадрового</div>
+                                <div>персонала</div>
+                            </a>
+                        </li>
+                        <li class="footer-menu-item cursor">
+                            <a href="recruitingPersonal.html">Привлечение кадров</a>
+                        </li>
+                    </div>
+                    <div>
+                        <div class="orange-text headline">МЫ В СОЦСЕТЯХ</div>
+                        <li class="footer-menu-item cursor"><a href="https://www.youtube.com"
+                                target="_blank">YouTube</a>
+                        </li>
+                        <li class="footer-menu-item cursor"><a href="https://www.facebook.com"
+                                target="_blank">Facebook</a>
+                        </li>
+                        <li class="footer-menu-item cursor"><a href="https://www.instagram.com"
+                                target="_blank">Instagram</a>
+                        </li>
+                    </div>
+                </div>
+                <div class="orange-text headline">ЛЮБОЕ СОВПАДЕНИЕ С РЕАЛЬНОСТЬЮ СЛУЧАЙНО!</div>
+                <div>© WorkerHunters, 2000-2020</div>
+                <div>За использование материалов без согласия WorkerHunters уголовная ответственность не
+                    предусмотрена.
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script>
+
+    </script>
+
+</body>
+
+</html>
