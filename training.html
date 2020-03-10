@@ -33,11 +33,13 @@
     <link href="Media.css" type="text/css" rel="stylesheet" />
     <!--код для МЕНЮ-->
     <script async src="FinalProject.js"></script>
+    <!--код для кнопок сервиса (position:fixed)-->
+    <script async src="OnTop.js"></script>
     <!--код для раздела "ОТЗЫВЫ НАШИХ КЛИЕНТОВ"-->
-    <script async src="Data.js"></script>
-    <script async src="Reviews.js"></script>
+    <!--script async src="Data.js"></script>
+    <script async src="Reviews.js"></script-->
     <!--код для КАРУСЕЛИ-->
-    <script async src="Carousel.js"></script>
+    <!--script async src="Carousel.js"></script-->
 </head>
 
 <body>
@@ -120,10 +122,17 @@
                 <div class="orange-line"></div>
                 <div class="orange-line"></div>
                 <!--иконки для всплывающих окон-->
+                <!--.subject > div:nth-child(4)-->
+                <!--занимает место с 1 по 4 колонку включительно-->
                 <div>
-                    <!--занимает место с 1 по 4 колонку включительно-->
+                    <!--.subject > div:nth-child(4) > div:nth-child(1)-->
+                    <!--определяет 4 колонки и имеет position:fixed-->
                     <div>
-                        <!--определяет 4 колонки-->
+                        <!--НАВЕРХ-->
+                        <div>
+                            <div class="online-service on-top cursor"><img src="icon/icon/callback04.png" alt="Наверх">
+                            </div>
+                        </div>
                         <!--ОБРАТНЫЙ ЗВОНОК-->
                         <div>
                             <div class="popuptext" id="MP-Call">
@@ -131,18 +140,19 @@
                                 <div>данный сервис на стадии разработки!</div>
                             </div>
                             <div class="popup" onclick="myFunction('MP-Call')">
-                                <div class="on-top cursor"><img src="icon/icon/callback01.png" alt="Обратный звонок">
+                                <div class="online-service cursor"><img src="icon/icon/callback01.png" alt="Обратный звонок">
                                 </div>
                             </div>
                         </div>
                         <!--НАПИСАТЬ ПИСЬМО-->
                         <div>
+
                             <div class="popuptext" id="MP-Letter">
                                 <div>Простите за временные неудобства -</div>
                                 <div>данный сервис на стадии разработки!</div>
                             </div>
                             <div class="popup" onclick="myFunction('MP-Letter')">
-                                <div class="on-top cursor"><img src="icon/icon/callback02.png" alt="Написать письмо">
+                                <div class="online-service cursor"><img src="icon/icon/callback02.png" alt="Написать письмо">
                                 </div>
                             </div>
                         </div>
@@ -153,17 +163,11 @@
                                 <div>данный сервис на стадии разработки!</div>
                             </div>
                             <div class="popup" onclick="myFunction('MP-Online')">
-                                <div class="on-top cursor"><img src="icon/icon/callback03.png"
+                                <div class="online-service cursor"><img src="icon/icon/callback03.png"
                                         alt="Онлайн консультация">
                                 </div>
                             </div>
-                        </div>
-                        <!--ОБРАТНЫЙ ЗВОНОК-->
-                        <div>
-                            <a href="#" title="Наверх">
-                                <div class="on-top cursor"><img src="icon/icon/callback04.png" alt="Наверх"></div>
-                            </a>
-                        </div>
+                        </div>                        
                     </div>
                 </div>
             </div>
@@ -237,7 +241,7 @@
                 <div class="orange-line"></div>
             </div>
             <!--блоки с рекомендациями-->
-            <div id=recommendations class="blocks reccom content-font grid-for-content-blocks">
+            <div id="recommendations" class="blocks reccom content-font grid-for-content-blocks">
                 <!--ВСТАВКА ЭТОЙ ЧАСТИ ДОЛЖНА ПРОИСХОДИТЬ ЧЕРЕЗ JAVASCRIPT???-->
                 <a href="laborMarket.html">
                     <div class="blocks-item reccom cursor">

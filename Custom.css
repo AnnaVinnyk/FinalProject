@@ -29,8 +29,10 @@ a {text-decoration: none;}
 .bcolor-none {background-color: none;}
 .orange-fon {background-color: #ff7c00;}
 .white-fon {background-color: white;}
+.white-border {box-shadow: inset 0 0 0 4px #86e7ff;}
 .orange-text {color: #ff7c00;}
 .orange-line {border-bottom: 3px solid #ff7c00;}
+.orange-border {box-shadow: inset 0 0 0 4px #ff7c00;}
 .navy-fon {background-color: #0047a3;}
 .navy-text {color: #0047a3;}
 .nearly-navy-text {color: #0153bc;}
@@ -50,34 +52,6 @@ a {text-decoration: none;}
 .lightblue-fon {background-color: #deefff;}
 .blue-on-lightblue {color: #0047a3;background-color: #deefff;}
 .orange-on-navy {background-color: #0047a3;color: #ff7c00;}
-
-
-/*стили для кнопок сервиса "sticky"*/
-.on-top {
-    background-color: #86e7ff;
-    border: 1.75px solid white;
-    border-radius: 100%;
-    width: 55px;
-    height: 55px;
-    text-align: center;  
-    opacity: 0.8;  
-    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.367);*/
-}
-.on-top img {
-    z-index: 103;
-    max-width: 100%;
-}
-.on-top:hover {
-    background-color: #00acd6;
-    transform: scale(1.2);
-    box-shadow: 0 0 18px rgba(0, 0, 0, 0.275);/**/
-    opacity: 1;
-    transition: 0.4s;
-}
-.on-top:not(:hover) {
-    transition: 0.4s;
-}
-
 
 /*стили для остальных кнопок*/
 .animate

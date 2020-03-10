@@ -1,74 +1,94 @@
 let slideIndex = 0,
     buttonIndex = 0;
 
+//функция задаёт прозрачность 0.0 для всех картинок карусели     
+//и выделяет белым цветом все кружки в навигации карусели
+function zeroOpacity(xSlides, xButtons) {
+    for (let i = 0; i < xSlides.length; i++) {
+        xSlides[i].style.opacity = "0.0";
+        xButtons[i].className = "karusel-navigator white-border-and-color";
+    }
+}
+
+//функция задаёт прозрачность 1.0 для видимой картинки карусели
+//и выделяет оранжевым цветом кружок с номером видимой картинки
+function noOpacity(xSlides, xButtons, xSlideIndex) {
+    xSlides[xSlideIndex - 1].style.opacity = "1.0";
+    xButtons[xSlideIndex - 1].className = "karusel-navigator orange-border-and-color";
+}
+
+//функция для листания картинок карусели вперёд  
 function Next() {
     let i;
     let NextIndex;
-    let slides = document.getElementsByClassName("mySlides-01");
+    let className;
+    if (window.innerWidth > 700) { className = "mySlideShow"; }
+    else { className = "myLittleSlideShow"; }
+    let slides = document.getElementsByClassName(className);
     let buttons = document.getElementsByClassName("karusel-navigator");
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.opacity = "0.0";
-        buttons[i].className = "karusel-navigator white-on-navy";
-    }
+    zeroOpacity(slides, buttons);
     NextIndex = (slideIndex + 1);
+    //проверка, чтобы не выйти за общее количество слайдов
     if (NextIndex > slides.length) { slideIndex = 1 }
     else { slideIndex = NextIndex };
-    slides[slideIndex - 1].style.opacity = "1.0";
-    buttons[slideIndex - 1].className = "karusel-navigator white-on-orange";
+    noOpacity(slides, buttons, slideIndex);
+    //передаётся значение buttonIndex, тем самым указывая, что было изменение индекса с помощью навигации
     buttonIndex = NextIndex;
 }
 
+//функция для листания картинок карусели назад  
 function Previous() {
     let i;
     let PreviousIndex;
-    let slides = document.getElementsByClassName("mySlides-01");
+    let className;
+    if (window.innerWidth > 700) { className = "mySlideShow"; }
+    else { className = "myLittleSlideShow"; }
+    let slides = document.getElementsByClassName(className);
     let buttons = document.getElementsByClassName("karusel-navigator");
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.opacity = "0.0";
-        buttons[i].className = "karusel-navigator white-on-navy";
-    }
+    zeroOpacity(slides, buttons);
     PreviousIndex = (slideIndex - 1);
+    //проверка, чтобы не выйти за ноль
     if (PreviousIndex == 0) { slideIndex = slides.length }
     else { slideIndex = PreviousIndex };
-    slides[slideIndex - 1].style.opacity = "1.0";
-    buttons[slideIndex - 1].className = "karusel-navigator white-on-orange";
+    noOpacity(slides, buttons, slideIndex);
+    //передаётся значение buttonIndex, тем самым указывая, что было изменение индекса с помощью навигации
     buttonIndex = PreviousIndex;
 }
 
+//функция для листания картинок карусели по номерам 
 function changeIndex(newIndex) {
     let i;
-    let slides = document.getElementsByClassName("mySlides-01");
+    let className;
+    if (window.innerWidth > 700) { className = "mySlideShow"; }
+    else { className = "myLittleSlideShow"; }
+    let slides = document.getElementsByClassName(className);
     let buttons = document.getElementsByClassName("karusel-navigator");
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.opacity = "0.0";
-        buttons[i].className = "karusel-navigator white-on-navy";
-    }
-    if (newIndex) { slideIndex = newIndex; }
-    else { slideIndex++; }
-    if (slideIndex > slides.length) { slideIndex = 1 }
-    slides[slideIndex - 1].style.opacity = "1.0";
-    buttons[slideIndex - 1].className = "karusel-navigator white-on-orange";
+    zeroOpacity(slides, buttons);
+    slideIndex = newIndex;
+    noOpacity(slides, buttons, slideIndex);
+    //передаётся значение buttonIndex, тем самым указывая, что было изменение индекса с помощью навигации
     buttonIndex = newIndex;
-
 }
 
+//функция для автоматического листания картинок карусели (рекурсия)  
 function showSlides() {
     let i;
-    let slides = document.getElementsByClassName("mySlides-01");
+    let className;
+    if (window.innerWidth > 700) { className = "mySlideShow"; }
+    else { className = "myLittleSlideShow"; }
+    let slides = document.getElementsByClassName(className);
     let buttons = document.getElementsByClassName("karusel-navigator");
-    //var texts = document.getElementsByClassName("mySlides-02");
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.opacity = "0.0";
-        buttons[i].className = "karusel-navigator white-on-navy";
-        //texts[i].style.opacity = "0.0";
-    }
+    zeroOpacity(slides, buttons);
+    //если было изменение индекса с помощью навигации, то buttonIndex не нулевое значение
+    //и значение из buttonIndex передаётся в slideIndex, а buttonIndex обнуляется
+    //в противном случае навигация не была исользована и slideIndex просто увеличивается на 1  
     if (buttonIndex) { slideIndex = buttonIndex; buttonIndex = 0; }
     else { slideIndex++; }
+    //проверка, чтобы не выйти за общее количество слайдов
     if (slideIndex > slides.length) { slideIndex = 1 }
-    slides[slideIndex - 1].style.opacity = "1.0";
-    buttons[slideIndex - 1].className = "karusel-navigator white-on-orange";
-    //texts[slideIndex - 1].style.opacity = "1.0";
-    setTimeout(showSlides, 4000); // Change image every 2 seconds
+    noOpacity(slides, buttons, slideIndex);
+    //рекурсия для закливания каруселии
+    setTimeout(showSlides, 4000);
 }
 
 showSlides();

@@ -3,14 +3,13 @@
     background-color: none;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 10px;
+    grid-gap: 20px;
     align-items: center;
     justify-items: stretch;
 }
 .blocks-item.activity {
     background-color: #f8f4e8;
-    grid-row-gap: 0;
-    border-radius: 180px; 
+    border-radius: 180px;
     justify-items: start;
     position: relative;
 }
@@ -24,7 +23,7 @@
 }
 .blocks-item.activity:hover {
     background-color: white;
-    color: #0086e4; 
+    color: #0086e4;  
 }
 .grid-for-content-blocks.activity {grid-row-gap: 0;}
  

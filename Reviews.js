@@ -10,7 +10,7 @@ function ClientsSay(begin, end, flag) {
         //создаёт пустой блок-карточку с отзывом клиента
         let div0 = document.createElement('div');
         div0.setAttribute('class', "blocks-item");
-        document.getElementById('reviews').appendChild(div0);
+        document.getElementById('ClientReviews').appendChild(div0);
         let div00 = document.createElement('div');
         div0.appendChild(div00);
         //голубая полоса с именем клиента

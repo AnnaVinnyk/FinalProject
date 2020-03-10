@@ -6,6 +6,17 @@
         margin-right: 0;  
     }
 }
+/*фиксированные кнопки сервиса*/
+@media (max-width: 1210px) {    
+    .subject > div:nth-child(4) {
+        align-self: center;
+        padding: 0;
+    }
+    .subject > div:nth-child(4) > div:nth-child(1) {
+        grid-template-columns: repeat(4, 55px);
+        grid-gap: 15px;
+    }
+}
 /*общая сетка, кнопка "БОЛЬШЕ ОТЗЫВОВ"*/
 @media (max-width: 1100px) {    
     .blocks {grid-template-columns: repeat(3, minmax(200px, 1fr));}
@@ -170,7 +181,6 @@
         text-align: center;
         top: 15px;
     }
-
     .menu-item .service::before {
         content: '▶ ';
         font-size: 80%;
@@ -226,13 +236,32 @@
     }
     #sub {position: absolute;}
     #sub.open {position: relative;}
-    .karusel > div:nth-child(1), .karusel > div:nth-child(3) {
-        padding: 0px 0px;
-     
+}
+/*фиксированные кнопки сервиса*/
+@media (max-width: 700px) {
+    .subject > div:nth-child(4) > div:nth-child(1)  {
+        right: 15px;
+    }   
+}
+/*"КАРУСЕЛЬ" на маленький экран*/
+@media (max-width: 700px) {
+    .myLittleSlideShow {
+        display: block;
     }
-    .navigator {
-        top: -30px;
+    .mySlideShow {
+        display: none;
     }
+    .small-picture {
+        display: block;
+    }
+    .big-picture {
+        display: none;
+    }
+    /*.karusel img:nth-child(1) {content: url("images/slide11.jpg");}
+    .karusel img:nth-child(2) {content: url("images/slide12.jpg");}
+    .karusel img:nth-child(3) {content: url("images/slide13.jpg");}
+    .karusel img:nth-child(4) {content: url("images/slide14.jpg");}
+    .karusel img:nth-child(5) {content: url("images/slide15.jpg");}*/
 }
 /*разделители разделов, "ОТЗЫВЫ КЛИЕНТОВ", кнопка "БОЛЬШЕ ОТЗЫВОВ", "НАМ ДОВЕРЯЮТ"*/
 @media (max-width: 560px) {    
@@ -372,9 +401,9 @@
         bottom: 75px;
         right: -8px;  
     }
-    #MP-Call.popuptext::after {margin-left: -108px;}
-    #MP-Letter.popuptext::after {margin-left: -38px;}
-    #MP-Online.popuptext::after {margin-left: 32px;}
+    #MP-Call.popuptext::after {margin-left: -38px;}
+    #MP-Letter.popuptext::after {margin-left: 32px;}
+    #MP-Online.popuptext::after {margin-left: 102px;}
 } 
 /*не известно что:)*/
 @media (max-width: 320px) {
@@ -383,10 +412,14 @@
 }
 /*фиксированные кнопки сервиса*/
 @media (max-width: 315px) {
-    .subject > div:nth-child(4) {padding-right: 261px;}
-    .subject > div:nth-child(4) > div {grid-template-columns: repeat(4, 54px);}
+    .subject > div:nth-child(4) > div:nth-child(1) {
+        grid-template-columns: repeat(4, 54px);
+    }
     .on-top {
         max-width: 54px;
         max-height: 54px;
+    }
+    .popuptext {
+        left: -8.5px;
     }
 } 

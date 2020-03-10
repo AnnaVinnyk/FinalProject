@@ -33,6 +33,8 @@
     <link href="Media.css" type="text/css" rel="stylesheet" />
     <!--код для МЕНЮ-->
     <script async src="FinalProject.js"></script>
+    <!--код для кнопок сервиса (position:fixed)-->
+    <script async src="OnTop.js"></script>
     <!--код для раздела "ОТЗЫВЫ НАШИХ КЛИЕНТОВ"-->
     <script async src="Data.js"></script>
     <script async src="Reviews.js"></script>
@@ -120,10 +122,17 @@
                 <div class="orange-line"></div>
                 <div class="orange-line"></div>
                 <!--иконки для всплывающих окон-->
+                <!--.subject > div:nth-child(4)-->
+                <!--занимает место с 1 по 4 колонку включительно-->
                 <div>
-                    <!--занимает место с 1 по 4 колонку включительно-->
+                    <!--.subject > div:nth-child(4) > div:nth-child(1)-->
+                    <!--определяет 4 колонки и имеет position:fixed-->
                     <div>
-                        <!--определяет 4 колонки-->
+                        <!--НАВЕРХ-->
+                        <div>
+                            <div class="online-service on-top cursor"><img src="icon/icon/callback04.png" alt="Наверх">
+                            </div>
+                        </div>
                         <!--ОБРАТНЫЙ ЗВОНОК-->
                         <div>
                             <div class="popuptext" id="MP-Call">
@@ -131,21 +140,21 @@
                                 <div>данный сервис на стадии разработки!</div>
                             </div>
                             <div class="popup" onclick="myFunction('MP-Call')">
-                                <div class="on-top cursor"><img src="icon/icon/callback01.png" alt="Обратный звонок">
+                                <div class="online-service cursor"><img src="icon/icon/callback01.png"
+                                        alt="Обратный звонок">
                                 </div>
                             </div>
                         </div>
                         <!--НАПИСАТЬ ПИСЬМО-->
                         <div>
-                            <div id="myModal" class="modal">
-                                <div id="myModal" class="modal-content popuptext" id="MP-Letter">
-                                    <div>Простите за временные неудобства -</div>
-                                    <div>данный сервис на стадии разработки!</div>
-                                    <div class="close">×</div>
-                                </div>
+
+                            <div class="popuptext" id="MP-Letter">
+                                <div>Простите за временные неудобства -</div>
+                                <div>данный сервис на стадии разработки!</div>
                             </div>
-                            <div id="myBtn" class="popup" onclick="myFunction('MP-Letter')">
-                                <div class="on-top cursor"><img src="icon/icon/callback02.png" alt="Написать письмо">
+                            <div class="popup" onclick="myFunction('MP-Letter')">
+                                <div class="online-service cursor"><img src="icon/icon/callback02.png"
+                                        alt="Написать письмо">
                                 </div>
                             </div>
                         </div>
@@ -156,16 +165,10 @@
                                 <div>данный сервис на стадии разработки!</div>
                             </div>
                             <div class="popup" onclick="myFunction('MP-Online')">
-                                <div class="on-top cursor"><img src="icon/icon/callback03.png"
+                                <div class="online-service cursor"><img src="icon/icon/callback03.png"
                                         alt="Онлайн консультация">
                                 </div>
                             </div>
-                        </div>
-                        <!--ОБРАТНЫЙ ЗВОНОК-->
-                        <div>
-                            <a href="#" title="Наверх">
-                                <div class="on-top cursor"><img src="icon/icon/callback04.png" alt="Наверх"></div>
-                            </a>
                         </div>
                     </div>
                 </div>
@@ -175,40 +178,39 @@
                 <div class="blocks-item slide">
                     <div class="sub4-blocks-item">
                         <div class="karusel">
-                            <div class="cursor" onclick="Previous()">
-                                <img src="icon/icon/left01.png" alt="Назад">
-                            </div>
-                            <div><img src="images/slide01.jpg" alt="Стратегии развитых стран"
-                                    class="mySlides-01 image-01 cursor">
+                            <div class="cursor previous" onclick="Previous()">&#171</div>
+                            <div class="big-picture">
+                                <img src="images/slide01.jpg" alt="Стратегии развитых стран"
+                                    class="mySlideShow image-01 cursor">
                                 <img src="images/slide02.jpg" alt="Сохранение персонала"
-                                    class="mySlides-01 image-00 image-02 cursor">
+                                    class="mySlideShow image-00 image-02 cursor">
                                 <img src="images/slide03.jpg" alt="Инновационный метод поиска"
-                                    class="mySlides-01 image-00 image-03 cursor">
+                                    class="mySlideShow image-00 image-03 cursor">
                                 <img src="images/slide04.jpg" alt="Стратегия привлечения кадров"
-                                    class="mySlides-01 image-00 image-04 cursor">
+                                    class="mySlideShow image-00 image-04 cursor">
                                 <img src="images/slide05.jpg" alt="Наши клиенты"
-                                    class="mySlides-01 image-00 image-05 cursor">
+                                    class="mySlideShow image-00 image-05 cursor">
                             </div>
-                            <div class="cursor" onclick="Next()">
-                                <img src="icon/icon/right01.png" alt="Вперёд">
+                            <div class="small-picture">
+                                <img src="images/slide11.jpg" alt="Стратегии развитых стран"
+                                    class="myLittleSlideShow image-01 cursor">
+                                <img src="images/slide12.jpg" alt="Сохранение персонала"
+                                    class="myLittleSlideShow image-00 image-02 cursor">
+                                <img src="images/slide13.jpg" alt="Инновационный метод поиска"
+                                    class="myLittleSlideShow image-00 image-03 cursor">
+                                <img src="images/slide14.jpg" alt="Стратегия привлечения кадров"
+                                    class="myLittleSlideShow image-00 image-04 cursor">
+                                <img src="images/slide15.jpg" alt="Наши клиенты"
+                                    class="myLittleSlideShow image-00 image-05 cursor">
                             </div>
+                            <div class="cursor next" onclick="Next()">&#187</div>
                         </div>
                         <div class="navigator">
-                            <div class="karusel-navigator white-on-navy" onclick="changeIndex(1)">
-                                <!--1-->
-                            </div>
-                            <div class="karusel-navigator white-on-navy" onclick="changeIndex(2)">
-                                <!--2-->
-                            </div>
-                            <div class="karusel-navigator white-on-navy" onclick="changeIndex(3)">
-                                <!--3-->
-                            </div>
-                            <div class="karusel-navigator white-on-navy" onclick="changeIndex(4)">
-                                <!--4-->
-                            </div>
-                            <div class="karusel-navigator white-on-navy" onclick="changeIndex(5)">
-                                <!--5-->
-                            </div>
+                            <div class="karusel-navigator" onclick="changeIndex(1)">1</div>
+                            <div class="karusel-navigator" onclick="changeIndex(2)">2</div>
+                            <div class="karusel-navigator" onclick="changeIndex(3)">3</div>
+                            <div class="karusel-navigator" onclick="changeIndex(4)">4</div>
+                            <div class="karusel-navigator" onclick="changeIndex(5)">5</div>
                         </div>
                     </div>
                 </div>
@@ -220,50 +222,50 @@
                 <div class="orange-line"></div>
             </div>
             <div class="blocks activity content-font grid-for-content-blocks">
-                <div class="blocks-item activity">
+                <div class="blocks-item activity navy-text">
                     <div class="sub6-blocks-item">
                         <div><img src="icon/01.png" alt="" class="reccom"></div>
                         <div>ПРОВЕДЕНИЕ СОЦИАЛЬНЫХ ОПРОСОВ</div>
                     </div>
                 </div>
-                <div class="blocks-item activity">
+                <div class="blocks-item activity navy-text">
                     <div class="sub6-blocks-item">
                         <div><img src="icon/02.png" alt="" class="reccom"></div>
                         <div>НАЛАЖИВАНИЕ ВЗАИМОСВЯЗИ «РАБОТНИК - РУКОВОДИТЕЛЬ»</div>
                     </div>
                 </div>
-                <div class="blocks-item activity">
+                <div class="blocks-item activity navy-text">
                     <div class="sub6-blocks-item">
                         <div><img src="icon/03.png" alt="" class="reccom"></div>
                         <div>КУРСЫ ПОВЫШЕНИЯ КВАЛИФИКАЦИИ РАБОТНИКОВ</div>
                     </div>
                 </div>
-                <div class="blocks-item activity">
+                <div class="blocks-item activity navy-text">
                     <div class="sub6-blocks-item">
                         <div><img src="icon/04.png" alt="" class="reccom"></div>
                         <div>РАЗРАБОТКА И ВНЕДРЕНИЕ СИСТЕМЫ ЭКОНОМИЧЕСКИХ СТИМУЛОВ И СОЦИАЛЬНЫХ ГАРАНТИЙ
                         </div>
                     </div>
                 </div>
-                <div class="blocks-item activity">
+                <div class="blocks-item activity navy-text">
                     <div class="sub6-blocks-item">
                         <div><img src="icon/05.png" alt="" class="reccom"></div>
                         <div>ОФОРМЛЕНИЕ И СОПРОВОЖДЕНИЕ ПРОЦЕДУРЫ «ЗАЁМ У РАБОТОДАТЕЛЯ»</div>
                     </div>
                 </div>
-                <div class="blocks-item activity">
+                <div class="blocks-item activity navy-text">
                     <div class="sub6-blocks-item">
                         <div><img src="icon/06.png" alt="" class="reccom"></div>
                         <div>ПОИСК И ПРИВЛЕЧЕНИЕ НОВЫХ СОТРУДНИКОВ</div>
                     </div>
                 </div>
-                <div class="blocks-item activity">
+                <div class="blocks-item activity navy-text">
                     <div class="sub6-blocks-item">
                         <div><img src="icon/07.png" alt="" class="reccom"></div>
                         <div>ВНЕДРЕНИЕ СИСТЕМЫ УПРАВЛЕНИЯ КАДРАМИ ПО ПРИНЦИПУ РАЗВИТЫХ СТРАН</div>
                     </div>
                 </div>
-                <div class="blocks-item activity">
+                <div class="blocks-item activity navy-text">
                     <div class="sub6-blocks-item">
                         <div><img src="icon/08.png" alt="" class="reccom"></div>
                         <div>ОБУЧЕНИЕ КАДРОВОГО ПЕРСОНАЛА</div>
@@ -357,7 +359,7 @@
                 <div class="orange-line"></div>
             </div>
             <!--блоки с отзывами клиентов-->
-            <div id=reviews class="blocks content-font grid-for-content-blocks">
+            <div id="ClientReviews" class="blocks content-font grid-for-content-blocks">
                 <!--ВСТАВКА ЭТОЙ ЧАСТИ ПРОИСХОДИТ ЧЕРЕЗ JAVASCRIPT
             <div class="blocks-item">
                 <div>
@@ -394,7 +396,7 @@
                 <div class="orange-line"></div>
             </div>
             <!--блоки с рекомендациями-->
-            <div id=recommendations class="blocks reccom content-font grid-for-content-blocks">
+            <div id="recommendations" class="blocks reccom content-font grid-for-content-blocks">
                 <!--ВСТАВКА ЭТОЙ ЧАСТИ ДОЛЖНА ПРОИСХОДИТЬ ЧЕРЕЗ JAVASCRIPT???-->
                 <a href="laborMarket.html">
                     <div class="blocks-item reccom cursor">
@@ -501,7 +503,7 @@
             </footer>
         </div>
     </div>
-    <script>
+    <!--script>
         // Get the modal
         var modal = document.getElementById('myModal');
 
@@ -527,7 +529,7 @@
                 modal.style.display = "none";
             }
         }
-    </script>
+    </script-->
 
 </body>
 

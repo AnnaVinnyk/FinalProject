@@ -43,22 +43,53 @@
     grid-row-start: 1;
     grid-row-end: 2;
 }
+/*стили для кнопок сервиса (position: fixed)*/
 .subject > div:nth-child(4) {
     grid-column-start: 1;
     grid-column-end: 4;
     justify-self: flex-end;
-    align-self: center;
-    padding-right: 270px;
 }
 .subject > div:nth-child(4) > div:nth-child(1) {
     display: grid;
-    grid-template-columns: repeat(4, 55px);
+    grid-template-columns: 55px;
     grid-gap: 15px;
     position: fixed;
     bottom: 25px;
+    right: 25px;
     z-index: 102;
 }
-
+.online-service {
+    background-color: #86e7ff;
+    border: 1.75px solid white;
+    border-radius: 100%;
+    width: 55px;
+    height: 55px;
+    text-align: center;  
+    opacity: 0.8;  
+    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.367);*/
+}
+.on-top {
+    display: none;
+}
+.on-top-show {
+    display: block;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+.online-service img {
+    z-index: 103;
+    max-width: 100%;
+}
+.online-service:hover {
+    background-color: #00acd6;
+    transform: scale(1.2);
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.275);/**/
+    opacity: 1;
+    transition: 0.4s;
+}
+.online-service:not(:hover) {
+    transition: 0.4s;
+}
 
 /*общие стили для блоков контента*/
 .content-font {
@@ -83,282 +114,3 @@
     justify-items: center;
     align-items: center;
 }
-
-
-/*стили для "КАРУСЕЛИ"*/
-/*.blocks.presentation {grid-template-columns: 1fr;}
-.blocks-item.slide { background-color: #f8f4e8;}
-.sub4-blocks-item {
-    border: 0px solid black;
-    font-style: normal;
-    padding: 0;   
-}
-.karusel > div {position: relative;}
-.mySlides-01 {
-    max-width: 100%;
-    display: block;
-}
-.image-00 {
-    border: 0px solid black;
-    position: absolute;
-    top: 0;
-    display: grid;
-    align-items: center;
-    justify-content: center;  
-}
-.image-01 {
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    z-index: 100;
-}
-.image-02 {z-index: 99;}
-.image-03 {z-index: 98;}
-.image-04 {z-index: 97;}
-.image-05 {z-index: 96;}
-.navigator {
-    position: relative;
-    height: 0;
-    top: -40px;
-    z-index: 101;
-    display: grid; 
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 15px;
-}
-.karusel-navigator {
-    font-family: "Century Gothic";
-    font-weight: bold;
-    height: 30px;
-    width: 30px;
-    font-size: 14px;
-    display: grid;
-    align-content: center;
-    justify-content: center;
-    border-radius: 30px;
-    cursor: pointer;
-}*/
-
-
-/*стили для раздела "ОТЗЫВЫ НАШИХ КЛИЕНТОВ"*/
-/*.blocks-item.company {justify-items: stretch;}
-.sub1-blocks-item {
-    border: 0px solid black;
-    font-size: 19px;
-    color: white;
-    background-color: #4cb5ff;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    text-align: center;
-    border-bottom: 0px solid #0047a3;
-}
-.sub1-blocks-item-temp {
-    border: 0px solid black;
-    font-size: 19px;
-    color: white;
-    background-color: #1ed9a1;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    text-align: center;
-}
-.sub2-blocks-item {
-    border: 0px solid black;
-    font-style: italic;
-    text-align: center;
-    padding: 20px;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    grid-gap: 10px;
-    align-items: stretch;  
-}
-.sub2-blocks-item div {border: 0px green solid;}
-.clients {max-width: 90px;}
-.div-clients {
-    text-align: center;
-    align-self: center;    
-}
-.organization {
-    padding-top: 0;
-    text-align: center;
-    font-weight: bold;
-    font-style: normal;
-}
-.profession {
-    padding-bottom: 0;
-    text-align: center;
-    font-weight: normal;
-    font-style: normal;    
-}
-.logos {max-width: 150px;}
-.div-logos {
-    border: 0px green solid;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}*/
-
-
-/*.sub3-blocks-item {
-    border: 0px solid black;
-    font-style: italic;
-    text-align: justify;
-    padding: 20px;   
-}*/
-
-
-/*стили для раздела "НАША ДЕЯТЕЛЬНОСТЬ"*/
-/*.blocks.activity {
-    background-color: none;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 10px;
-    align-items: center;
-    justify-items: stretch;
-}
-.blocks-item.activity {
-    background-color: #f8f4e8;
-    grid-row-gap: 0;
-    border-radius: 180px; 
-    justify-items: start;
-    position: relative;
-}
-.sub6-blocks-item {
-    display: grid;
-    grid-template-columns: 100px 1fr;
-    grid-gap: 20px;
-    padding: 20px;
-    align-items: center;
-    justify-items: flex-start;
-}
-.blocks-item.activity:hover {
-    background-color: white;
-    color: #0086e4; 
-}
-.grid-for-content-blocks.activity {grid-row-gap: 0;}*/
- 
-
-
-/*стили для раздела "НАМ ДОВЕРЯЮТ"*/
-/*.grid-for-content-blocks.trust {
-    grid-row-gap: 30px;
-    grid-column-gap: 0;
-    justify-items: center;   
-}
-.mySlides-02 {
-    position: relative; 
-    width: 210px;
-}
-.pic {
-    width: 210px;
-    height: 140px;
-    overflow: hidden;
-}
-.pic:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 18px rgba(0, 0, 0, .275);
-    transition: 0.2s;
-    -webkit-transition: 0.2s;
-    -moz-transition: 0.2s;
-    -o-transition: 0.2s;
-    -ms-transition: 0.2s;
-}
-.pic:not(:hover) {
-    transition: 0.2s;
-    -webkit-transition: 0.2s;
-    -moz-transition: 0.2s;
-    -o-transition: 0.2s;
-    -ms-transition: 0.2s;
-}
-.trusty > .blue-text {
-    padding-top: 30px;
-    padding-bottom: 10px;
-    font-size: 17px;
-    height: 17px;
-}
-.blue-text > a {
-    text-decoration: none;
-    color: #0086e4;
-}
-.blue-text > a:hover {
-    color: #ff7c00;
-    font-size: 19px;
-    transition: 0.2s;
-    -webkit-transition: 0.2s;
-    -moz-transition: 0.2s;
-    -o-transition: 0.2s;
-    -ms-transition: 0.2s; 
-}
-.blue-text > a:not(:hover) {
-    transition: 0.2s;
-    -webkit-transition: 0.2s;
-    -moz-transition: 0.2s;
-    -o-transition: 0.2s;
-    -ms-transition: 0.2s; 
-}
-.trusty > div {
-    display: grid;
-    justify-items: center;
-    align-items: center;
-}
-.trusty {
-    display: grid;
-    width: 100%;
-    justify-items: center;
-    align-items: center;
-}*/
-
-
-/*стили для раздела "РЕКОМЕНДУЕМ К ПРОСМОТРУ"*/
-/*.blocks.reccom {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(450px, 1fr));
-    grid-gap: 40px;
-}
-.blocks-item.reccom {
-    color: black;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-    padding: 20px; 
-    align-items: flex-start;
-}
-.blocks-item.reccom > div:nth-child(2) {
-    display: grid;
-    grid-gap: 20px;
-}
-.blocks-item.reccom > div:nth-child(2) > div:nth-child(1) {
-    font-size: 17px;
-    font-weight: bold;
-}
-.blocks-item.reccom > div:nth-child(2) > div:nth-child(2) {
-    color: black;
-}
-.blocks-item.reccom:hover {
-    box-shadow: inset 0 0 0 2px #0086e4;
-    color: #0086e4;
-    transition: 0.4s;
-}
-.blocks-item.reccom:not(:hover) {transition: 0.4s;}
-.blocks.but {
-    position: relative;
-    align-items: center;
-    justify-items: center;
-}
-.blocks.but > div:nth-child(1){
-    grid-column-start: 1;
-    grid-column-end: 5;
-    padding-top: 30px;
-    width: 250px;
-    height: 40px;
-    position: relative;
-}
-.blocks.but > div:nth-child(1) > div:nth-child(1){
-    width: 250px;
-    position: absolute;
-}
-img.reccom {max-width: 100%;}
-.button.reccom {
-    width: 160px;
-    margin-bottom: 20px;
-    justify-self: center;
-}*/

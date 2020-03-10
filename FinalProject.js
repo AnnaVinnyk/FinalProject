@@ -10,27 +10,4 @@ titleElem.onclick = function () {
 }
 
 
-//функция для всплывающих окон сервиса
-let Id = '';
-let LastId = '';
-let sumId = 1;
-function myFunction(Id) {
-    if (LastId == Id) { sumId += 1 }
-    else {
-        document.getElementById('MP-Call').className = 'popuptext';
-        document.getElementById('MP-Letter').className = 'popuptext';
-        document.getElementById('MP-Online').className = 'popuptext';
-        sumId = 1;
-        LastId = Id;
-    };
-    if (sumId % 2 == 0) {
-        document.getElementById('MP-Call').className = 'popuptext';
-        document.getElementById('MP-Letter').className = 'popuptext';
-        document.getElementById('MP-Online').className = 'popuptext';
-    }
-    else {
-        var popup = document.getElementById(Id);
-        popup.classList.toggle('show');
-    }
 
-}

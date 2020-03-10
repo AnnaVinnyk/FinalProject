@@ -22,21 +22,21 @@
     position: absolute;
     margin-top: 8px;
 }
-#MP-Call.popuptext::after {margin-left: -100px;}
-#MP-Letter.popuptext::after {margin-left: -30px;}
-#MP-Online.popuptext::after {margin-left: 40px;}
+#MP-Call.popuptext::after {margin-left: -30px;}
+#MP-Letter.popuptext::after {margin-left: 40px;}
+#MP-Online.popuptext::after {margin-left: 110px;}
 .popuptext.show {
     visibility: visible;
-    -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s;
+    -webkit-animation: fadeIn 0.5s;
+    animation: fadeIn 0.5s;
 }
 @-webkit-keyframes fadeIn {
     from {opacity: 0;} 
     to {opacity: 1;}
 }
-
 @keyframes fadeIn {
     from {opacity: 0;}
-    to {opacity:1 ;}
+    to {opacity: 1;}
 }
+
 
