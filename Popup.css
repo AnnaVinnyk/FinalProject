@@ -12,19 +12,20 @@
     position: absolute;
     width: 280px;
     height: 40px;
-    bottom: 75px;
-    right: 0;
+    right: 70px;
     font-size: 16px;    
 }
 .popuptext::after {
-    content: '▼ ';
+    content: '▶ ';
     font-size: 75%;
     position: absolute;
-    margin-top: 8px;
+    right: -10px;
+    bottom: 20px;
+    
 }
-#MP-Call.popuptext::after {margin-left: -30px;}
-#MP-Letter.popuptext::after {margin-left: 40px;}
-#MP-Online.popuptext::after {margin-left: 110px;}
+#MP-Call.popuptext {bottom: 145px;}
+#MP-Letter.popuptext {bottom: 75px;}
+#MP-Online.popuptext {bottom: 5px;}
 .popuptext.show {
     visibility: visible;
     -webkit-animation: fadeIn 0.5s;

@@ -54,3 +54,20 @@
     padding-top: 20px;
     padding-bottom: 20px;
 }
+.blocks.but {
+    position: relative;
+    align-items: center;
+    justify-items: center;
+}
+.blocks.but > div:nth-child(1){
+    grid-column-start: 1;
+    grid-column-end: 5;
+    padding-top: 30px;
+    width: 200px;
+    height: 40px;
+    position: relative;
+}
+.blocks.but > div:nth-child(1) > div:nth-child(1){
+    width: 200px;
+    position: absolute;
+}
