@@ -2,19 +2,25 @@
 .popup {cursor: pointer;}
 .popuptext {
     visibility: hidden;
+    display: grid;
+    grid-template-columns: 1fr;
     background-color: white;
     color: red;
     border: 1.5px solid red;
     box-shadow: 0 0 18px rgba(0, 0, 0, .275);
-    text-align: center;
+    text-align: left;
     border-radius: 6px;
-    padding: 8px 0;
+    padding: 15px;
+    padding-top: 15px;
     position: absolute;
-    width: 280px;
-    height: 40px;
+    width: 250px;
+    /*height: 40px;*/
     right: 70px;
     font-size: 16px;    
 }
+.close-popup {font-size: 24px;}
+.close-popup:hover,
+.close-popup:focus {color: red;}
 .popuptext::after {
     content: '▶ ';
     font-size: 75%;

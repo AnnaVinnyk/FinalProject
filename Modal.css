@@ -84,13 +84,14 @@ form .blue-text {
     margin: 0;
     right: 5px;
     top: -5px;
-    font-size: 28px;
     font-weight: bold;
     position: absolute;
 }
 .close:hover,
 .close:focus {
-    color: #0086e4;
     text-decoration: none;
     cursor: pointer;
 }
+.close-modal {font-size: 28px;}
+.close-modal:hover,
+.close-modal:focus {color: #0086e4;}

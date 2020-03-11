@@ -38,7 +38,7 @@
     <!--код для МЕНЮ-->
     <script async src="FinalProject.js"></script>
     <!--код для кнопок сервиса (position:fixed)-->
-    <script async src="OnTop.js"></script>
+    <script async src="Popup.js"></script>
     <!--код для раздела "ОТЗЫВЫ НАШИХ КЛИЕНТОВ"-->
     <!--script async src="Data.js"></script>
     <script async src="Reviews.js"></script-->
@@ -140,8 +140,10 @@
                         <!--ОБРАТНЫЙ ЗВОНОК-->
                         <div>
                             <div class="popuptext" id="MP-Call">
-                                <div>Простите за временные неудобства -</div>
-                                <div>данный сервис на стадии разработки!</div>
+                                <div class="close close-popup">×</div>
+                                <div>
+                                    <div>Извините за временные неудобства. Данный сервис на стадии разработки.</div>
+                                </div>
                             </div>
                             <div class="popup" onclick="myFunction('MP-Call')">
                                 <div class="online-service cursor"><img src="icon/icon/callback01.png"
@@ -153,7 +155,7 @@
                         <div>
                             <div id="myModal" class="modal">
                                 <div class="modal-content" id="MP-Letter">
-                                    <div class="close">×</div>
+                                    <div class="close close-modal">×</div>
                                     <div class="modal-header">
                                         <div class="blue-text">ОБРАТНАЯ СВЯЗЬ</div>
                                         <div>Если у вас возникли вопросы - свяжитесь с нами! Наши сотрудники будут рады
@@ -183,7 +185,6 @@
                                         <div class="cursor">ОТПРАВИТЬ</div>
                                     </div>
                                 </div>
-
                             </div>
                             <div id="myBtn" class="popup">
                                 <div class="online-service cursor"><img src="icon/icon/callback02.png"
@@ -194,8 +195,10 @@
                         <!--ОНЛАЙН КОНСУЛЬТАЦИЯ-->
                         <div>
                             <div class="popuptext" id="MP-Online">
-                                <div>Простите за временные неудобства -</div>
-                                <div>данный сервис на стадии разработки!</div>
+                                <div class="close close-popup">×</div>
+                                <div>
+                                    <div>Извините за временные неудобства. Данный сервис на стадии разработки.</div>
+                                </div>
                             </div>
                             <div class="popup" onclick="myFunction('MP-Online')">
                                 <div class="online-service cursor"><img src="icon/icon/callback03.png"
