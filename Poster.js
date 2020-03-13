@@ -2,7 +2,7 @@ let posterIndex = 0;
 //функция задаёт прозрачность 0.0 для всех картинок карусели     
 //и выделяет белым цветом все кружки в навигации карусели
 function zeroOpacity(xPoster) {
-    for (let i = 0; i < xPoster.length-1; i++) {
+    for (let i = 0; i < xPoster.length - 1; i++) {
         xPoster[i].className = "myPosterShow image-00 image-02";
     }
 }
@@ -23,10 +23,11 @@ function showPoster() {
     //в противном случае навигация не была исользована и slideIndex просто увеличивается на 1  
     posterIndex++;
     //проверка, чтобы не выйти за общее количество слайдов
-    if (posterIndex > poster.length-1) { posterIndex = 1 }
-    noOpacity(poster, posterIndex);
-    //рекурсия для закливания каруселии
-    setTimeout(showPoster, 1000);
+    if (posterIndex < poster.length) {
+        noOpacity(poster, posterIndex);
+        //рекурсия для закливания каруселии
+        setTimeout(showPoster, 1000);
+    }
 }
 
 showPoster();
