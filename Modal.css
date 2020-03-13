@@ -68,14 +68,20 @@ form .blue-text {
     color: white;
     display: grid;
     justify-self: center;
+    justify-items: center;
+    position: relative;
 }
 .modal-button > div {
-    padding: 15px;
-    text-align: center;
-    background-color: #1ca1ff;        
-}
-.modal-button > div:hover {
     background-color: #4cb5ff;
+    border: 1px solid  #4cb5ff;
+    border-bottom: 5px solid #2a83d6;
+    color: white;
+    width: 160px;
+    text-align: center;        
+}
+.modal-button > div:hover {background-color: #72c5ff;}
+.attention {
+    color: red;
 }
 /*кнопка ЗАКРЫТЬ модального окна*/
 .close {

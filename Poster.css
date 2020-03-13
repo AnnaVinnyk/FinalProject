@@ -1,0 +1,13 @@
+.poster {
+    position: relative;
+    display: grid;  
+    grid-template-columns: 1fr;
+    justify-items: stretch;
+    align-items: stretch;
+    font-size: 16px;
+    color: black;
+}
+.myPosterShow {
+    max-width: 100%;
+    display: block;
+}

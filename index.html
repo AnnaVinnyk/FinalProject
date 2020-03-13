@@ -2,10 +2,11 @@
 <html lang="ru">
 
 <head>
+    <link rel="shortcut icon" href="icon/icon.png" type="image/x-icon">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>FinalProject</title>
+    <title>WorkerHUNTERS</title>
     <link href="Custom.css" type="text/css" rel="stylesheet" />
     <!--стили для "HEADER"-->
     <link href="Header.css" type="text/css" rel="stylesheet" />
@@ -110,7 +111,7 @@
                     <a href="reviews.html" class="orange-on-navy">
                         <li class="menu-item cursor">ОТЗЫВЫ</li>
                     </a>
-                    <a href="index.html" class="orange-on-navy">
+                    <a href="contacts.html" class="orange-on-navy">
                         <li class="menu-item cursor">КОНТАКТЫ</li>
                     </a>
                 </ul>
@@ -158,8 +159,11 @@
                                     <div class="close close-modal">×</div>
                                     <div class="modal-header">
                                         <div class="blue-text">ОБРАТНАЯ СВЯЗЬ</div>
-                                        <div>Если у вас возникли вопросы - свяжитесь с нами! Наши сотрудники будут рады
-                                            вам помочь!</div>
+                                        <div>
+                                            <div>Если у вас возникли вопросы - свяжитесь с нами!</div>
+                                            <div>Наши специалисты будут рады вам помочь!</div>
+                                            <div class="attention">Внимание! Данный сервис на стадии разработки!</div>
+                                        </div>
                                     </div>
                                     <div class="modal-body">
                                         <form>
@@ -182,7 +186,7 @@
                                         </form>
                                     </div>
                                     <div class="modal-button">
-                                        <div class="cursor">ОТПРАВИТЬ</div>
+                                        <div class="action-button animate" onclick="SendMessage()">ОТПРАВИТЬ</div>
                                     </div>
                                 </div>
                             </div>
@@ -216,28 +220,35 @@
                         <div class="karusel">
                             <div class="cursor previous" onclick="Previous()">&#171</div>
                             <div class="big-picture">
-                                <img src="images/slide01.jpg" alt="Стратегии развитых стран"
-                                    class="mySlideShow image-01 cursor">
-                                <img src="images/slide02.jpg" alt="Сохранение персонала"
-                                    class="mySlideShow image-00 image-02 cursor">
-                                <img src="images/slide03.jpg" alt="Инновационный метод поиска"
-                                    class="mySlideShow image-00 image-03 cursor">
-                                <img src="images/slide04.jpg" alt="Стратегия привлечения кадров"
-                                    class="mySlideShow image-00 image-04 cursor">
-                                <img src="images/slide05.jpg" alt="Наши клиенты"
-                                    class="mySlideShow image-00 image-05 cursor">
+                                <a href="#activity"><img src="images/slide01.jpg" alt="Стратегии развитых стран"
+                                        class="mySlideShow image-00 image-02 cursor"></a>
+                                <a href="savePersonal.html"><img src="images/slide02.jpg" alt="Сохранение персонала"
+                                        class="mySlideShow image-00 image-02 cursor"></a>
+                                <a href="recruitingPersonal.html"><img src="images/slide03.jpg"
+                                        alt="Инновационный метод поиска"
+                                        class="mySlideShow image-00 image-02 cursor"></a>
+                                <a href="recruitingPersonal.html"><img src="images/slide04.jpg"
+                                        alt="Стратегия привлечения кадров"
+                                        class="mySlideShow image-00 image-02 cursor"></a>
+                                <a href="#trust"><img src="images/slide05.jpg" alt="Наши клиенты"
+                                        class="mySlideShow image-00 image-02 cursor"></a>
+                                <img src="images/slide05.jpg" alt="Наши клиенты" class="mySlideShow image-03 cursor">
                             </div>
                             <div class="small-picture">
-                                <img src="images/slide11.jpg" alt="Стратегии развитых стран"
-                                    class="myLittleSlideShow image-01 cursor">
-                                <img src="images/slide12.jpg" alt="Сохранение персонала"
-                                    class="myLittleSlideShow image-00 image-02 cursor">
-                                <img src="images/slide13.jpg" alt="Инновационный метод поиска"
-                                    class="myLittleSlideShow image-00 image-03 cursor">
-                                <img src="images/slide14.jpg" alt="Стратегия привлечения кадров"
-                                    class="myLittleSlideShow image-00 image-04 cursor">
+                                <a href="#activity"><img src="images/slide11.jpg" alt="Стратегии развитых стран"
+                                        class="myLittleSlideShow image-00 image-02 cursor"></a>
+                                <a href="savePersonal.html"><img src="images/slide12.jpg" alt="Сохранение персонала"
+                                        class="myLittleSlideShow image-00 image-02 cursor"></a>
+                                <a href="recruitingPersonal.html"><img src="images/slide13.jpg"
+                                        alt="Инновационный метод поиска"
+                                        class="myLittleSlideShow image-00 image-02 cursor"></a>
+                                <a href="recruitingPersonal.html"><img src="images/slide14.jpg"
+                                        alt="Стратегия привлечения кадров"
+                                        class="myLittleSlideShow image-00 image-02 cursor"></a>
+                                <a href="#trust"><img src="images/slide15.jpg" alt="Наши клиенты"
+                                        class="myLittleSlideShow image-00 image-02 cursor"></a>
                                 <img src="images/slide15.jpg" alt="Наши клиенты"
-                                    class="myLittleSlideShow image-00 image-05 cursor">
+                                    class="myLittleSlideShow image-03 cursor">
                             </div>
                             <div class="cursor next" onclick="Next()">&#187</div>
                         </div>
@@ -252,7 +263,7 @@
                 </div>
             </div>
             <!--РАЗДЕЛ "НАША ДЕЯТЕЛЬНОСТЬ"-->
-            <div class="subject orange-text">
+            <div id="activity" class="subject orange-text">
                 <div>НАША ДЕЯТЕЛЬНОСТЬ</div>
                 <div class="orange-line"></div>
                 <div class="orange-line"></div>
@@ -309,7 +320,7 @@
                 </div>
             </div>
             <!--РАЗДЕЛ "НАМ ДОВЕРЯЮТ"-->
-            <div class="subject orange-text">
+            <div id="trust" class="subject orange-text">
                 <div>НАМ ДОВЕРЯЮТ</div>
                 <div class="orange-line"></div>
                 <div class="orange-line"></div>
@@ -540,33 +551,7 @@
         </div>
     </div>
     <!--script>
-        // Get the modal
-        var modal = document.getElementById('myModal');
-
-        // Get the button that opens the modal
-        var btn = document.getElementById("myBtn");
-
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-
-        // When the user clicks the button, open the modal 
-        btn.onclick = function () {
-            modal.style.display = "block";
-        }
-
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function () {
-            modal.style.display = "none";
-        }
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
     </script-->
-
 </body>
 
 </html>

@@ -18,6 +18,8 @@
     <link href="Popup.css" type="text/css" rel="stylesheet" />
     <!--стили для КАРУСЕЛИ-->
     <link href="Carousel.css" type="text/css" rel="stylesheet" />
+    <!--стили для ОБЪЯВЛЕНИЯ-->
+    <link href="Poster.css" type="text/css" rel="stylesheet" />
     <!--стили для раздела "НАША ДЕЯТЕЛЬНОСТЬ"-->
     <link href="Activity.css" type="text/css" rel="stylesheet" />
     <!--стили для раздела "НАМ ДОВЕРЯЮТ"-->
@@ -40,10 +42,8 @@
     <script async src="FinalProject.js"></script>
     <!--код для кнопок сервиса (position:fixed)-->
     <script async src="Popup.js"></script>
-    <!--код для раздела "ОТЗЫВЫ НАШИХ КЛИЕНТОВ"-->
-    <script async src="Data.js"></script>
-    <script async src="Reviews.js"></script>
-    <script async src="AllReviews.js"></script>
+    <!--код для ОБЪЯВЛЕНИЯ-->
+    <script async src="Poster.js"></script>
 </head>
 
 <body>
@@ -108,21 +108,50 @@
                         </ul>
                     </li>
                     <a href="reviews.html" class="orange-on-navy">
-                        <li class="menu-item cursor active-item">ОТЗЫВЫ</li>
+                        <li class="menu-item cursor">ОТЗЫВЫ</li>
                     </a>
                     <a href="contacts.html" class="orange-on-navy">
-                        <li class="menu-item cursor">КОНТАКТЫ</li>
+                        <li class="menu-item cursor active-item">КОНТАКТЫ</li>
                     </a>
                 </ul>
             </nav>
         </div>
     </div>
     <!--СОДЕРЖИМОЕ СТРАНИЦЫ-->
-    <div class="custom-grid">
+    <div class="custom-grid post">
         <div>
-            <!--РАЗДЕЛ "ОТЗЫВЫ КЛИЕНТОВ"-->
+            <!--РАЗДЕЛ "КОНТАКТЫ"-->
             <div class="subject orange-text">
-                <div>ОТЗЫВЫ НАШИХ КЛИЕНТОВ</div>
+                <div>КОНТАКТЫ</div>
+                <div class="orange-line"></div>
+                <div class="orange-line"></div>
+
+            </div>
+            <!--КАРУСЕЛЬ-->
+            <!--div class="blocks presentation content-font grid-for-content-blocks">
+                <div class="blocks-item slide">
+                    <div class="sub4-blocks-item"-->
+            <div class="poster">
+                <div>
+                    <img src="contacts/poster01.png" alt="Контакты" class="myPosterShow image-00 image-02">
+                    <img src="contacts/poster02.png" alt="Контакты" class="myPosterShow image-00 image-02">
+                    <img src="contacts/poster03.png" alt="Контакты" class="myPosterShow image-00 image-02">
+                    <img src="contacts/poster04.png" alt="Контакты" class="myPosterShow image-00 image-02">
+                    <img src="contacts/poster05.png" alt="Контакты" class="myPosterShow image-00 image-02">
+                    <img src="contacts/poster06.png" alt="Контакты" class="myPosterShow image-00 image-02">
+                    <img src="contacts/poster07.png" alt="Контакты" class="myPosterShow image-00 image-02">
+                    <img src="contacts/poster08.png" alt="Контакты" class="myPosterShow image-00 image-02">
+                    <img src="contacts/poster09.png" alt="Контакты" class="myPosterShow image-00 image-02">
+                    <img src="contacts/poster10.png" alt="Контакты" class="myPosterShow image-00 image-02">
+                    <img src="contacts/poster01.png" alt="Контакты" class="myPosterShow image-03">
+                </div>
+            </div>
+            <!--/div>
+                </div>
+            </div-->
+            <!--РАЗДЕЛ "РЕКОМЕНДУЕМ К ПРОСМОТРУ"-->
+            <div class="subject orange-text">
+                <div>РЕКОМЕНДУЕМ К ПРОСМОТРУ</div>
                 <div class="orange-line"></div>
                 <div class="orange-line"></div>
                 <!--иконки для всплывающих окон-->
@@ -211,43 +240,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <!--блоки с отзывами клиентов-->
-            <div id="ClientReviews" class="blocks content-font grid-for-content-blocks">
-                <!--ВСТАВКА ЭТОЙ ЧАСТИ ПРОИСХОДИТ ЧЕРЕЗ JAVASCRIPT
-            <div class="blocks-item">
-                <div>
-                    <div class="sub1-blocks-item">Леонардо Ди Каприо</div>
-                    <div class="sub2-blocks-item">
-                        <div class="div-clients"><img src="clients/client-002.jpg" alt="Di Caprio" class="clients" /></div>
-                        <div class="blue-on-white">
-                            <div class="organization">МЕТІНВЕСТ</div>
-                            <div class="profession">Recruitment/HR Manager</div>
-                        </div>
-                        <div class="review">Lorem ipsum dolor sit, amet consectetur adipisicing elit. A, ad veniam
-                            officiisillum nostrum pariatur voluptatibus eveniet corrupti aperiam! Expedita nostrum earum
-                            quae
-                            voluptate temporibus distinctio totam unde neque soluta. Lorem ipsum dolor sit, amet consectetur
-                            adipisicing elit. A, ad veniam
-                            officiisillum nostrum pariatur voluptatibus eveniet corrupti aperiam! Expedita nostrum earum
-                            quae
-                            voluptate temporibus distinctio totam unde neque soluta.</div>
-                    </div>
-                </div>
-                <div class="div-logos"><img src="logos/logo-002.jpg" alt="Metinvest" class="logos" /></div>
-            </div>-->
-            </div>
-            <!--кнопка "БОЛЬШЕ ОТЗЫВОВ"-->
-            <div class="blocks but content-font grid-for-content-blocks">
-                <div id="say">
-                    <div class="action-button animate" onclick="ClientsSay(4,8,1)">БОЛЬШЕ ОТЗЫВОВ</div>
-                </div>
-            </div>
-            <!--РАЗДЕЛ "РЕКОМЕНДУЕМ К ПРОСМОТРУ"-->
-            <div class="subject orange-text">
-                <div>РЕКОМЕНДУЕМ К ПРОСМОТРУ</div>
-                <div class="orange-line"></div>
-                <div class="orange-line"></div>
             </div>
             <!--блоки с рекомендациями-->
             <div id="recommendations" class="blocks reccom content-font grid-for-content-blocks">
@@ -357,9 +349,8 @@
             </footer>
         </div>
     </div>
-    <script>
-    </script>
-
+    <!--script>
+    </script-->
 </body>
 
 </html>

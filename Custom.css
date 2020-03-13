@@ -54,13 +54,11 @@ a {text-decoration: none;}
 .orange-on-navy {background-color: #0047a3;color: #ff7c00;}
 
 /*стили для остальных кнопок*/
-.animate
-{
+.animate {
 	transition: all 0.1s;
 	-webkit-transition: all 0.1s;
 }
-.action-button
-{
+.action-button {
 	position: absolute;
 	height: 40px;
     display: grid;
@@ -76,8 +74,7 @@ a {text-decoration: none;}
 	cursor: pointer;	
 }
 .action-button:hover {background-color: #daf7fe;}
-.action-button:active
-{
+.action-button:active {
 	transform: translate(0px,5px);
     -webkit-transform: translate(0px,5px);
 	border-bottom: 1px solid;

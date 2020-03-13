@@ -2,10 +2,11 @@
 <html lang="ru">
 
 <head>
+    <link rel="shortcut icon" href="icon/icon.png" type="image/x-icon">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>FinalProject</title>
+    <title>WorkerHUNTERS</title>
     <link href="Custom.css" type="text/css" rel="stylesheet" />
     <!--стили для "HEADER"-->
     <link href="Header.css" type="text/css" rel="stylesheet" />
@@ -39,11 +40,6 @@
     <script async src="FinalProject.js"></script>
     <!--код для кнопок сервиса (position:fixed)-->
     <script async src="Popup.js"></script>
-    <!--код для раздела "ОТЗЫВЫ НАШИХ КЛИЕНТОВ"-->
-    <!--script async src="Data.js"></script>
-    <script async src="Reviews.js"></script-->
-    <!--код для КАРУСЕЛИ-->
-    <!--script async src="Carousel.js"></script-->
 </head>
 
 <body>
@@ -110,7 +106,7 @@
                     <a href="reviews.html" class="orange-on-navy">
                         <li class="menu-item cursor">ОТЗЫВЫ</li>
                     </a>
-                    <a href="index.html" class="orange-on-navy">
+                    <a href="contacts.html" class="orange-on-navy">
                         <li class="menu-item cursor">КОНТАКТЫ</li>
                     </a>
                 </ul>
@@ -158,8 +154,11 @@
                                     <div class="close close-modal">×</div>
                                     <div class="modal-header">
                                         <div class="blue-text">ОБРАТНАЯ СВЯЗЬ</div>
-                                        <div>Если у вас возникли вопросы - свяжитесь с нами! Наши сотрудники будут рады
-                                            вам помочь!</div>
+                                        <div>
+                                            <div>Если у вас возникли вопросы - свяжитесь с нами!</div>
+                                            <div>Наши специалисты будут рады вам помочь!</div>
+                                            <div class="attention">Внимание! Данный сервис на стадии разработки!</div>
+                                        </div>
                                     </div>
                                     <div class="modal-body">
                                         <form>
@@ -182,7 +181,7 @@
                                         </form>
                                     </div>
                                     <div class="modal-button">
-                                        <div class="cursor">ОТПРАВИТЬ</div>
+                                        <div class="action-button animate" onclick="SendMessage()">ОТПРАВИТЬ</div>
                                     </div>
                                 </div>
                             </div>
