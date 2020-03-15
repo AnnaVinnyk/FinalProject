@@ -1,0 +1,38 @@
+/*стили для раздела "РЕКОМЕНДУЕМ К ПРОСМОТРУ"*/
+.blocks.reccom {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(450px, 1fr));
+    grid-gap: 40px;
+    padding-bottom: 40px;
+}
+.blocks-item.reccom {
+    color: black;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    padding: 20px; 
+    align-items: flex-start;
+}
+.blocks-item.reccom > div:nth-child(2) {
+    display: grid;
+    grid-gap: 20px;
+}
+.blocks-item.reccom > div:nth-child(2) > div:nth-child(1) {
+    font-size: 17px;
+    font-weight: bold;
+}
+.blocks-item.reccom > div:nth-child(2) > div:nth-child(2) {
+    color: black;
+}
+.blocks-item.reccom:hover {
+    box-shadow: inset 0 0 0 2px #0086e4;
+    color: #0086e4;
+    transition: 0.4s;
+}
+.blocks-item.reccom:not(:hover) {transition: 0.4s;}
+img.reccom {max-width: 100%;}
+.button.reccom {
+    width: 160px;
+    margin-bottom: 20px;
+    justify-self: center;
+}

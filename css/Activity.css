@@ -1,0 +1,29 @@
+/*стили для раздела "НАША ДЕЯТЕЛЬНОСТЬ"*/
+.blocks.activity {
+    background-color: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    align-items: center;
+    justify-items: stretch;
+}
+.blocks-item.activity {
+    background-color: #f8f4e8;
+    border-radius: 180px;
+    justify-items: start;
+    position: relative;
+}
+.sub6-blocks-item {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-gap: 20px;
+    padding: 20px;
+    align-items: center;
+    justify-items: flex-start;
+}
+.blocks-item.activity:hover {
+    background-color: white;
+    color: #0086e4;  
+}
+.grid-for-content-blocks.activity {grid-row-gap: 0;}
+ 

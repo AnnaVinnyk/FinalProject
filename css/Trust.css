@@ -1,0 +1,68 @@
+/*стили для раздела "НАМ ДОВЕРЯЮТ"*/
+.grid-for-content-blocks.trust {
+    grid-row-gap: 30px;
+    grid-column-gap: 0;
+    justify-items: center;   
+}
+.mySlides-02 {
+    position: relative; 
+    width: 210px;
+}
+.pic {
+    width: 210px;
+    height: 140px;
+    overflow: hidden;
+}
+.pic:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 18px rgba(0, 0, 0, .275);
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -o-transition: 0.2s;
+    -ms-transition: 0.2s;
+}
+.pic:not(:hover) {
+    transition: 0.2s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    -ms-transition: 0.3s;
+}
+.trusty > .blue-text {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    font-size: 17px;
+    height: 17px;
+}
+.to-big {
+    text-decoration: none;
+    color: #0086e4;
+}
+.to-big:hover {
+    color: #ff7c00;
+    font-size: 19px;
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -o-transition: 0.2s;
+    -ms-transition: 0.2s; 
+}
+.to-big:not(:hover) {
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -o-transition: 0.2s;
+    -ms-transition: 0.2s; 
+}
+.trusty > div {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+.trusty {
+    display: grid;
+    width: 100%;
+    justify-items: center;
+    align-items: center;
+}
